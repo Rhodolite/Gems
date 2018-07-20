@@ -1,0 +1,78 @@
+1.  Generate enough entropy for gpg
+
+        See: https://www.ostechnix.com/how-to-generate-enough-entropy-for-gpg-key-generation-process/
+
+        sudo apt-get install rng-tools
+        sudo rngd -r /dev/urandom
+
+2.  Run gpg2
+
+        See: https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/
+
+        gpg2 --full-gen-key
+        1
+        4096
+        0
+        y
+        Joy Diamond             #   Change to your Name
+        python.gem@gmail.com    #   Change to your email
+                                #   Blank comment
+        O                       #   The letter 'O' for (O)kay
+
+        (It will say "We need to generate a lot of random bytes ... This is done by
+        rngd above)
+
+        Will take a few minutes to generate the key ...
+
+3.  How to export a key:
+
+        First (use "gpg" if your computer you are exporting from does not have "gpg2"):
+
+            gpg2 --list-secret-keys
+
+            /home/joy/.gnupg/secring.gpg
+            -----------------------------
+            sec   4096R/218F4475 2017-11-28
+            uid                  Joy Diamond <python.gem@gmail.com>
+            ssb   4096R/0944B2DB 2017-11-28
+
+        The key is the second column, so for example:
+
+            gpg --export-secret-keys 218F4475 >joy.asc
+
+        Then copy "joy.asc" to another computer and then:   (use "gpg" if "gpg2" does not exist)
+
+            gpg2 --import ~/joy.asc
+            gpg2 --keyid-format LONG -k
+            rm ~/joy.asc
+
+        Back to the first computer:
+
+            rm joy.asc
+
+
+4.  How to configure git to sign commits:
+
+          gpg2 --list-secret-keys
+
+              /home/joy/.gnupg/secring.gpg
+              -----------------------------
+              sec   4096R/218F4475 2017-11-28
+              uid                  Joy Diamond <python.gem@gmail.com>
+              ssb   4096R/0944B2DB 2017-11-28
+
+        git config --global user.signingkey 218F4475                #   Change 218F4475 to the number from above
+        git config --global gpg.program gpg2                        #   IF you have gpg2 on your computer
+        git config --global commit.gpgsign true
+
+5.  How to upload your key
+
+            gpg2 --keyid-format LONG -k
+
+                /home/joy/.gnupg/pubring.gpg
+                -----------------------------
+                pub   rsa4096/29EA9652218F4475 2017-11-28 [SC]
+                uid                 [ultimate] Joy Diamond <python.gem@gmail.com>
+                sub   rsa4096/274E933F0944B2DB 2017-11-28 [E]
+
+            gpg2 --armor --export 29EA9652218F4475

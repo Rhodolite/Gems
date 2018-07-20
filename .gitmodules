@@ -1,0 +1,27 @@
+[submodule "Gem.java.Mirror"]
+	path = java/Mirror
+	url = https://gitlab.com/gemsmiths/Gem.java.Mirror
+[submodule "Gem.js.Opal"]
+	path = js/Opal
+	url = https://gitlab.com/gemsmiths/Gem.js.Opal
+[submodule "Gem.py.Gem"]
+	path = py/Gem
+	url = https://gitlab.com/gemsmiths/Gem.py.Gem
+[submodule "Gem.py.Old"]
+	path = py/Old
+	url = https://gitlab.com/gemsmiths/Gem.py.Old
+[submodule "Gem.py.Other"]
+	path = py/Other
+	url = https://gitlab.com/gemsmiths/Gem.py.Other
+[submodule "Gem.py.Parser"]
+	path = py/Parser
+	url = https://gitlab.com/gemsmiths/Gem.py.Parser
+[submodule "Gem.py.PPK"]
+	path = py/PPK
+	url = https://gitlab.com/gemsmiths/Gem.py.PPK
+[submodule "Gem.py.Tremolite"]
+	path = py/Tremolite
+	url = https://gitlab.com/gemsmiths/Gem.py.Tremolite
+[submodule "Gem.py.UnitTest"]
+	path = py/UnitTest
+	url = https://gitlab.com/gemsmiths/Gem.py.UnitTest
