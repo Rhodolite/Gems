@@ -1,6 +1,9 @@
 [submodule "Gem-doc-agenda"]
 	path = doc/Agenda
 	url = git@gitlab.com:gemsmiths/Gem-doc-agenda
+[submodule "Gem-doc-coding"]
+	path = doc/Coding
+	url = git@gitlab.com:gemsmiths/Gem-doc-coding
 [submodule "Gem.java.Mirror"]
 	path = java/Mirror
 	url = git@gitlab.com:gemsmiths/language-devs/silver-devs/java-mirror

@@ -1,0 +1,43 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	email = python.gem@gmail.com
+	name = Joy Diamond
+	signingkey = 29EA9652218F4475
+[remote "origin"]
+	url = joy:JoyDiamond/Gems
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "m"]
+	url = joy:gemsmiths/language-devs/gem-devs/gem-core
+	fetch = +refs/heads/*:refs/remotes/m/*
+[remote "hub"]
+	url = rho:Rhodolite/Gems.git
+	fetch = +refs/heads/*:refs/remotes/hub/*
+[branch "joy-tremolite-1"]
+	remote = origin
+	merge = refs/heads/joy-tremolite-1
+[submodule "Gem-doc-agenda"]
+	url = joy:JoyDiamond/Gem-doc-agenda
+[submodule "Gem-doc-coding"]
+	url = joy:JoyDiamond/Gem-doc-coding
+[submodule "Gem.java.Mirror"]
+	url = joy:JoyDiamond/Gem.java.Mirror
+[submodule "Gem.js.Opal"]
+	url = joy:JoyDiamond/Gem.js.Opal
+[submodule "Gem.py.Gem"]
+	url = joy:JoyDiamond/Gem.py.Gem
+[submodule "Gem.py.Old"]
+	url = joy:JoyDiamond/Gem.py.Old
+[submodule "Gem.py.Other"]
+	url = joy:JoyDiamond/Gem.py.Other
+[submodule "Gem.py.PPK"]
+	url = joy:JoyDiamond/Gem.py.PPK
+[submodule "Gem.py.Parser"]
+	url = joy:JoyDiamond/Gem.py.Parser
+[submodule "Gem.py.Tremolite"]
+	url = joy:JoyDiamond/Gem.py.Tremolite
+[submodule "Gem.py.UnitTest"]
+	url = joy:JoyDiamond/Gem.py.UnitTest
