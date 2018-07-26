@@ -46,6 +46,7 @@ CoreParser = ../Parser/CoreParser
 
 CoreParser_Files = \
     $(CoreParser)/ActionWord.py $(CoreParser)/Atom.py \
+	$(CoreParser)/BookcaseCoupleTwig.py $(CoreParser)/BookcaseDualTwig.py \
     $(CoreParser)/Cache.py $(CoreParser)/ClassOrder.py $(CoreParser)/Core.py $(CoreParser)/CrystalComment.py \
         $(CoreParser)/CrystalIndentation.py $(CoreParser)/CreateMeta.py \
     $(CoreParser)/DualFrill.py $(CoreParser)/DualTwig.py $(CoreParser)/DumpToken.py \
@@ -55,7 +56,8 @@ CoreParser_Files = \
     $(CoreParser)/Method.py \
     $(CoreParser)/Nub.py \
     $(CoreParser)/ParserToken.py $(CoreParser)/ParserTrunk.py \
-    $(CoreParser)/TokenCache.py $(CoreParser)/Tokenizer.py $(CoreParser)/TestTree.py \
+    $(CoreParser)/TokenCache.py $(CoreParser)/Tokenizer.py $(CoreParser)/TestTree.py $(CoreParser)/TripleFrill.py \
+        $(CoreParser)/TripleTwig.py \
 
 
 Gem = ../Gem/Gem
@@ -171,8 +173,8 @@ PythonParser_Files = \
     $(PythonParser)/Suite.py $(PythonParser)/SymbolTable.py \
     $(PythonParser)/TernaryExpression.py $(PythonParser)/TokenCache.py $(PythonParser)/TokenTuple.py \
         $(PythonParser)/Tokenize1Atom.py $(PythonParser)/Tokenize1Name.py \
-        $(PythonParser)/Tokenize1Operator.py $(PythonParser)/TripleFrill.py $(PythonParser)/TripleStatement.py \
-        $(PythonParser)/TripleToken.py $(PythonParser)/TripleTwig.py \
+        $(PythonParser)/Tokenize1Operator.py $(PythonParser)/TripleStatement.py \
+        $(PythonParser)/TripleToken.py \
         $(PythonParser)/TupleOfExpression.py \
     $(PythonParser)/UnaryExpression.py \
     $(PythonParser)/Whitespace.py \
@@ -181,6 +183,14 @@ PythonParser_Files = \
 
 PythonParser_Generated = \
     $(PythonParser)/Match.py \
+
+
+Remedy = ../ErrorCorrecting/Remedy
+
+Remedy_Files = \
+    $(Remedy)/MockSolidStateDevice.py \
+    $(Remedy)/Main.py \
+    $(Remedy)/ReedSolomon.py
 
 
 Restructure = ../Tremolite/Restructure
@@ -243,7 +253,6 @@ TremoliteParser_Files = \
     $(TremoliteParser)/Main.py \
     $(TremoliteParser)/Parse.py $(TremoliteParser)/Parse1.py $(TremoliteParser)/Pattern.py \
     $(TremoliteParser)/Statement.py \
-    $(TremoliteParser)/Tree.py \
 
 TremoliteParser_Generated = \
     $(TremoliteParser)/Match.py \
@@ -286,6 +295,7 @@ Files = \
     $(LockFree_Files) \
     $(MultiProcessingExample_Files) \
     $(PythonParser_Generated) $(PythonParser_Files) \
+    $(Remedy_Files) \
     $(Restructure_Assets) $(Restructure_Generated) $(Restructure_Files) \
     $(Rex_Files) \
     $(Rubber_Files) \
@@ -306,7 +316,7 @@ clean:
 	rm -f ba.py bi.py bk.py bm.py bo.py
 	rm -f ca.py ca2.py cd.py ce.py cr.py
 	rm -f dfo.py
-	rm -f ef.py en.py ex.py
+	rm -f ef.py en.py erk.py erm.py ers.py ex.py
 	rm -f files f.py fc.py ff.py dfo.py fi.py fm.py fo.py fs.py fsh.py fst.py ft.py fw.py fy.py
 	rm -f g1c.py g1ga.py g1gt.py g1m.py g1n.py
 	rm -f   gcm.py gdc.py gdm.py gdo.py gga.py ggc.py gg4.py gh2.py gh3.py gh4.py ghe.py ghm.py gho.py
@@ -315,7 +325,7 @@ clean:
 	rm -f   h1p.py h1pa.py h1pc.py h1pe.py h1pes.py h1pf.py h1pi.py h1pm.py h1ps.py h1px.py
 	rm -f     h1za.py h1zh.py h1zn.py h1zo.py
 	rm -f   h2ps.py h2s.py h2s.py h2t.py
-	rm -f   h3e.py h3f.py h3p.py h3s.py h3t.py h3w.py
+	rm -f   h3e.py h3p.py h3s.py h3t.py
 	rm -f   h4f.py h4s.py h4t.py h4w.py
 	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcr.py hcs.py hd.py hdh.py hel.py
 	rm -f   hk.py hkc.py hkd.py hkds.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
@@ -329,11 +339,11 @@ clean:
 	rm -f   m2ch.py m2cr.py m2d.py m2m.py m2ma.py m3m.py
 	rm -f   map.py me.py
 	rm -f o.py
-	rm -f p2f.py p2w.py pa2.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
-	rm -f   pdt.py pel.py pem.py pf.py pkc.py pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
+	rm -f p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
+	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c pkc.py pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
 	rm -f q1p.py qcm.py qcr.py qj.py ql.py qma.py qmc.py qp.py qs.py
 	rm -f r0p.py r1p.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
-	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rs.py rtr.py ru.py rxc.py rxcr.py rxp.py rxw.py
+	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rs.py ru.py rxc.py rxcr.py rxp.py rxw.py
 	rm -f sl.py so.py ssio.py sy.py
 	rm -f t.java t1.py t2.py tb.py th.py
 	rm -f uc.py ud.py ue.py um.py
@@ -380,6 +390,9 @@ links:
 	ln -s $(Gem)/DelayedFileOutput.py                                           dfo.py
 	ln -s $(Gem)/ExecuteFile.py                                                 ef.py
 	ln -s $(Gem)/ErrorNumber.py                                                 en.py
+	ln -s $(Remedy)/MockSolidStateDevice.py                                     erk.py
+	ln -s $(Remedy)/Main.py                                                     erm.py
+	ln -s $(Remedy)/ReedSolomon.py                                              ers.py
 	ln -s $(Gem)/Exception.py                                                   ex.py
 	ln -s $(LockFree)/Development.py                                            f.py
 	ln -s $(LockFree)/Core.py                                                   fc.py
@@ -432,10 +445,8 @@ links:
 	ln -s $(PythonParser)/DualStatement.py                                      h2s.py
 	ln -s $(PythonParser)/DualToken.py                                          h2t.py
 	ln -s $(PythonParser)/TernaryExpression.py                                  h3e.py
-	ln -s $(PythonParser)/TripleFrill.py                                        h3f.py
 	ln -s $(PythonParser)/TripleStatement.py                                    h3s.py
 	ln -s $(PythonParser)/TripleToken.py                                        h3t.py
-	ln -s $(PythonParser)/TripleTwig.py                                         h3w.py
 	ln -s $(PythonParser)/QuadrupleFrill.py                                     h4f.py
 	ln -s $(PythonParser)/QuadrupleStatement.py                                 h4s.py
 	ln -s $(PythonParser)/QuadrupleToken.py                                     h4t.py
@@ -514,7 +525,9 @@ links:
 	ln -s $(Gem)/Method.py                                                      me.py
 	ln -s $(Gem)/Output.py                                                      o.py
 	ln -s $(CoreParser)/DualFrill.py                                            p2f.py
+	ln -s $(CoreParser)/TripleFrill.py                                          p3f.py
 	ln -s $(CoreParser)/DualTwig.py                                             p2w.py
+	ln -s $(CoreParser)/TripleTwig.py                                           p3w.py
 	ln -s $(Gem)/Path2.py                                                       pa2.py
 	ln -s $(CoreParser)/Atom.py                                                 pat.py
 	ln -s $(Gem)/Path.py                                                        path.py
@@ -527,6 +540,8 @@ links:
 	ln -s $(CoreParser)/EmptyLine.py                                            pel.py
 	ln -s $(CoreParser)/Elemental.py                                            pem.py
 	ln -s $(CoreParser)/Tokenizer.py                                            pf.py
+	ln -s $(CoreParser)/BookcaseDualTwig.py                                     pk2.py
+	ln -s $(CoreParser)/BookcaseCoupleTwig.py                                   pk2c.py
 	ln -s $(CoreParser)/TokenCache.py                                           pkc.py
 	ln -s $(CoreParser)/LineMarker.py                                           pl.py
 	ln -s $(CoreParser)/Method.py                                               pm.py
@@ -563,7 +578,6 @@ links:
 	ln -s $(Restructure)/Name.py                                                rn.py
 	ln -s $(TremoliteParser)/Pattern.py                                         rp.py
 	ln -s $(TremoliteParser)/Statement.py                                       rs.py
-	ln -s $(TremoliteParser)/Tree.py                                            rtr.py
 	ln -s $(Restructure)/Build.py                                               ru.py
 	ln -s $(Rex)/Compile.py                                                     rxc.py
 	ln -s $(Rex)/Core.py                                                        rxcr.py
@@ -647,6 +661,7 @@ wc:
         $(LockFree_Files) \
         $(MultiProcessingExample_Files) \
         $(PythonParser_Files) \
+        $(Remedy_Files) \
         $(Restructure_Files) \
         $(Rex_Files) \
         $(Rubber_Files) \
@@ -670,6 +685,7 @@ test:
         $(LockFree_Files) \
         $(MultiProcessingExample_Files) \
         $(PythonParser_Files) \
+        $(Remedy_Files) \
         $(Restructure_Files) \
         $(Rex_Files) \
         $(Rubber_Files) \
