@@ -1,0 +1,46 @@
+$(CoreParser)/DualFrill.py                      p2f.py
+$(CoreParser)/DualTwig.py                       p2w.py
+$(CoreParser)/ActionWord.py                     paw.py
+$(CoreParser)/Atom.py                           pat.py
+$(CoreParser)/Cache.py                          pca.py
+$(CoreParser)/ClassOrder.py                     pco.py
+$(CoreParser)/Core.py                           pcr.py
+$(CoreParser)/CreateMeta.py                     pcc.py
+$(CoreParser)/CrystalComment.py                 pyc.py
+$(CoreParser)/CrystalIndentation.py             pyi.py
+$(CoreParser)/DumpToken.py                      pdt.py
+$(CoreParser)/Elemental.py                      pem.py
+$(CoreParser)/EmptyLine.py                      pel.py
+$(CoreParser)/Method.py                         pm.py
+$(CoreParser)/Nub.py                            pn.py
+$(CoreParser)/ParserToken.py                    pyk.py
+$(CoreParser)/ParserTrunk.py                    pyt.py
+$(CoreParser)/TestTree.py                       ptt.py
+$(CoreParser)/TokenCache.py                     pkc.py
+$(CoreParser)/Tokenizer.py                      pf.py
+
+$(Restructure)/Build.py                         ru.py
+$(Restructure)/Core.py                          rcr2.py
+$(Restructure)/CreateMatch.py                   rcm.py
+$(Restructure)/Main.py                          rma2.py
+$(Restructure)/Match.py                         rmc2.py
+$(Restructure)/Name.py                          rn.py
+
+$(Rex)/Compile.py                               rxc.py
+$(Rex)/Core.py                                  rxcr.py
+$(Rex)/Parse.py                                 rxp.py
+$(Rex)/PatternWrapper.py                        rxw.py
+
+../Tremolite/OtherLicenses/LicenseTemplate.txt  rlp.txt
+../Tremolite/OtherLicenses/README.txt           rlr.txt
+
+$(TremoliteParser)/Core.py                      rcr.py
+$(TremoliteParser)/Development.py               rd.py
+$(TremoliteParser)/Elemental.py                 rel.py
+$(TremoliteParser)/Main.py                      rma.py
+$(TremoliteParser)/Match.py                     rmc.py
+$(TremoliteParser)/Parse1.py                    r1p.py
+$(TremoliteParser)/Parse.py                     r0p.py
+$(TremoliteParser)/Pattern.py                   rp.py
+$(TremoliteParser)/Statement.py                 rs.py
+$(TremoliteParser)/Tree.py                      rtr.py
