@@ -11,6 +11,7 @@ $(CoreParser)/Core.py                           pcr.py
 $(CoreParser)/CreateMeta.py                     pcc.py
 $(CoreParser)/CrystalComment.py                 pyc.py
 $(CoreParser)/CrystalIndentation.py             pyi.py
+$(CoreParser)/DualExpressionStatement.py        p2es.py
 $(CoreParser)/DualFrill.py                      p2f.py
 $(CoreParser)/DualTwig.py                       p2w.py
 $(CoreParser)/DumpToken.py                      pdt.py
@@ -44,6 +45,7 @@ $(Rex)/PatternWrapper.py                        rxw.py
 
 $(TremoliteParser)/Core.py                      rcr.py
 $(TremoliteParser)/Development.py               rd.py
+$(TremoliteParser)/DualExpressionStatement.py   r2es.py
 $(TremoliteParser)/Elemental.py                 rel.py
 $(TremoliteParser)/Main.py                      rma.py
 $(TremoliteParser)/Match.py                     rmc.py
@@ -51,3 +53,4 @@ $(TremoliteParser)/Parse1.py                    r1p.py
 $(TremoliteParser)/Parse.py                     r0p.py
 $(TremoliteParser)/Pattern.py                   rp.py
 $(TremoliteParser)/Statement.py                 rs.py
+$(TremoliteParser)/Tokenize1Atom.py             r1za.py
