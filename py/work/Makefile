@@ -16,6 +16,34 @@ Beryl_Files = \
     $(Beryl)/Main.py \
 
 
+Capital = ../Capital/Capital
+
+Capital_Files = \
+    $(Capital)/__init__.py \
+    $(Capital)/Absent.py $(Capital)/All.py $(Capital)/Ascii.py \
+    $(Capital)/Boot.py \
+    $(Capital)/Cache.py $(Capital)/Cache2.py $(Capital)/Cadence.py $(Capital)/Codec.py $(Capital)/ContextManager.py \
+        $(Capital)/Core.py $(Capital)/CatchException.py \
+    $(Capital)/DelayedFileOutput.py $(Capital)/DroveMany.py $(Capital)/DumpCache.py \
+    $(Capital)/ErrorNumber.py $(Capital)/Exception.py $(Capital)/ExecuteFile.py \
+    $(Capital)/FileOutput.py $(Capital)/FileStatus.py \
+    $(Capital)/Gaggle.py $(Capital)/GarbageCollection.py $(Capital)/Global.py \
+    $(Capital)/Hailstone.py $(Capital)/Herd.py $(Capital)/Herd_2.py $(Capital)/Herd_3.py $(Capital)/Herd_4567.py \
+        $(Capital)/HerdMany.py $(Capital)/Horde.py \
+    $(Capital)/Import.py $(Capital)/IO.py \
+    $(Capital)/LiquidMap.py \
+    $(Capital)/Map.py $(Capital)/Method.py \
+    $(Capital)/Output.py \
+    $(Capital)/Path.py $(Capital)/Path2.py $(Capital)/PortrayString.py \
+    $(Capital)/Rabble.py $(Capital)/RegularExpression.py \
+    $(Capital)/Series.py $(Capital)/Sequence.py $(Capital)/SimpleStringIO.py $(Capital)/Sleep.py \
+        $(Capital)/StringOutput.py $(Capital)/System.py \
+    $(Capital)/Traceback.py $(Capital)/Thread.py \
+
+Capital_Generated = \
+    $(Capital)/GeneratedConjureQuadruple.py \
+
+
 Chess5x2 = ../Other/Chess5x2
 
 Chess5x2_Files = \
@@ -58,33 +86,6 @@ CoreParser_Files = \
     $(CoreParser)/ParserToken.py $(CoreParser)/ParserTrunk.py \
     $(CoreParser)/TokenCache.py $(CoreParser)/Tokenizer.py $(CoreParser)/TestTree.py $(CoreParser)/TripleFrill.py \
         $(CoreParser)/TripleTwig.py \
-
-
-Gem = ../Gem/Gem
-
-Gem_Files = \
-    $(Gem)/__init__.py \
-    $(Gem)/Absent.py $(Gem)/All.py $(Gem)/Ascii.py \
-    $(Gem)/Boot.py \
-    $(Gem)/Cache.py $(Gem)/Cache2.py $(Gem)/Cadence.py $(Gem)/Codec.py $(Gem)/ContextManager.py $(Gem)/Core.py \
-        $(Gem)/CatchException.py \
-    $(Gem)/DelayedFileOutput.py $(Gem)/DroveMany.py $(Gem)/DumpCache.py \
-    $(Gem)/ErrorNumber.py $(Gem)/Exception.py $(Gem)/ExecuteFile.py \
-    $(Gem)/FileOutput.py $(Gem)/FileStatus.py \
-    $(Gem)/Gaggle.py $(Gem)/GarbageCollection.py $(Gem)/Global.py \
-    $(Gem)/Hailstone.py $(Gem)/Herd.py $(Gem)/Herd_2.py $(Gem)/Herd_3.py $(Gem)/Herd_4567.py $(Gem)/HerdMany.py \
-        $(Gem)/Horde.py \
-    $(Gem)/Import.py $(Gem)/IO.py \
-    $(Gem)/LiquidMap.py \
-    $(Gem)/Map.py $(Gem)/Method.py \
-    $(Gem)/Output.py \
-    $(Gem)/Path.py $(Gem)/Path2.py $(Gem)/PortrayString.py \
-    $(Gem)/Rabble.py $(Gem)/RegularExpression.py \
-    $(Gem)/Series.py $(Gem)/Sequence.py $(Gem)/SimpleStringIO.py $(Gem)/Sleep.py $(Gem)/StringOutput.py $(Gem)/System.py \
-    $(Gem)/Traceback.py $(Gem)/Thread.py \
-
-Gem_Generated = \
-    $(Gem)/GeneratedConjureQuadruple.py \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -284,10 +285,10 @@ Work_Files = \
 Files = \
     $(Agate_Files) \
     $(Beryl_Files) \
+    $(Capital_Generated) $(Capital_Files) \
     $(Chess5x2_Files) \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
-    $(Gem_Generated) $(Gem_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
     $(KeyExample_Files) \
     $(LearningPython_Files) \
@@ -374,58 +375,58 @@ links:
 	ln -s /usr/lib/python3.5/sre_compile.py                                     3sc.py
 	ln -s /usr/lib/python3.5/sre_constants.py                                   3sf.py
 	ln -s /usr/lib/python3.5/sre_parse.py                                       3sp.py
-	ln -s $(Gem)/All.py                                                         a.py
-	ln -s $(Gem)/Absent.py                                                      ab.py
-	ln -s $(Gem)/Ascii.py                                                       ac.py
+	ln -s $(Capital)/All.py                                                     a.py
+	ln -s $(Capital)/Absent.py                                                  ab.py
+	ln -s $(Capital)/Ascii.py                                                   ac.py
 	ln -s $(Agate)/RUNME.py                                                     ag.py
 	ln -s $(Beryl)/BerylAnswer.py                                               ba.py
 	ln -s $(Beryl)/__init__.py                                                  bi.py
 	ln -s $(Beryl)/Ask.py                                                       bk.py
 	ln -s $(Beryl)/Main.py                                                      bm.py
-	ln -s $(Gem)/Boot.py                                                        bo.py
-	ln -s $(Gem)/Cache.py                                                       ca.py
-	ln -s $(Gem)/Cache2.py                                                      ca2.py
-	ln -s $(Gem)/Cadence.py                                                     cd.py
-	ln -s $(Gem)/CatchException.py                                              ce.py
-	ln -s $(Gem)/Core.py                                                        cr.py
-	ln -s $(Gem)/DelayedFileOutput.py                                           dfo.py
-	ln -s $(Gem)/ExecuteFile.py                                                 ef.py
-	ln -s $(Gem)/ErrorNumber.py                                                 en.py
+	ln -s $(Capital)/Boot.py                                                    bo.py
+	ln -s $(Capital)/Cache.py                                                   ca.py
+	ln -s $(Capital)/Cache2.py                                                  ca2.py
+	ln -s $(Capital)/Cadence.py                                                 cd.py
+	ln -s $(Capital)/CatchException.py                                          ce.py
+	ln -s $(Capital)/Core.py                                                    cr.py
+	ln -s $(Capital)/DelayedFileOutput.py                                       dfo.py
+	ln -s $(Capital)/ExecuteFile.py                                             ef.py
+	ln -s $(Capital)/ErrorNumber.py                                             en.py
 	ln -s $(Remedy)/MockSolidStateDevice.py                                     erk.py
 	ln -s $(Remedy)/Main.py                                                     erm.py
 	ln -s $(Remedy)/ReedSolomon.py                                              ers.py
-	ln -s $(Gem)/Exception.py                                                   ex.py
+	ln -s $(Capital)/Exception.py                                               ex.py
 	ln -s $(LockFree)/Development.py                                            f.py
 	ln -s $(LockFree)/Core.py                                                   fc.py
 	ln -s $(LockFree)/Fibonacci.py                                              ff.py
 	ln -s $(LockFree)/Interval.py                                               fi.py
 	ln -s $(LockFree)/Main.py                                                   fm.py
-	ln -s $(Gem)/FileOutput.py                                                  fo.py
-	ln -s $(Gem)/FileStatus.py                                                  fs.py
+	ln -s $(Capital)/FileOutput.py                                              fo.py
+	ln -s $(Capital)/FileStatus.py                                              fs.py
 	ln -s $(LockFree)/Shared.py                                                 fsh.py
 	ln -s $(LockFree)/Status.py                                                 fst.py
 	ln -s $(LockFree)/Thread.py                                                 ft.py
 	ln -s $(LockFree)/Chore.py                                                  fw.py
 	ln -s $(LockFree)/LifeCycle.py                                              fy.py
-	ln -s $(Gem)/ContextManager.py                                              gcm.py
-	ln -s $(Gem)/DumpCache.py                                                   gdc.py
-	ln -s $(Gem)/DroveMany.py                                                   gdm.py
-	ln -s $(Gem)/Codec.py                                                       gdo.py
-	ln -s $(Gem)/Gaggle.py                                                      gga.py
-	ln -s $(Gem)/GarbageCollection.py                                           ggc.py
-	ln -s $(Gem)/GeneratedConjureQuadruple.py                                   gg4.py
-	ln -s $(Gem)/Herd_2.py                                                      gh2.py
-	ln -s $(Gem)/Herd_3.py                                                      gh3.py
-	ln -s $(Gem)/Herd_4567.py                                                   gh4.py
-	ln -s $(Gem)/Herd.py                                                        ghe.py
-	ln -s $(Gem)/HerdMany.py                                                    ghm.py
-	ln -s $(Gem)/Horde.py                                                       gho.py
-	ln -s $(Gem)/Hailstone.py                                                   gi.py
-	ln -s $(Gem)/Global.py                                                      gl.py
-	ln -s $(Gem)/LiquidMap.py                                                   gq.py
-	ln -s $(Gem)/Rabble.py                                                      gr.py
-	ln -s $(Gem)/Series.py                                                      gse.py
-	ln -s $(Gem)/Sequence.py                                                    gsq.py
+	ln -s $(Capital)/ContextManager.py                                          gcm.py
+	ln -s $(Capital)/DumpCache.py                                               gdc.py
+	ln -s $(Capital)/DroveMany.py                                               gdm.py
+	ln -s $(Capital)/Codec.py                                                   gdo.py
+	ln -s $(Capital)/Gaggle.py                                                  gga.py
+	ln -s $(Capital)/GarbageCollection.py                                       ggc.py
+	ln -s $(Capital)/GeneratedConjureQuadruple.py                               gg4.py
+	ln -s $(Capital)/Herd_2.py                                                  gh2.py
+	ln -s $(Capital)/Herd_3.py                                                  gh3.py
+	ln -s $(Capital)/Herd_4567.py                                               gh4.py
+	ln -s $(Capital)/Herd.py                                                    ghe.py
+	ln -s $(Capital)/HerdMany.py                                                ghm.py
+	ln -s $(Capital)/Horde.py                                                   gho.py
+	ln -s $(Capital)/Hailstone.py                                               gi.py
+	ln -s $(Capital)/Global.py                                                  gl.py
+	ln -s $(Capital)/LiquidMap.py                                               gq.py
+	ln -s $(Capital)/Rabble.py                                                  gr.py
+	ln -s $(Capital)/Series.py                                                  gse.py
+	ln -s $(Capital)/Sequence.py                                                gsq.py
 	ln -s $(PythonParser)/Parse.py                                              h0p.py
 	ln -s $(PythonParser)/Parse1.py                                             h1p.py
 	ln -s $(PythonParser)/Parse1Atom.py                                         h1pa.py
@@ -500,9 +501,9 @@ links:
 	ln -s $(CodeGenerator)/GenerateTestPortrayString.py                         g1gt.py
 	ln -s $(CodeGenerator)/Main.py                                              g1m.py
 	ln -s $(CodeGenerator)/NestedConjure.py                                     g1n.py
-	ln -s $(Gem)/__init__.py                                                    in.py
-	ln -s $(Gem)/Import.py                                                      im.py
-	ln -s $(Gem)/IO.py                                                          io.py
+	ln -s $(Capital)/__init__.py                                                in.py
+	ln -s $(Capital)/Import.py                                                  im.py
+	ln -s $(Capital)/IO.py                                                      io.py
 	ln -s $(JavaParser)/Parse.py                                                j0p.py
 	ln -s $(JavaParser)/Parse1.py                                               j1p.py
 	ln -s ../Old/Junk/Boot.py                                                   jb.py
@@ -522,16 +523,16 @@ links:
 	ln -s $(MultiProcessingExample)/Development.py                              m2d.py
 	ln -s $(MultiProcessingExample)/Multiprocessing.py                          m2m.py
 	ln -s $(MultiProcessingExample)/Main.py                                     m2ma.py
-	ln -s $(Gem)/Map.py                                                         map.py
-	ln -s $(Gem)/Method.py                                                      me.py
-	ln -s $(Gem)/Output.py                                                      o.py
+	ln -s $(Capital)/Map.py                                                     map.py
+	ln -s $(Capital)/Method.py                                                  me.py
+	ln -s $(Capital)/Output.py                                                  o.py
 	ln -s $(CoreParser)/DualFrill.py                                            p2f.py
 	ln -s $(CoreParser)/TripleFrill.py                                          p3f.py
 	ln -s $(CoreParser)/DualTwig.py                                             p2w.py
 	ln -s $(CoreParser)/TripleTwig.py                                           p3w.py
-	ln -s $(Gem)/Path2.py                                                       pa2.py
+	ln -s $(Capital)/Path2.py                                                   pa2.py
 	ln -s $(CoreParser)/Atom.py                                                 pat.py
-	ln -s $(Gem)/Path.py                                                        path.py
+	ln -s $(Capital)/Path.py                                                    path.py
 	ln -s $(CoreParser)/ActionWord.py                                           paw.py
 	ln -s $(CoreParser)/Cache.py                                                pca.py
 	ln -s $(CoreParser)/CreateMeta.py                                           pcc.py
@@ -568,7 +569,7 @@ links:
 	ln -s $(TremoliteParser)/Core.py                                            rcr.py
 	ln -s $(Restructure)/Core.py                                                rcr2.py
 	ln -s $(TremoliteParser)/Development.py                                     rd.py
-	ln -s $(Gem)/RegularExpression.py                                           re.py
+	ln -s $(Capital)/RegularExpression.py                                       re.py
 	ln -s $(TremoliteParser)/Elemental.py                                       rel.py
 	ln -s ../Tremolite/OtherLicenses/LicenseTemplate.txt                        rlp.txt
 	ln -s ../Tremolite/OtherLicenses/README.txt                                 rlr.txt
@@ -584,15 +585,15 @@ links:
 	ln -s $(Rex)/Core.py                                                        rxcr.py
 	ln -s $(Rex)/Parse.py                                                       rxp.py
 	ln -s $(Rex)/PatternWrapper.py                                              rxw.py
-	ln -s $(Gem)/Sleep.py                                                       sl.py
-	ln -s $(Gem)/StringOutput.py                                                so.py
-	ln -s $(Gem)/SimpleStringIO.py                                              ssio.py
-	ln -s $(Gem)/System.py                                                      sy.py
+	ln -s $(Capital)/Sleep.py                                                   sl.py
+	ln -s $(Capital)/StringOutput.py                                            so.py
+	ln -s $(Capital)/SimpleStringIO.py                                          ssio.py
+	ln -s $(Capital)/System.py                                                  sy.py
 	ln -s test.java                                                             t.java
 	ln -s test.py                                                               t1.py
 	ln -s test2.py                                                              t2.py
-	ln -s $(Gem)/Traceback.py                                                   tb.py
-	ln -s $(Gem)/Thread.py                                                      th.py
+	ln -s $(Capital)/Traceback.py                                               tb.py
+	ln -s $(Capital)/Thread.py                                                  th.py
 	ln -s $(Rubber)/Core.py                                                     uc.py
 	ln -s $(Rubber)/Development.py                                              ud.py
 	ln -s $(Rubber)/ElasticSearch.py                                            ue.py
@@ -612,7 +613,7 @@ links:
 	ln -s $(Chess5x2)/Player.py                                                 yp.py
 	ln -s $(Chess5x2)/Square.py                                                 yq.py
 	ln -s $(Chess5x2)/ChessRook.py                                              yr.py
-	ln -s $(Gem)/PortrayString.py                                               ys.py
+	ln -s $(Capital)/PortrayString.py                                           ys.py
 	ln -s $(Chess5x2)/VoidSquare.py                                             yv.py
 	ln -s $(Chess5x2)/ChessPawn.py                                              yw.py
 	ln -s $(Chess5x2)/FrozenChessCard.py                                        yzc.py
@@ -651,10 +652,10 @@ wc:
 	#
 	wc -l \
         $(Beryl_Files) \
+        $(Capital_Files) \
         $(Chess5x2_Files) \
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
-        $(Gem_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
@@ -676,10 +677,10 @@ wc:
 test:
 	cat \
         $(Beryl_Files) \
+        $(Capital_Files) \
         $(Chess5x2_Files) \
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
-        $(Gem_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
