@@ -1,3 +1,6 @@
+#
+#   Copyright (c) 2017-2018 Joy Diamond.  All rights reserved.
+#
 $(CoreParser)/ActionWord.py                     paw.py
 $(CoreParser)/Atom.py                           pat.py
 $(CoreParser)/BookcaseCoupleTwig.py             pk2c.py
