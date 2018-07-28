@@ -10,6 +10,9 @@
 [submodule "Gem.js.Opal"]
 	path = js/Opal
 	url = git@gitlab.com:gemsmiths/system-devs/opal
+[submodule "Gem-py-ErrorCorrecting"]
+	path = py/ErrorCorrecting
+	url = git@gitlab.com:gemsmiths/Gem-py-ErrorCorrecting
 [submodule "Gem.py.Gem"]
 	path = py/Gem
 	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/python-gem

@@ -1,16 +1,19 @@
-$(CoreParser)/DualFrill.py                      p2f.py
-$(CoreParser)/DualTwig.py                       p2w.py
 $(CoreParser)/ActionWord.py                     paw.py
 $(CoreParser)/Atom.py                           pat.py
+$(CoreParser)/BookcaseCoupleTwig.py             pk2c.py
+$(CoreParser)/BookcaseDualTwig.py               pk2.py
 $(CoreParser)/Cache.py                          pca.py
 $(CoreParser)/ClassOrder.py                     pco.py
 $(CoreParser)/Core.py                           pcr.py
 $(CoreParser)/CreateMeta.py                     pcc.py
 $(CoreParser)/CrystalComment.py                 pyc.py
 $(CoreParser)/CrystalIndentation.py             pyi.py
+$(CoreParser)/DualFrill.py                      p2f.py
+$(CoreParser)/DualTwig.py                       p2w.py
 $(CoreParser)/DumpToken.py                      pdt.py
 $(CoreParser)/Elemental.py                      pem.py
 $(CoreParser)/EmptyLine.py                      pel.py
+$(CoreParser)/LineMarker.py                     pl.py
 $(CoreParser)/Method.py                         pm.py
 $(CoreParser)/Nub.py                            pn.py
 $(CoreParser)/ParserToken.py                    pyk.py
@@ -18,6 +21,8 @@ $(CoreParser)/ParserTrunk.py                    pyt.py
 $(CoreParser)/TestTree.py                       ptt.py
 $(CoreParser)/TokenCache.py                     pkc.py
 $(CoreParser)/Tokenizer.py                      pf.py
+$(CoreParser)/TripleFrill.py                    p3f.py
+$(CoreParser)/TripleTwig.py                     p3w.py
 
 $(Restructure)/Build.py                         ru.py
 $(Restructure)/Core.py                          rcr2.py
@@ -43,4 +48,3 @@ $(TremoliteParser)/Parse1.py                    r1p.py
 $(TremoliteParser)/Parse.py                     r0p.py
 $(TremoliteParser)/Pattern.py                   rp.py
 $(TremoliteParser)/Statement.py                 rs.py
-$(TremoliteParser)/Tree.py                      rtr.py
