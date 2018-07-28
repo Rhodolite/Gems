@@ -14,7 +14,7 @@
 	path = py/ErrorCorrecting
 	url = git@gitlab.com:gemsmiths/Gem-py-ErrorCorrecting
 [submodule "Gem.py.Gem"]
-	path = py/Gem
+	path = py/Capital
 	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/python-gem
 [submodule "Gem.py.Old"]
 	path = py/Old

@@ -43,9 +43,9 @@ Main_py=../UnitTest/UnitTest/Main.py
 Main_py=../Parser/Mothballed/SqlParser/Main.py
 Main_py=../ErrorCorrecting/Remedy/Main.py
 Main_py=../Parser/Mothballed/JavaParser/Main.py
+Main_py=../Other/LearningPython/Main.py
 Main_py=../Tremolite/TremoliteParser/Main.py
 Main_py=../Parser/PythonParser/Main.py
-Main_py=../Other/LearningPython/Main.py
 
 show=2
 all=false
