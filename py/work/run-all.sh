@@ -1,3 +1,6 @@
+#
+#   Copyright (c) 2018 Joy Diamond.  All rights reserved.
+#
 set -e$-
 
 for command in \
