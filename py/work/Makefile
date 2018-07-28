@@ -98,7 +98,7 @@ JavaParser_Generated = \
     $(JavaParser)/Match.py \
 
 
-LearningPython = ../Other/Mothballed/LearningPython
+LearningPython = ../Other/LearningPython
 
 LearningPython_Files = \
     $(LearningPython)/Main.py \
@@ -340,7 +340,8 @@ clean:
 	rm -f   map.py me.py
 	rm -f o.py
 	rm -f p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
-	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c pkc.py pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
+	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c.py pkc.py
+	rm -f   pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
 	rm -f q1p.py qcm.py qcr.py qj.py ql.py qma.py qmc.py qp.py qs.py
 	rm -f r0p.py r1p.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
 	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rs.py ru.py rxc.py rxcr.py rxp.py rxw.py
