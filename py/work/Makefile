@@ -77,7 +77,8 @@ CoreParser_Files = \
 	$(CoreParser)/BookcaseCoupleTwig.py $(CoreParser)/BookcaseDualTwig.py \
     $(CoreParser)/Cache.py $(CoreParser)/ClassOrder.py $(CoreParser)/Core.py $(CoreParser)/CrystalComment.py \
         $(CoreParser)/CrystalIndentation.py $(CoreParser)/CreateMeta.py \
-    $(CoreParser)/DualFrill.py $(CoreParser)/DualTwig.py $(CoreParser)/DumpToken.py \
+    $(CoreParser)/DualExpressionStatement.py $(CoreParser)/DualFrill.py $(CoreParser)/DualTwig.py \
+        $(CoreParser)/DumpToken.py \
     $(CoreParser)/Elemental.py \
     $(CoreParser)/EmptyLine.py \
     $(CoreParser)/LineMarker.py \
@@ -148,15 +149,14 @@ PythonParser = ../Parser/PythonParser
 PythonParser_Files = \
     $(PythonParser)/Atom.py \
     $(PythonParser)/BinaryExpression.py $(PythonParser)/BookcaseDualExpression.py \
-        $(PythonParser)/BookcaseDualStatement.py $(PythonParser)/BookcaseExpression.py \
-        $(PythonParser)/BookcaseKeywordStatement.py $(PythonParser)/BookcaseKeywordDualStatement.py \
-        $(PythonParser)/BookcaseManyExpression.py $(PythonParser)/BookcaseManyFrill.py \
-        $(PythonParser)/BookcaseManyStatement.py $(PythonParser)/BookcaseStatement.py \
-        $(PythonParser)/BookcaseTriple.py $(PythonParser)/BuildSymbolTable.py \
+        $(PythonParser)/BookcaseExpression.py $(PythonParser)/BookcaseKeywordStatement.py \
+        $(PythonParser)/BookcaseKeywordDualStatement.py $(PythonParser)/BookcaseManyExpression.py \
+        $(PythonParser)/BookcaseManyFrill.py $(PythonParser)/BookcaseManyStatement.py \
+        $(PythonParser)/BookcaseStatement.py $(PythonParser)/BookcaseTriple.py $(PythonParser)/BuildSymbolTable.py \
     $(PythonParser)/Cache.py $(PythonParser)/CallStatement.py $(PythonParser)/ClassOrder.py \
         $(PythonParser)/Combine.py $(PythonParser)/Core.py $(PythonParser)/CreateMeta.py \
-    $(PythonParser)/DefinitionHeader.py $(PythonParser)/Development.py $(PythonParser)/DualStatement.py \
-        $(PythonParser)/DualToken.py \
+    $(PythonParser)/DefinitionHeader.py $(PythonParser)/Development.py $(PythonParser)/DualExpressionStatement.py \
+        $(PythonParser)/DualStatement.py $(PythonParser)/DualToken.py \
     $(PythonParser)/Elemental.py \
     $(PythonParser)/Main.py $(PythonParser)/ManyExpression.py $(PythonParser)/ManyFrill.py \
         $(PythonParser)/MemberExpression.py $(PythonParser)/Method.py $(PythonParser)/MosiacDefinition.py \
@@ -249,11 +249,12 @@ TremoliteParser = ../Tremolite/TremoliteParser
 
 TremoliteParser_Files = \
     $(TremoliteParser)/Core.py \
-    $(TremoliteParser)/Development.py \
+    $(TremoliteParser)/Development.py $(TremoliteParser)/DualExpressionStatement.py \
     $(TremoliteParser)/Elemental.py \
     $(TremoliteParser)/Main.py \
     $(TremoliteParser)/Parse.py $(TremoliteParser)/Parse1.py $(TremoliteParser)/Pattern.py \
     $(TremoliteParser)/Statement.py \
+    $(TremoliteParser)/Tokenize1Atom.py \
 
 TremoliteParser_Generated = \
     $(TremoliteParser)/Match.py \
@@ -325,11 +326,11 @@ clean:
 	rm -f h0p.py
 	rm -f   h1p.py h1pa.py h1pc.py h1pe.py h1pes.py h1pf.py h1pi.py h1pm.py h1ps.py h1px.py
 	rm -f     h1za.py h1zh.py h1zn.py h1zo.py
-	rm -f   h2ps.py h2s.py h2s.py h2t.py
+	rm -f   h2es.py h2ps.py h2s.py h2s.py h2t.py
 	rm -f   h3e.py h3p.py h3s.py h3t.py
 	rm -f   h4f.py h4s.py h4t.py h4w.py
 	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcr.py hcs.py hd.py hdh.py hel.py
-	rm -f   hk.py hkc.py hkd.py hkds.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
+	rm -f   hk.py hkc.py hkd.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
 	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hme.py hmf.py hmo.py hmx.py hmy.py hpr.py hpt.py hs.py
 	rm -f   hto.py htt.py hu.py hv.py hwy.py hx.py hy.py
 	rm -f in.py im.py io.py
@@ -340,11 +341,11 @@ clean:
 	rm -f   m2ch.py m2cr.py m2d.py m2m.py m2ma.py m3m.py
 	rm -f   map.py me.py
 	rm -f o.py
-	rm -f p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
+	rm -f p2es.py p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
 	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c.py pkc.py
 	rm -f   pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
 	rm -f q1p.py qcm.py qcr.py qj.py ql.py qma.py qmc.py qp.py qs.py
-	rm -f r0p.py r1p.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
+	rm -f r0p.py r1es.py r1p.py r1za.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
 	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rs.py ru.py rxc.py rxcr.py rxp.py rxw.py
 	rm -f sl.py so.py ssio.py sy.py
 	rm -f t.java t1.py t2.py tb.py th.py
@@ -442,11 +443,12 @@ links:
 	ln -s $(PythonParser)/Tokenize1Header.py                                    h1zh.py
 	ln -s $(PythonParser)/Tokenize1Name.py                                      h1zn.py
 	ln -s $(PythonParser)/Tokenize1Operator.py                                  h1zo.py
-	ln -s $(PythonParser)/Parse3.py                                             h3p.py
+	ln -s $(PythonParser)/DualExpressionStatement.py                            h2es.py
 	ln -s $(PythonParser)/PrefixedDualStatement.py                              h2ps.py
 	ln -s $(PythonParser)/DualStatement.py                                      h2s.py
 	ln -s $(PythonParser)/DualToken.py                                          h2t.py
 	ln -s $(PythonParser)/TernaryExpression.py                                  h3e.py
+	ln -s $(PythonParser)/Parse3.py                                             h3p.py
 	ln -s $(PythonParser)/TripleStatement.py                                    h3s.py
 	ln -s $(PythonParser)/TripleToken.py                                        h3t.py
 	ln -s $(PythonParser)/QuadrupleFrill.py                                     h4f.py
@@ -468,7 +470,6 @@ links:
 	ln -s $(PythonParser)/BookcaseExpression.py                                 hk.py
 	ln -s $(PythonParser)/TokenCache.py                                         hkc.py
 	ln -s $(PythonParser)/BookcaseDualExpression.py                             hkd.py
-	ln -s $(PythonParser)/BookcaseDualStatement.py                              hkds.py
 	ln -s $(PythonParser)/BookcaseManyFrill.py                                  hkf.py
 	ln -s $(PythonParser)/BookcaseKeywordStatement.py                           hkk.py
 	ln -s $(PythonParser)/BookcaseKeywordDualStatement.py                       hkkd.py
@@ -526,6 +527,7 @@ links:
 	ln -s $(Capital)/Map.py                                                     map.py
 	ln -s $(Capital)/Method.py                                                  me.py
 	ln -s $(Capital)/Output.py                                                  o.py
+	ln -s $(CoreParser)/DualExpressionStatement.py                              p2es.py
 	ln -s $(CoreParser)/DualFrill.py                                            p2f.py
 	ln -s $(CoreParser)/TripleFrill.py                                          p3f.py
 	ln -s $(CoreParser)/DualTwig.py                                             p2w.py
@@ -564,7 +566,9 @@ links:
 	ln -s $(SqlParser)/Pattern.py                                               qp.py
 	ln -s $(SqlParser)/Statement.py                                             qs.py
 	ln -s $(TremoliteParser)/Parse.py                                           r0p.py
+	ln -s $(TremoliteParser)/DualExpressionStatement.py                         r2es.py
 	ln -s $(TremoliteParser)/Parse1.py                                          r1p.py
+	ln -s $(TremoliteParser)/Tokenize1Atom.py                                   r1za.py
 	ln -s $(Restructure)/CreateMatch.py                                         rcm.py
 	ln -s $(TremoliteParser)/Core.py                                            rcr.py
 	ln -s $(Restructure)/Core.py                                                rcr2.py
