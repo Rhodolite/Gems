@@ -3,6 +3,7 @@
 #
 $(CoreParser)/ActionWord.py                     paw.py
 $(CoreParser)/Atom.py                           pat.py
+$(CoreParser)/BinaryExpression.py               pbe.py
 $(CoreParser)/BookcaseCoupleTwig.py             pk2c.py
 $(CoreParser)/BookcaseDualTwig.py               pk2.py
 $(CoreParser)/Cache.py                          pca.py
@@ -49,8 +50,10 @@ $(TremoliteParser)/DualExpressionStatement.py   r2es.py
 $(TremoliteParser)/Elemental.py                 rel.py
 $(TremoliteParser)/Main.py                      rma.py
 $(TremoliteParser)/Match.py                     rmc.py
-$(TremoliteParser)/Parse1.py                    r1p.py
-$(TremoliteParser)/Parse.py                     r0p.py
+$(TremoliteParser)/ParseAtom.py                 rpa.py
+$(TremoliteParser)/ParseExpression.py           rpe.py
+$(TremoliteParser)/Parse.py                     rpr.py
 $(TremoliteParser)/Pattern.py                   rp.py
 $(TremoliteParser)/Statement.py                 rs.py
-$(TremoliteParser)/Tokenize1Atom.py             r1za.py
+$(TremoliteParser)/TokenizeAtom.py              rza.py
+$(TremoliteParser)/TokenizeOperator.py          rzo.py
