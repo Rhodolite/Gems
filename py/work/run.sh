@@ -34,7 +34,6 @@ done
 
 Main_py=../Old/Beryl/Main.py
 Main_py=../Other/Chess5x2/Main.py
-Main_py=../Other/LockFree/Main.py
 Main_py=../Other/Mothballed/Rubber/Main.py
 Main_py=../Other/MultiProcessingExample/Main.py
 Main_py=../PPK/KeyExample/Main.py
@@ -46,6 +45,7 @@ Main_py=../Parser/Mothballed/JavaParser/Main.py
 Main_py=../Parser/Mothballed/SqlParser/Main.py
 Main_py=../Tremolite/TremoliteParser/Main.py
 Main_py=../Parser/PythonParser/Main.py
+Main_py=../Other/LockFree/Main.py
 
 show=2
 all=false
