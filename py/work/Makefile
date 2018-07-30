@@ -74,7 +74,7 @@ CoreParser = ../Parser/CoreParser
 
 CoreParser_Files = \
     $(CoreParser)/ActionWord.py $(CoreParser)/Atom.py \
-	$(CoreParser)/BookcaseCoupleTwig.py $(CoreParser)/BookcaseDualTwig.py \
+	$(CoreParser)/BinaryExpression.py $(CoreParser)/BookcaseCoupleTwig.py $(CoreParser)/BookcaseDualTwig.py \
     $(CoreParser)/Cache.py $(CoreParser)/ClassOrder.py $(CoreParser)/Core.py $(CoreParser)/CrystalComment.py \
         $(CoreParser)/CrystalIndentation.py $(CoreParser)/CreateMeta.py \
     $(CoreParser)/DualExpressionStatement.py $(CoreParser)/DualFrill.py $(CoreParser)/DualTwig.py \
@@ -252,9 +252,10 @@ TremoliteParser_Files = \
     $(TremoliteParser)/Development.py $(TremoliteParser)/DualExpressionStatement.py \
     $(TremoliteParser)/Elemental.py \
     $(TremoliteParser)/Main.py \
-    $(TremoliteParser)/Parse.py $(TremoliteParser)/Parse1.py $(TremoliteParser)/Pattern.py \
+    $(TremoliteParser)/Parse.py $(TremoliteParser)/ParseAtom.py $(TremoliteParser)/ParseExpression.py \
+        $(TremoliteParser)/Pattern.py \
     $(TremoliteParser)/Statement.py \
-    $(TremoliteParser)/Tokenize1Atom.py \
+    $(TremoliteParser)/TokenizeAtom.py $(TremoliteParser)/TokenizeOperator.py
 
 TremoliteParser_Generated = \
     $(TremoliteParser)/Match.py \
@@ -278,6 +279,9 @@ UnitTest_Generated = \
         $(UnitTest)/GeneratedConjureTriple.py $(UnitTest)/GeneratedNew.py \
     $(UnitTest)/OldConjureQuadruple.py \
 
+
+Work_Duplicates = \
+    m1
 
 Work_Files = \
     Makefile \
@@ -305,7 +309,7 @@ Files = \
     $(SqlParser_Generated) $(SqlParser_Files) \
     $(TremoliteParser_Generated) $(TremoliteParser_Files) \
     $(UnitTest_Generated) $(UnitTest_Files) \
-    $(Work_Files) \
+    $(Work_Duplicates) $(Work_Files) \
 
 
 all: clean files links
@@ -341,12 +345,13 @@ clean:
 	rm -f   m2ch.py m2cr.py m2d.py m2m.py m2ma.py m3m.py
 	rm -f   map.py me.py
 	rm -f o.py
-	rm -f p2es.py p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pca.py pcc.py pco.py pcr.py
+	rm -f p2es.py p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pbe.py pca.py pcc.py pco.py pcr.py
 	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c.py pkc.py
 	rm -f   pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
 	rm -f q1p.py qcm.py qcr.py qj.py ql.py qma.py qmc.py qp.py qs.py
-	rm -f r0p.py r1es.py r1p.py r1za.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
-	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rs.py ru.py rxc.py rxcr.py rxp.py rxw.py
+	rm -f r1es.py r2es.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
+	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rpa.py rpe.py rpr.py
+	rm -f   rs.py ru.py rxc.py rxcr.py rxp.py rxw.py rza.py rzo.py
 	rm -f sl.py so.py ssio.py sy.py
 	rm -f t.java t1.py t2.py tb.py th.py
 	rm -f uc.py ud.py ue.py um.py
@@ -478,8 +483,8 @@ links:
 	ln -s $(PythonParser)/BookcaseStatement.py                                  hks.py
 	ln -s $(PythonParser)/BookcaseTriple.py                                     hkt.py
 	ln -s $(PythonParser)/Main.py                                               hma.py
-	ln -s ../bin/.pyxie/hma.py                                                  hma1.py
-	ln -s ../bin/.pyxie/hma2.py                                                 hma2.py
+	ln -s ../../bin/.pyxie/hma.py                                               hma1.py
+	ln -s ../../bin/.pyxie/hma2.py                                              hma2.py
 	ln -s $(PythonParser)/Match.py                                              hmc.py
 	ln -s $(PythonParser)/MosiacDefinition.py                                   hmd.py
 	ln -s $(PythonParser)/MemberExpression.py                                   hme.py
@@ -536,6 +541,7 @@ links:
 	ln -s $(CoreParser)/Atom.py                                                 pat.py
 	ln -s $(Capital)/Path.py                                                    path.py
 	ln -s $(CoreParser)/ActionWord.py                                           paw.py
+	ln -s $(CoreParser)/BinaryExpression.py                                     pbe.py
 	ln -s $(CoreParser)/Cache.py                                                pca.py
 	ln -s $(CoreParser)/CreateMeta.py                                           pcc.py
 	ln -s $(CoreParser)/ClassOrder.py                                           pco.py
@@ -565,10 +571,7 @@ links:
 	ln -s $(SqlParser)/Match.py                                                 qmc.py
 	ln -s $(SqlParser)/Pattern.py                                               qp.py
 	ln -s $(SqlParser)/Statement.py                                             qs.py
-	ln -s $(TremoliteParser)/Parse.py                                           r0p.py
 	ln -s $(TremoliteParser)/DualExpressionStatement.py                         r2es.py
-	ln -s $(TremoliteParser)/Parse1.py                                          r1p.py
-	ln -s $(TremoliteParser)/Tokenize1Atom.py                                   r1za.py
 	ln -s $(Restructure)/CreateMatch.py                                         rcm.py
 	ln -s $(TremoliteParser)/Core.py                                            rcr.py
 	ln -s $(Restructure)/Core.py                                                rcr2.py
@@ -583,12 +586,17 @@ links:
 	ln -s $(Restructure)/Match.py                                               rmc2.py
 	ln -s $(Restructure)/Name.py                                                rn.py
 	ln -s $(TremoliteParser)/Pattern.py                                         rp.py
+	ln -s $(TremoliteParser)/ParseAtom.py                                       rpa.py
+	ln -s $(TremoliteParser)/ParseExpression.py                                 rpe.py
+	ln -s $(TremoliteParser)/Parse.py                                           rpr.py
 	ln -s $(TremoliteParser)/Statement.py                                       rs.py
 	ln -s $(Restructure)/Build.py                                               ru.py
 	ln -s $(Rex)/Compile.py                                                     rxc.py
 	ln -s $(Rex)/Core.py                                                        rxcr.py
 	ln -s $(Rex)/Parse.py                                                       rxp.py
 	ln -s $(Rex)/PatternWrapper.py                                              rxw.py
+	ln -s $(TremoliteParser)/TokenizeAtom.py                                    rza.py
+	ln -s $(TremoliteParser)/TokenizeOperator.py                                rzo.py
 	ln -s $(Capital)/Sleep.py                                                   sl.py
 	ln -s $(Capital)/StringOutput.py                                            so.py
 	ln -s $(Capital)/SimpleStringIO.py                                          ssio.py
