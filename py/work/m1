@@ -19,15 +19,21 @@ $(CoreParser)/DumpToken.py                      pdt.py
 $(CoreParser)/Elemental.py                      pem.py
 $(CoreParser)/EmptyLine.py                      pel.py
 $(CoreParser)/LineMarker.py                     pl.py
+$(CoreParser)/ManyExpression.py                 pmx.py
+$(CoreParser)/ManyFrill.py                      pmf.py
 $(CoreParser)/Method.py                         pm.py
 $(CoreParser)/Nub.py                            pn.py
 $(CoreParser)/ParserToken.py                    pyk.py
 $(CoreParser)/ParserTrunk.py                    pyt.py
-$(CoreParser)/TestTree.py                       ptt.py
+$(CoreParser)/QuadrupleFrill.py                 p4f.py
+$(CoreParser)/QuadrupleTwig.py                  p4w.py
+$(CoreParser)/TestTree.py                       pte.py
 $(CoreParser)/TokenCache.py                     pkc.py
 $(CoreParser)/Tokenizer.py                      pf.py
+$(CoreParser)/TokenTuple.py                     ptt.py
 $(CoreParser)/TripleFrill.py                    p3f.py
 $(CoreParser)/TripleTwig.py                     p3w.py
+$(CoreParser)/TupleOfExpression.py              pto.py
 
 $(Restructure)/Build.py                         ru.py
 $(Restructure)/Core.py                          rcr2.py

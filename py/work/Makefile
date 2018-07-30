@@ -82,11 +82,12 @@ CoreParser_Files = \
     $(CoreParser)/Elemental.py \
     $(CoreParser)/EmptyLine.py \
     $(CoreParser)/LineMarker.py \
-    $(CoreParser)/Method.py \
+    $(CoreParser)/ManyExpression.py $(CoreParser)/ManyFrill.py $(CoreParser)/Method.py \
     $(CoreParser)/Nub.py \
     $(CoreParser)/ParserToken.py $(CoreParser)/ParserTrunk.py \
-    $(CoreParser)/TokenCache.py $(CoreParser)/Tokenizer.py $(CoreParser)/TestTree.py $(CoreParser)/TripleFrill.py \
-        $(CoreParser)/TripleTwig.py \
+    $(CoreParser)/QuadrupleFrill.py $(CoreParser)/QuadrupleTwig.py \
+    $(CoreParser)/TokenCache.py $(CoreParser)/TokenTuple.py $(CoreParser)/Tokenizer.py $(CoreParser)/TestTree.py \
+        $(CoreParser)/TripleFrill.py $(CoreParser)/TripleTwig.py $(CoreParser)/TupleOfExpression.py \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -158,25 +159,21 @@ PythonParser_Files = \
     $(PythonParser)/DefinitionHeader.py $(PythonParser)/Development.py $(PythonParser)/DualExpressionStatement.py \
         $(PythonParser)/DualStatement.py $(PythonParser)/DualToken.py \
     $(PythonParser)/Elemental.py \
-    $(PythonParser)/Main.py $(PythonParser)/ManyExpression.py $(PythonParser)/ManyFrill.py \
-        $(PythonParser)/MemberExpression.py $(PythonParser)/Method.py $(PythonParser)/MosiacDefinition.py \
-        $(PythonParser)/MosiacSymbol.py \
+    $(PythonParser)/Main.py $(PythonParser)/ManyExpression.py $(PythonParser)/MemberExpression.py \
+        $(PythonParser)/Method.py $(PythonParser)/MosiacDefinition.py $(PythonParser)/MosiacSymbol.py \
     $(PythonParser)/Parse.py \
         $(PythonParser)/Parse1.py $(PythonParser)/Parse1Atom.py $(PythonParser)/Tokenize1Header.py \
         $(PythonParser)/Parse1Call.py $(PythonParser)/Parse1Complex.py $(PythonParser)/Parse1Expression.py \
         $(PythonParser)/Parse1ExpressionStatement.py $(PythonParser)/Parse1From.py \
         $(PythonParser)/Parse1Function.py $(PythonParser)/Parse1Import.py $(PythonParser)/Parse1Simple.py \
-        $(PythonParser)/Parse3.py $(PythonParser)/PostfixExpression.py $(PythonParser)/PrefixedDualStatement.py \
-        $(PythonParser)/Priority.py \
+        $(PythonParser)/Parse3.py $(PythonParser)/Path.py $(PythonParser)/PostfixExpression.py \
+        $(PythonParser)/PrefixedDualStatement.py $(PythonParser)/Priority.py \
     $(PythonParser)/Pattern.py \
-    $(PythonParser)/QuadrupleFrill.py $(PythonParser)/QuadrupleStatement.py $(PythonParser)/QuadrupleToken.py \
-        $(PythonParser)/QuadrupleTwig.py \
+    $(PythonParser)/QuadrupleStatement.py $(PythonParser)/QuadrupleToken.py \
     $(PythonParser)/Suite.py $(PythonParser)/SymbolTable.py \
-    $(PythonParser)/TernaryExpression.py $(PythonParser)/TokenCache.py $(PythonParser)/TokenTuple.py \
-        $(PythonParser)/Tokenize1Atom.py $(PythonParser)/Tokenize1Name.py \
-        $(PythonParser)/Tokenize1Operator.py $(PythonParser)/TripleStatement.py \
+    $(PythonParser)/TernaryExpression.py $(PythonParser)/TokenCache.py $(PythonParser)/Tokenize1Atom.py \
+        $(PythonParser)/Tokenize1Name.py $(PythonParser)/Tokenize1Operator.py $(PythonParser)/TripleStatement.py \
         $(PythonParser)/TripleToken.py \
-        $(PythonParser)/TupleOfExpression.py \
     $(PythonParser)/UnaryExpression.py \
     $(PythonParser)/Whitespace.py \
     $(PythonParser)/Transform.py \
@@ -332,24 +329,25 @@ clean:
 	rm -f     h1za.py h1zh.py h1zn.py h1zo.py
 	rm -f   h2es.py h2ps.py h2s.py h2s.py h2t.py
 	rm -f   h3e.py h3p.py h3s.py h3t.py
-	rm -f   h4f.py h4s.py h4t.py h4w.py
-	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcr.py hcs.py hd.py hdh.py hel.py
+	rm -f   h4s.py h4t.py
+	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcr.py hcs.py hd.py hdh.py hem.py
 	rm -f   hk.py hkc.py hkd.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
-	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hme.py hmf.py hmo.py hmx.py hmy.py hpr.py hpt.py hs.py
-	rm -f   hto.py htt.py hu.py hv.py hwy.py hx.py hy.py
+	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py hpa.py hpr.py hpt.py hs.py
+	rm -f   hu.py hv.py hwy.py hx.py hy.py
 	rm -f in.py im.py io.py
 	rm -f j0p.py j1p.py jb.py jcr.py jma.py jmc.py jp.py
 	rm -f ke.py km.py kr.py
 	rm -f l.txt lpm.py lr1.txt
 	rm -f m
 	rm -f   m2ch.py m2cr.py m2d.py m2m.py m2ma.py m3m.py
-	rm -f   map.py me.py
+	rm -f   map.py md.py
 	rm -f o.py
-	rm -f p2es.py p2f.py p2w.py pa2.py p3f.py p3w.py pat.py path.py paw.py pbe.py pca.py pcc.py pco.py pcr.py
+	rm -f p2es.py p2f.py p2w.py pa2.py p3f.py p3w.py p4f.py p4w.py
+	rm -f   pat.py path.py paw.py pbe.py pca.py pcc.py pco.py pcr.py
 	rm -f   pdt.py pel.py pem.py pf.py pk2.py pk2c.py pkc.py
-	rm -f   pl.py pm.py pn.py ps3.py ptt.py pyc.py pyi.py pyk.py pyt.py
+	rm -f   pl.py pmd.py pmf.py pmx.py pn.py ps3.py pte.py pto.py ptt.py pyc.py pyi.py pyk.py pyt.py
 	rm -f q1p.py qcm.py qcr.py qj.py ql.py qma.py qmc.py qp.py qs.py
-	rm -f r1es.py r2es.py rcm.py rcr.py rcr2.py rd.py re.py rel.py rlp.txt rlr.txt
+	rm -f r1es.py r2es.py rcm.py rcr.py rcr2.py rd.py re.py rem.py rlp.txt rlr.txt
 	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rpa.py rpe.py rpr.py
 	rm -f   rs.py ru.py rxc.py rxcr.py rxp.py rxw.py rza.py rzo.py
 	rm -f sl.py so.py ssio.py sy.py
@@ -456,10 +454,8 @@ links:
 	ln -s $(PythonParser)/Parse3.py                                             h3p.py
 	ln -s $(PythonParser)/TripleStatement.py                                    h3s.py
 	ln -s $(PythonParser)/TripleToken.py                                        h3t.py
-	ln -s $(PythonParser)/QuadrupleFrill.py                                     h4f.py
 	ln -s $(PythonParser)/QuadrupleStatement.py                                 h4s.py
 	ln -s $(PythonParser)/QuadrupleToken.py                                     h4t.py
-	ln -s $(PythonParser)/QuadrupleTwig.py                                      h4w.py
 	ln -s $(PythonParser)/Atom.py                                               hat.py
 	ln -s $(PythonParser)/BinaryExpression.py                                   hbe.py
 	ln -s $(PythonParser)/BuildSymbolTable.py                                   hby.py
@@ -471,7 +467,7 @@ links:
 	ln -s $(PythonParser)/Core.py                                               hcr.py
 	ln -s $(PythonParser)/Development.py                                        hd.py
 	ln -s $(PythonParser)/DefinitionHeader.py                                   hdh.py
-	ln -s $(PythonParser)/Elemental.py                                          hel.py
+	ln -s $(PythonParser)/Elemental.py                                          hem.py
 	ln -s $(PythonParser)/BookcaseExpression.py                                 hk.py
 	ln -s $(PythonParser)/TokenCache.py                                         hkc.py
 	ln -s $(PythonParser)/BookcaseDualExpression.py                             hkd.py
@@ -486,17 +482,15 @@ links:
 	ln -s ../../bin/.pyxie/hma.py                                               hma1.py
 	ln -s ../../bin/.pyxie/hma2.py                                              hma2.py
 	ln -s $(PythonParser)/Match.py                                              hmc.py
-	ln -s $(PythonParser)/MosiacDefinition.py                                   hmd.py
+	ln -s $(PythonParser)/Method.py                                             hmd.py
+	ln -s $(PythonParser)/MosiacDefinition.py                                   hmdf.py
 	ln -s $(PythonParser)/MemberExpression.py                                   hme.py
-	ln -s $(PythonParser)/ManyFrill.py                                          hmf.py
-	ln -s $(PythonParser)/Method.py                                             hmo.py
 	ln -s $(PythonParser)/ManyExpression.py                                     hmx.py
 	ln -s $(PythonParser)/MosiacSymbol.py                                       hmy.py
+	ln -s $(PythonParser)/Path.py                                               hpa.py
 	ln -s $(PythonParser)/Priority.py                                           hpr.py
 	ln -s $(PythonParser)/Pattern.py                                            hpt.py
 	ln -s $(PythonParser)/Suite.py                                              hs.py
-	ln -s $(PythonParser)/TupleOfExpression.py                                  hto.py
-	ln -s $(PythonParser)/TokenTuple.py                                         htt.py
 	ln -s $(PythonParser)/UnaryExpression.py                                    hu.py
 	ln -s $(PythonParser)/Variable.py                                           hv.py
 	ln -s $(PythonParser)/Whitespace.py                                         hwy.py
@@ -530,13 +524,15 @@ links:
 	ln -s $(MultiProcessingExample)/Multiprocessing.py                          m2m.py
 	ln -s $(MultiProcessingExample)/Main.py                                     m2ma.py
 	ln -s $(Capital)/Map.py                                                     map.py
-	ln -s $(Capital)/Method.py                                                  me.py
+	ln -s $(Capital)/Method.py                                                  md.py
 	ln -s $(Capital)/Output.py                                                  o.py
 	ln -s $(CoreParser)/DualExpressionStatement.py                              p2es.py
 	ln -s $(CoreParser)/DualFrill.py                                            p2f.py
 	ln -s $(CoreParser)/TripleFrill.py                                          p3f.py
 	ln -s $(CoreParser)/DualTwig.py                                             p2w.py
 	ln -s $(CoreParser)/TripleTwig.py                                           p3w.py
+	ln -s $(CoreParser)/QuadrupleFrill.py                                       p4f.py
+	ln -s $(CoreParser)/QuadrupleTwig.py                                        p4w.py
 	ln -s $(Capital)/Path2.py                                                   pa2.py
 	ln -s $(CoreParser)/Atom.py                                                 pat.py
 	ln -s $(Capital)/Path.py                                                    path.py
@@ -554,10 +550,14 @@ links:
 	ln -s $(CoreParser)/BookcaseCoupleTwig.py                                   pk2c.py
 	ln -s $(CoreParser)/TokenCache.py                                           pkc.py
 	ln -s $(CoreParser)/LineMarker.py                                           pl.py
-	ln -s $(CoreParser)/Method.py                                               pm.py
+	ln -s $(CoreParser)/Method.py                                               pmd.py
+	ln -s $(CoreParser)/ManyFrill.py                                            pmf.py
+	ln -s $(CoreParser)/ManyExpression.py                                       pmx.py
 	ln -s $(CoreParser)/Nub.py                                                  pn.py
 	ln -s ../Old/Junk/PortrayString_3.py                                        ps3.py
-	ln -s $(CoreParser)/TestTree.py                                             ptt.py
+	ln -s $(CoreParser)/TestTree.py                                             pte.py
+	ln -s $(CoreParser)/TupleOfExpression.py                                    pto.py
+	ln -s $(CoreParser)/TokenTuple.py                                           ptt.py
 	ln -s $(CoreParser)/CrystalComment.py                                       pyc.py
 	ln -s $(CoreParser)/CrystalIndentation.py                                   pyi.py
 	ln -s $(CoreParser)/ParserToken.py                                          pyk.py
@@ -577,7 +577,7 @@ links:
 	ln -s $(Restructure)/Core.py                                                rcr2.py
 	ln -s $(TremoliteParser)/Development.py                                     rd.py
 	ln -s $(Capital)/RegularExpression.py                                       re.py
-	ln -s $(TremoliteParser)/Elemental.py                                       rel.py
+	ln -s $(TremoliteParser)/Elemental.py                                       rem.py
 	ln -s ../Tremolite/OtherLicenses/LicenseTemplate.txt                        rlp.txt
 	ln -s ../Tremolite/OtherLicenses/README.txt                                 rlr.txt
 	ln -s $(TremoliteParser)/Main.py                                            rma.py
