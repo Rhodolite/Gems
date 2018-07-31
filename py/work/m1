@@ -8,7 +8,6 @@ $(CoreParser)/BookcaseCoupleTwig.py             pk2c.py
 $(CoreParser)/BookcaseDualTwig.py               pk2.py
 $(CoreParser)/Cache.py                          pca.py
 $(CoreParser)/ClassOrder.py                     pco.py
-$(CoreParser)/Core.py                           pcr.py
 $(CoreParser)/CreateMeta.py                     pcc.py
 $(CoreParser)/CrystalComment.py                 pyc.py
 $(CoreParser)/CrystalIndentation.py             pyi.py
@@ -31,29 +30,30 @@ $(CoreParser)/TestTree.py                       pte.py
 $(CoreParser)/TokenCache.py                     pkc.py
 $(CoreParser)/Tokenizer.py                      pf.py
 $(CoreParser)/TokenTuple.py                     ptt.py
+$(CoreParser)/__init__.py                       pz.py
 $(CoreParser)/TripleFrill.py                    p3f.py
 $(CoreParser)/TripleTwig.py                     p3w.py
 $(CoreParser)/TupleOfExpression.py              pto.py
 
 $(Restructure)/Build.py                         ru.py
-$(Restructure)/Core.py                          rcr2.py
 $(Restructure)/CreateMatch.py                   rcm.py
 $(Restructure)/Main.py                          rma2.py
 $(Restructure)/Match.py                         rmc2.py
 $(Restructure)/Name.py                          rn.py
+$(Restructure)/__init__.py                      rz2.py
 
 $(Rex)/Compile.py                               rxc.py
-$(Rex)/Core.py                                  rxcr.py
 $(Rex)/Parse.py                                 rxp.py
 $(Rex)/PatternWrapper.py                        rxw.py
+$(Rex)/__init__.py                              rxz.py
 
 ../Tremolite/OtherLicenses/LicenseTemplate.txt  rlp.txt
 ../Tremolite/OtherLicenses/README.txt           rlr.txt
 
-$(TremoliteParser)/Core.py                      rcr.py
 $(TremoliteParser)/Development.py               rd.py
 $(TremoliteParser)/DualExpressionStatement.py   r2es.py
 $(TremoliteParser)/Elemental.py                 rel.py
+$(TremoliteParser)/__init__.py                  rz.py
 $(TremoliteParser)/Main.py                      rma.py
 $(TremoliteParser)/Match.py                     rmc.py
 $(TremoliteParser)/ParseAtom.py                 rpa.py
