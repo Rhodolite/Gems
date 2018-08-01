@@ -1,27 +1,30 @@
+[submodule "Gem-doc-agenda"]
+	path = doc/Agenda
+	url = git@gitlab.com:gemsmiths/Gem-doc-agenda
 [submodule "Gem.java.Mirror"]
 	path = java/Mirror
-	url = git@gitlab.com:gemsmiths/languagedevs/gemdevs/Gem.java.Mirror
+	url = git@gitlab.com:gemsmiths/language-devs/silver-devs/java-mirror
 [submodule "Gem.js.Opal"]
 	path = js/Opal
-	url = git@gitlab.com:gemsmiths/Gem.js.Opal
+	url = git@gitlab.com:gemsmiths/system-devs/opal
 [submodule "Gem.py.Gem"]
 	path = py/Gem
-	url = git@gitlab.com:gemsmiths/Gem.py.Gem
+	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/python-gem
 [submodule "Gem.py.Old"]
 	path = py/Old
-	url = git@gitlab.com:gemsmiths/Gem.py.Old
+	url = git@gitlab.com:gemsmiths/mothball/Gem.py.Old
 [submodule "Gem.py.Other"]
 	path = py/Other
-	url = git@gitlab.com:gemsmiths/Gem.py.Other
+	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/Gem.py.Other
 [submodule "Gem.py.Parser"]
 	path = py/Parser
-	url = git@gitlab.com:gemsmiths/Gem.py.Parser
+	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/Gem.py.Parser
 [submodule "Gem.py.PPK"]
 	path = py/PPK
-	url = git@gitlab.com:gemsmiths/Gem.py.PPK
+	url = git@gitlab.com:gemsmiths/quarantine/Gem.py.PPK
 [submodule "Gem.py.Tremolite"]
 	path = py/Tremolite
 	url = git@gitlab.com:gemsmiths/languagedevs/Gem.py.Tremolite
 [submodule "Gem.py.UnitTest"]
 	path = py/UnitTest
-	url = git@gitlab.com:gemsmiths/Gem.py.UnitTest
+	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/Gem.py.UnitTest
