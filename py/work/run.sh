@@ -32,20 +32,19 @@ do
     trap "trap $i; rm -f $tmp1 $tmp2 $tmp3; kill -$i $$; exit $i" $i
 done
 
-Main_py=show.py
-Main_py=../Beryl/Main.py
-Main_py=../Ivory/Main.py
-Main_py=../Tremolite/Main.py
-Main_py=../Quartz/Main.py
-Main_py=../Dravite/Main.py
-Main_py=../Crystal/Main.py
-Main_py=../Topaz/Main.py
-Main_py=../Onyx/Main.py
-Main_py=../Diamond/Main.py
-Main_py=../Jasper/Main.py
-Main_py=../Sapphire/Main.py
-Main_py=../Melanite/Main.py
-Main_py=../Marble/Main.py
+Main_py=../Old/Beryl/Main.py
+Main_py=../Other/Chess5x2/Main.py
+Main_py=../Other/CodeGenerator/Main.py
+Main_py=../Other/LockFree/Main.py
+Main_py=../Other/Mothballed/LearningPython/Main.py
+Main_py=../Other/Mothballed/Rubber/Main.py
+Main_py=../Other/MultiProcessingExample/Main.py
+Main_py=../Parser/Mothballed/JavaParser/Main.py
+Main_py=../Parser/Mothballed/SqlParser/Main.py
+Main_py=../Parser/PythonParser/Main.py
+Main_py=../PPK/KeyExample/Main.py
+Main_py=../Tremolite/TremoliteParser/Main.py
+Main_py=../UnitTest/UnitTest/Main.py
 
 show=2
 all=false
