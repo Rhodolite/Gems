@@ -2,4 +2,4 @@
 
 language pattern
 
-joy := 'joy'
+joy := 'joy' #+ ' '
