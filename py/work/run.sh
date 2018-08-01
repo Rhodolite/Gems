@@ -4,10 +4,20 @@
 set -e$-
 
 usage=false
+Main_py=pick
 
 case $# in
-  0) ;;
-  1) usage=true ;;
+    0) ;;
+
+    1)
+        case "$1" in
+            h) Main_py=../Parser/PythonParser/Main.py ;;
+            r) Main_py=../Tremolite/TremoliteParser/Main.py ;;
+            *) usage=true ;;
+        esac
+        ;;
+
+    *) usage=true ;;
 esac
 
 if $usage
@@ -32,20 +42,22 @@ do
     trap "trap $i; rm -f $tmp1 $tmp2 $tmp3; kill -$i $$; exit $i" $i
 done
 
-Main_py=../Old/Beryl/Main.py
-Main_py=../Other/Chess5x2/Main.py
-Main_py=../Other/Mothballed/Rubber/Main.py
-Main_py=../Other/MultiProcessingExample/Main.py
-Main_py=../PPK/KeyExample/Main.py
-Main_py=../Other/CodeGenerator/Main.py
-Main_py=../ErrorCorrecting/Remedy/Main.py
-Main_py=../Other/LearningPython/Main.py
-Main_py=../UnitTest/UnitTest/Main.py
-Main_py=../Parser/Mothballed/JavaParser/Main.py
-Main_py=../Parser/Mothballed/SqlParser/Main.py
-Main_py=../Tremolite/TremoliteParser/Main.py
-Main_py=../Parser/PythonParser/Main.py
-Main_py=../Other/LockFree/Main.py
+if [ Main_py -eq pick ]; then
+    Main_py=../Old/Beryl/Main.py
+    Main_py=../Other/Chess5x2/Main.py
+    Main_py=../Other/Mothballed/Rubber/Main.py
+    Main_py=../Other/MultiProcessingExample/Main.py
+    Main_py=../PPK/KeyExample/Main.py
+    Main_py=../Other/CodeGenerator/Main.py
+    Main_py=../ErrorCorrecting/Remedy/Main.py
+    Main_py=../Other/LearningPython/Main.py
+    Main_py=../UnitTest/UnitTest/Main.py
+    Main_py=../Parser/Mothballed/JavaParser/Main.py
+    Main_py=../Parser/Mothballed/SqlParser/Main.py
+    Main_py=../Parser/PythonParser/Main.py
+    Main_py=../Other/LockFree/Main.py
+    Main_py=../Tremolite/TremoliteParser/Main.py
+fi
 
 show=2
 all=false
