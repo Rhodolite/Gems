@@ -12,6 +12,7 @@ case $# in
     1)
         case "$1" in
             h) Main_py=../Parser/PythonParser/Main.py ;;
+            j) Main_py=../Parser/Mothballed/JavaParser/Main.py ;;
             r) Main_py=../Tremolite/TremoliteParser/Main.py ;;
             z) Main_py=../UnitTest/UnitTest/Main.py ;;
             *) usage=true ;;

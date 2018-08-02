@@ -6,4 +6,5 @@
 language pattern                                #   Easier to read than 'language tremolite'
 
 space := ' '                                    #   Just a simple space
-joy   := 'J'..'y' + space + 'A'..'Z'            #   me!
+joy   := 'Joy' + space + 'A'..'Z'               #   me!
+#paren := ('ok')
