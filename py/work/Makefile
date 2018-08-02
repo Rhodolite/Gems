@@ -167,19 +167,18 @@ PythonParser_Files = \
     $(PythonParser)/__init__.py \
     $(PythonParser)/Main.py $(PythonParser)/ManyExpression.py $(PythonParser)/MemberExpression.py \
         $(PythonParser)/Method.py $(PythonParser)/MosiacDefinition.py $(PythonParser)/MosiacSymbol.py \
-    $(PythonParser)/Parse.py \
-        $(PythonParser)/Parse1.py $(PythonParser)/Parse1Atom.py $(PythonParser)/Tokenize1Header.py \
-        $(PythonParser)/Parse1Call.py $(PythonParser)/Parse1Complex.py $(PythonParser)/Parse1Expression.py \
-        $(PythonParser)/Parse1ExpressionStatement.py $(PythonParser)/Parse1From.py \
-        $(PythonParser)/Parse1Function.py $(PythonParser)/Parse1Import.py $(PythonParser)/Parse1Simple.py \
+    $(PythonParser)/Parse.py $(PythonParser)/ParseAtom.py $(PythonParser)/ParseCall.py \
+        $(PythonParser)/ParseComplex.py $(PythonParser)/ParseExpression.py \
+        $(PythonParser)/ParseExpressionStatement.py $(PythonParser)/ParseFrom.py \
+        $(PythonParser)/ParseFunction.py $(PythonParser)/ParseImport.py $(PythonParser)/ParseSimple.py \
         $(PythonParser)/Parse3.py $(PythonParser)/Path.py $(PythonParser)/PostfixExpression.py \
         $(PythonParser)/PrefixedDualStatement.py $(PythonParser)/Priority.py \
     $(PythonParser)/Pattern.py \
     $(PythonParser)/QuadrupleStatement.py $(PythonParser)/QuadrupleToken.py \
     $(PythonParser)/Suite.py $(PythonParser)/SymbolTable.py \
-    $(PythonParser)/TernaryExpression.py $(PythonParser)/TokenCache.py $(PythonParser)/Tokenize1Atom.py \
-        $(PythonParser)/Tokenize1Name.py $(PythonParser)/Tokenize1Operator.py $(PythonParser)/TripleStatement.py \
-        $(PythonParser)/TripleToken.py \
+    $(PythonParser)/TernaryExpression.py $(PythonParser)/TokenCache.py $(PythonParser)/TokenizeAtom.py \
+        $(PythonParser)/TokenizeHeader.py $(PythonParser)/TokenizeName.py $(PythonParser)/TokenizeOperator.py \
+        $(PythonParser)/TripleStatement.py $(PythonParser)/TripleToken.py \
     $(PythonParser)/UnaryExpression.py \
     $(PythonParser)/Transform.py \
     $(PythonParser)/Variable.py \
@@ -332,16 +331,14 @@ clean:
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
 	rm -f   gcm.py gdc.py gdm.py gdo.py gga.py ggc.py gg4.py gh2.py gh3.py gh4.py ghe.py ghm.py gho.py
 	rm -f   gi.py gl.py gq.py gr.py gse.py gsq.py
-	rm -f h0p.py
-	rm -f   h1p.py h1pa.py h1pc.py h1pe.py h1pes.py h1pf.py h1pi.py h1pm.py h1ps.py h1px.py
-	rm -f     h1za.py h1zh.py h1zn.py h1zo.py
-	rm -f   h2es.py h2ps.py h2s.py h2s.py h2t.py
+	rm -f h2es.py h2ps.py h2s.py h2s.py h2t.py
 	rm -f   h3e.py h3p.py h3s.py h3t.py
 	rm -f   h4s.py h4t.py
 	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcs.py hd.py hdh.py hem.py
 	rm -f   hk.py hkc.py hkd.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
-	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py hpa.py hpr.py hpt.py hs.py
-	rm -f   hu.py hv.py hx.py hy.py hz.py
+	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py
+	rm -f   hp.py hpa.py hpath.py hpc.py hpe.py hpes.py hpf.py hpi.py hpm.py hpr.py hps.py hpx.py hpy.py
+	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
 	rm -f in.py im.py io.py
 	rm -f j0p.py j1p.py jb.py jma.py jmc.py jp.py jz.py
 	rm -f ke.py km.py kr.py
@@ -438,21 +435,6 @@ links:
 	ln -s $(Capital)/Rabble.py                                                  gr.py
 	ln -s $(Capital)/Series.py                                                  gse.py
 	ln -s $(Capital)/Sequence.py                                                gsq.py
-	ln -s $(PythonParser)/Parse.py                                              h0p.py
-	ln -s $(PythonParser)/Parse1.py                                             h1p.py
-	ln -s $(PythonParser)/Parse1Atom.py                                         h1pa.py
-	ln -s $(PythonParser)/Parse1Call.py                                         h1pc.py
-	ln -s $(PythonParser)/Parse1Expression.py                                   h1pe.py
-	ln -s $(PythonParser)/Parse1ExpressionStatement.py                          h1pes.py
-	ln -s $(PythonParser)/Parse1Function.py                                     h1pf.py
-	ln -s $(PythonParser)/Parse1Import.py                                       h1pi.py
-	ln -s $(PythonParser)/Parse1From.py                                         h1pm.py
-	ln -s $(PythonParser)/Parse1Simple.py                                       h1ps.py
-	ln -s $(PythonParser)/Parse1Complex.py                                      h1px.py
-	ln -s $(PythonParser)/Tokenize1Atom.py                                      h1za.py
-	ln -s $(PythonParser)/Tokenize1Header.py                                    h1zh.py
-	ln -s $(PythonParser)/Tokenize1Name.py                                      h1zn.py
-	ln -s $(PythonParser)/Tokenize1Operator.py                                  h1zo.py
 	ln -s $(PythonParser)/DualExpressionStatement.py                            h2es.py
 	ln -s $(PythonParser)/PrefixedDualStatement.py                              h2ps.py
 	ln -s $(PythonParser)/DualStatement.py                                      h2s.py
@@ -493,15 +475,29 @@ links:
 	ln -s $(PythonParser)/MemberExpression.py                                   hme.py
 	ln -s $(PythonParser)/ManyExpression.py                                     hmx.py
 	ln -s $(PythonParser)/MosiacSymbol.py                                       hmy.py
-	ln -s $(PythonParser)/Path.py                                               hpa.py
-	ln -s $(PythonParser)/Priority.py                                           hpr.py
-	ln -s $(PythonParser)/Pattern.py                                            hpt.py
+	ln -s $(PythonParser)/Pattern.py                                            hp.py
+	ln -s $(PythonParser)/ParseAtom.py                                          hpa.py
+	ln -s $(PythonParser)/Path.py                                               hpath.py
+	ln -s $(PythonParser)/ParseCall.py                                          hpc.py
+	ln -s $(PythonParser)/ParseExpression.py                                    hpe.py
+	ln -s $(PythonParser)/ParseExpressionStatement.py                           hpes.py
+	ln -s $(PythonParser)/ParseImport.py                                        hpi.py
+	ln -s $(PythonParser)/ParseFunction.py                                      hpf.py
+	ln -s $(PythonParser)/ParseFrom.py                                          hpm.py
+	ln -s $(PythonParser)/Parse.py                                              hpr.py
+	ln -s $(PythonParser)/ParseSimple.py                                        hps.py
+	ln -s $(PythonParser)/ParseComplex.py                                       hpx.py
+	ln -s $(PythonParser)/Priority.py                                           hpy.py
 	ln -s $(PythonParser)/Suite.py                                              hs.py
 	ln -s $(PythonParser)/UnaryExpression.py                                    hu.py
 	ln -s $(PythonParser)/Variable.py                                           hv.py
 	ln -s $(PythonParser)/PostfixExpression.py                                  hx.py
 	ln -s $(PythonParser)/SymbolTable.py                                        hy.py
 	ln -s $(PythonParser)/__init__.py                                           hz.py
+	ln -s $(PythonParser)/TokenizeAtom.py                                       hza.py
+	ln -s $(PythonParser)/TokenizeHeader.py                                     hzh.py
+	ln -s $(PythonParser)/TokenizeName.py                                       hzn.py
+	ln -s $(PythonParser)/TokenizeOperator.py                                   hzo.py
 	ln -s $(CodeGenerator)/GenerateAscii.py                                     g1ga.py
 	ln -s $(CodeGenerator)/GenerateTestPortrayString.py                         g1gt.py
 	ln -s $(CodeGenerator)/Main.py                                              g1m.py

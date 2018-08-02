@@ -308,3 +308,6 @@ from    Capital.BuiltIn     import  privileged_2                        #   Capi
     transport('CoreParser.Whitespace',              'conjure_whitespace__ends_in_newline')
     transport('Rex.Compile',                        'compile_regular_expression')
     transport('Rex.Parse',                          'parse_ascii_regular_expression')
+    transport('CoreParser.Elemental',               'OperatorLeftParenthesis')
+    transport('CoreParser.Elemental',               'conjure_left_parenthesis__ends_in_newline')
+    transport('CoreParser.Elemental',               'conjure_left_parenthesis')
