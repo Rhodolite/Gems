@@ -76,6 +76,7 @@ CoreParser = ../Parser/CoreParser
 CoreParser_Files = \
     $(CoreParser)/ActionWord.py $(CoreParser)/Atom.py \
     $(CoreParser)/BinaryExpression.py $(CoreParser)/BookcaseCoupleTwig.py $(CoreParser)/BookcaseDualTwig.py \
+        $(CoreParser)/BookcaseExpression.py \
     $(CoreParser)/Cache.py $(CoreParser)/ClassOrder.py $(CoreParser)/CrystalComment.py \
         $(CoreParser)/CrystalIndentation.py $(CoreParser)/CreateMeta.py \
     $(CoreParser)/DualExpressionStatement.py $(CoreParser)/DualFrill.py $(CoreParser)/DualToken.py \
@@ -335,7 +336,7 @@ clean:
 	rm -f   h3e.py h3p.py h3s.py h3t.py
 	rm -f   h4s.py h4t.py
 	rm -f   hat.py hbe.py hby.py hca.py hcb.py hcc.py hco.py hcs.py hd.py hdh.py hem.py
-	rm -f   hk.py hkc.py hkd.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
+	rm -f   hkc.py hkd.py hke.py hkf.py hkk.py hkkd.py hkm.py hkms.py hks.py hkt.py
 	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py
 	rm -f   hp.py hpa.py hpath.py hpc.py hpe.py hpes.py hpf.py hpi.py hpm.py hpr.py hps.py hpx.py hpy.py
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
@@ -349,7 +350,7 @@ clean:
 	rm -f o.py
 	rm -f p2es.py p2f.py p2t.py p2w.py pa2.py p3f.py p3t.py p3w.py p4f.py p4w.py
 	rm -f   pat.py path.py paw.py pbe.py pca.py pcc.py pco.py pdt.py pel.py pem.py pf.py
-	rm -f   pk2.py pk2c.py pkc.py pl.py pmd.py pmf.py pmx.py pn.py ps3.py pte.py pto.py ptt.py
+	rm -f   pk2.py pk2c.py pkc.py pke.py pl.py pmd.py pmf.py pmx.py pn.py ps3.py pte.py pto.py ptt.py
 	rm -f   pw.py pyc.py pyi.py pyk.py pyt.py pz.py pza.py pzo.py
 	rm -f q1p.py qcm.py qj.py qma.py qmc.py qp.py qs.py qz.py
 	rm -f r2es.py rbe.py rcm.py rd.py re.py rem.py rlp.txt rlr.txt
@@ -456,9 +457,9 @@ links:
 	ln -s $(PythonParser)/Development.py                                        hd.py
 	ln -s $(PythonParser)/DefinitionHeader.py                                   hdh.py
 	ln -s $(PythonParser)/Elemental.py                                          hem.py
-	ln -s $(PythonParser)/BookcaseExpression.py                                 hk.py
 	ln -s $(PythonParser)/TokenCache.py                                         hkc.py
 	ln -s $(PythonParser)/BookcaseDualExpression.py                             hkd.py
+	ln -s $(PythonParser)/BookcaseExpression.py                                 hke.py
 	ln -s $(PythonParser)/BookcaseManyFrill.py                                  hkf.py
 	ln -s $(PythonParser)/BookcaseKeywordStatement.py                           hkk.py
 	ln -s $(PythonParser)/BookcaseKeywordDualStatement.py                       hkkd.py
@@ -553,6 +554,7 @@ links:
 	ln -s $(CoreParser)/BookcaseDualTwig.py                                     pk2.py
 	ln -s $(CoreParser)/BookcaseCoupleTwig.py                                   pk2c.py
 	ln -s $(CoreParser)/TokenCache.py                                           pkc.py
+	ln -s $(CoreParser)/BookcaseExpression.py                                   pke.py
 	ln -s $(CoreParser)/LineMarker.py                                           pl.py
 	ln -s $(CoreParser)/Method.py                                               pmd.py
 	ln -s $(CoreParser)/ManyFrill.py                                            pmf.py

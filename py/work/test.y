@@ -7,4 +7,4 @@ language pattern                                #   Easier to read than 'languag
 
 space := ' '                                    #   Just a simple space
 joy   := 'Joy' + space + 'A'..'Z'               #   me!
-#paren := ('ok')
+paren := ('ok')
