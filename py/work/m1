@@ -23,6 +23,7 @@ $(CoreParser)/Tokenizer.py                      pf.py
 $(CoreParser)/BookcaseDualTwig.py               pk2.py
 $(CoreParser)/BookcaseCoupleTwig.py             pk2c.py
 $(CoreParser)/TokenCache.py                     pkc.py
+$(CoreParser)/BookcaseExpression.py             pke.py
 $(CoreParser)/LineMarker.py                     pl.py
 $(CoreParser)/Method.py                         pmd.py
 $(CoreParser)/ManyFrill.py                      pmf.py
