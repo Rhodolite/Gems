@@ -259,7 +259,7 @@ TremoliteParser_Files = \
     $(TremoliteParser)/Parse.py $(TremoliteParser)/ParseAtom.py $(TremoliteParser)/ParseExpression.py \
         $(TremoliteParser)/Pattern.py \
     $(TremoliteParser)/Statement.py \
-    $(TremoliteParser)/TokenizeAtom.py $(TremoliteParser)/TokenizeOperator.py
+    $(TremoliteParser)/TokenizeAtom.py
 
 TremoliteParser_Generated = \
     $(TremoliteParser)/Match.py \
@@ -324,8 +324,11 @@ clean:
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ab.py ac.py ag.py
-	rm -f ba.py bi.py bk.py bm.py bo.py
-	rm -f ca.py ca2.py cd.py ce.py cr.py
+	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
+	rm -f   bat.py bath.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
+	rm -f   bk2.py bk2c.py bkc.py bke.py bl.py bmd.py bmf.py bmx.py bn.py bs3.py bte.py bto.py btt.py
+	rm -f   bw.py byc.py byi.py byk.py byt.py bz.py bza.py bzo.py
+	rm -f ca.py ca2.py cb.py cd.py ce.py cr.py
 	rm -f dfo.py
 	rm -f ef.py en.py erk.py erm.py ers.py ex.py
 	rm -f files f.py ff.py dfo.py fi.py fm.py fo.py fs.py fsh.py fst.py ft.py fw.py fy.py fz.py
@@ -347,15 +350,11 @@ clean:
 	rm -f m
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
 	rm -f   map.py md.py
-	rm -f o.py
-	rm -f p2es.py p2f.py p2t.py p2w.py pa2.py p3f.py p3t.py p3w.py p4f.py p4w.py
-	rm -f   pat.py path.py paw.py pbe.py pca.py pcc.py pco.py pdt.py pel.py pem.py pf.py
-	rm -f   pk2.py pk2c.py pkc.py pke.py pl.py pmd.py pmf.py pmx.py pn.py ps3.py pte.py pto.py ptt.py
-	rm -f   pw.py pyc.py pyi.py pyk.py pyt.py pz.py pza.py pzo.py
+	rm -f o.py oba.py obi.py obk.py obm.py
 	rm -f q1p.py qcm.py qj.py qma.py qmc.py qp.py qs.py qz.py
 	rm -f r2es.py rbe.py rcm.py rd.py re.py rem.py rlp.txt rlr.txt
 	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rpa.py rpe.py rpr.py
-	rm -f   rs.py ru.py rxc.py rxcr.py rxp.py rxw.py rxz.py rz.py rz2.py rza.py rzo.py
+	rm -f   rs.py ru.py rxc.py rxcr.py rxp.py rxw.py rxz.py rz.py rz2.py rza.py
 	rm -f sl.py so.py ssio.py sy.py
 	rm -f t.java t1.py t2.py tb.py th.py
 	rm -f ud.py ue.py um.py uz.py
@@ -388,13 +387,51 @@ links:
 	ln -s $(Capital)/Absent.py                                                  ab.py
 	ln -s $(Capital)/Ascii.py                                                   ac.py
 	ln -s $(Agate)/RUNME.py                                                     ag.py
-	ln -s $(Beryl)/BerylAnswer.py                                               ba.py
-	ln -s $(Beryl)/__init__.py                                                  bi.py
-	ln -s $(Beryl)/Ask.py                                                       bk.py
-	ln -s $(Beryl)/Main.py                                                      bm.py
-	ln -s $(Capital)/Boot.py                                                    bo.py
+	ln -s $(CoreParser)/DualExpressionStatement.py                              b2es.py
+	ln -s $(CoreParser)/DualFrill.py                                            b2f.py
+	ln -s $(CoreParser)/DualToken.py                                            b2t.py
+	ln -s $(CoreParser)/DualTwig.py                                             b2w.py
+	ln -s $(CoreParser)/TripleFrill.py                                          b3f.py
+	ln -s $(CoreParser)/TripleToken.py                                          b3t.py
+	ln -s $(CoreParser)/TripleTwig.py                                           b3w.py
+	ln -s $(CoreParser)/QuadrupleFrill.py                                       b4f.py
+	ln -s $(CoreParser)/QuadrupleTwig.py                                        b4w.py
+	ln -s $(Capital)/Path2.py                                                   ba2.py
+	ln -s $(CoreParser)/Atom.py                                                 bat.py
+	ln -s $(Capital)/Path.py                                                    bath.py
+	ln -s $(CoreParser)/ActionWord.py                                           baw.py
+	ln -s $(CoreParser)/BinaryExpression.py                                     bbe.py
+	ln -s $(CoreParser)/Cache.py                                                bca.py
+	ln -s $(CoreParser)/CreateMeta.py                                           bcc.py
+	ln -s $(CoreParser)/ClassOrder.py                                           bco.py
+	ln -s $(CoreParser)/DumpToken.py                                            bdt.py
+	ln -s $(CoreParser)/EmptyLine.py                                            bel.py
+	ln -s $(CoreParser)/Elemental.py                                            bem.py
+	ln -s $(CoreParser)/Tokenizer.py                                            bf.py
+	ln -s $(CoreParser)/BookcaseDualTwig.py                                     bk2.py
+	ln -s $(CoreParser)/BookcaseCoupleTwig.py                                   bk2c.py
+	ln -s $(CoreParser)/TokenCache.py                                           bkc.py
+	ln -s $(CoreParser)/BookcaseExpression.py                                   bke.py
+	ln -s $(CoreParser)/LineMarker.py                                           bl.py
+	ln -s $(CoreParser)/Method.py                                               bmd.py
+	ln -s $(CoreParser)/ManyFrill.py                                            bmf.py
+	ln -s $(CoreParser)/ManyExpression.py                                       bmx.py
+	ln -s $(CoreParser)/Nub.py                                                  bn.py
+	ln -s ../Old/Junk/PortrayString_3.py                                        bs3.py
+	ln -s $(CoreParser)/TestTree.py                                             bte.py
+	ln -s $(CoreParser)/TupleOfExpression.py                                    bto.py
+	ln -s $(CoreParser)/TokenTuple.py                                           btt.py
+	ln -s $(CoreParser)/Whitespace.py                                           bw.py
+	ln -s $(CoreParser)/CrystalComment.py                                       byc.py
+	ln -s $(CoreParser)/CrystalIndentation.py                                   byi.py
+	ln -s $(CoreParser)/ParserToken.py                                          byk.py
+	ln -s $(CoreParser)/ParserTrunk.py                                          byt.py
+	ln -s $(CoreParser)/__init__.py                                             bz.py
+	ln -s $(CoreParser)/TokenizeAtom.py                                         bza.py
+	ln -s $(CoreParser)/TokenizeOperator.py                                     bzo.py
 	ln -s $(Capital)/Cache.py                                                   ca.py
 	ln -s $(Capital)/Cache2.py                                                  ca2.py
+	ln -s $(Capital)/Boot.py                                                    cb.py
 	ln -s $(Capital)/Cadence.py                                                 cd.py
 	ln -s $(Capital)/CatchException.py                                          ce.py
 	ln -s $(Capital)/Core.py                                                    cr.py
@@ -436,6 +473,11 @@ links:
 	ln -s $(Capital)/Rabble.py                                                  gr.py
 	ln -s $(Capital)/Series.py                                                  gse.py
 	ln -s $(Capital)/Sequence.py                                                gsq.py
+	ln -s $(CodeGenerator)/GenerateAscii.py                                     g1ga.py
+	ln -s $(CodeGenerator)/GenerateTestPortrayString.py                         g1gt.py
+	ln -s $(CodeGenerator)/Main.py                                              g1m.py
+	ln -s $(CodeGenerator)/NestedConjure.py                                     g1n.py
+	ln -s $(CodeGenerator)/__init__.py                                          g1z.py
 	ln -s $(PythonParser)/DualExpressionStatement.py                            h2es.py
 	ln -s $(PythonParser)/PrefixedDualStatement.py                              h2ps.py
 	ln -s $(PythonParser)/DualStatement.py                                      h2s.py
@@ -499,11 +541,6 @@ links:
 	ln -s $(PythonParser)/TokenizeHeader.py                                     hzh.py
 	ln -s $(PythonParser)/TokenizeName.py                                       hzn.py
 	ln -s $(PythonParser)/TokenizeOperator.py                                   hzo.py
-	ln -s $(CodeGenerator)/GenerateAscii.py                                     g1ga.py
-	ln -s $(CodeGenerator)/GenerateTestPortrayString.py                         g1gt.py
-	ln -s $(CodeGenerator)/Main.py                                              g1m.py
-	ln -s $(CodeGenerator)/NestedConjure.py                                     g1n.py
-	ln -s $(CodeGenerator)/__init__.py                                          g1z.py
 	ln -s $(Capital)/__init__.py                                                in.py
 	ln -s $(Capital)/Import.py                                                  im.py
 	ln -s $(Capital)/IO.py                                                      io.py
@@ -530,48 +567,10 @@ links:
 	ln -s $(Capital)/Map.py                                                     map.py
 	ln -s $(Capital)/Method.py                                                  md.py
 	ln -s $(Capital)/Output.py                                                  o.py
-	ln -s $(CoreParser)/DualExpressionStatement.py                              p2es.py
-	ln -s $(CoreParser)/DualFrill.py                                            p2f.py
-	ln -s $(CoreParser)/DualToken.py                                            p2t.py
-	ln -s $(CoreParser)/DualTwig.py                                             p2w.py
-	ln -s $(CoreParser)/TripleFrill.py                                          p3f.py
-	ln -s $(CoreParser)/TripleToken.py                                          p3t.py
-	ln -s $(CoreParser)/TripleTwig.py                                           p3w.py
-	ln -s $(CoreParser)/QuadrupleFrill.py                                       p4f.py
-	ln -s $(CoreParser)/QuadrupleTwig.py                                        p4w.py
-	ln -s $(Capital)/Path2.py                                                   pa2.py
-	ln -s $(CoreParser)/Atom.py                                                 pat.py
-	ln -s $(Capital)/Path.py                                                    path.py
-	ln -s $(CoreParser)/ActionWord.py                                           paw.py
-	ln -s $(CoreParser)/BinaryExpression.py                                     pbe.py
-	ln -s $(CoreParser)/Cache.py                                                pca.py
-	ln -s $(CoreParser)/CreateMeta.py                                           pcc.py
-	ln -s $(CoreParser)/ClassOrder.py                                           pco.py
-	ln -s $(CoreParser)/DumpToken.py                                            pdt.py
-	ln -s $(CoreParser)/EmptyLine.py                                            pel.py
-	ln -s $(CoreParser)/Elemental.py                                            pem.py
-	ln -s $(CoreParser)/Tokenizer.py                                            pf.py
-	ln -s $(CoreParser)/BookcaseDualTwig.py                                     pk2.py
-	ln -s $(CoreParser)/BookcaseCoupleTwig.py                                   pk2c.py
-	ln -s $(CoreParser)/TokenCache.py                                           pkc.py
-	ln -s $(CoreParser)/BookcaseExpression.py                                   pke.py
-	ln -s $(CoreParser)/LineMarker.py                                           pl.py
-	ln -s $(CoreParser)/Method.py                                               pmd.py
-	ln -s $(CoreParser)/ManyFrill.py                                            pmf.py
-	ln -s $(CoreParser)/ManyExpression.py                                       pmx.py
-	ln -s $(CoreParser)/Nub.py                                                  pn.py
-	ln -s ../Old/Junk/PortrayString_3.py                                        ps3.py
-	ln -s $(CoreParser)/TestTree.py                                             pte.py
-	ln -s $(CoreParser)/TupleOfExpression.py                                    pto.py
-	ln -s $(CoreParser)/TokenTuple.py                                           ptt.py
-	ln -s $(CoreParser)/Whitespace.py                                           pw.py
-	ln -s $(CoreParser)/CrystalComment.py                                       pyc.py
-	ln -s $(CoreParser)/CrystalIndentation.py                                   pyi.py
-	ln -s $(CoreParser)/ParserToken.py                                          pyk.py
-	ln -s $(CoreParser)/ParserTrunk.py                                          pyt.py
-	ln -s $(CoreParser)/__init__.py                                             pz.py
-	ln -s $(CoreParser)/TokenizeAtom.py                                         pza.py
-	ln -s $(CoreParser)/TokenizeOperator.py                                     pzo.py
+	ln -s $(Beryl)/BerylAnswer.py                                               oba.py
+	ln -s $(Beryl)/__init__.py                                                  obi.py
+	ln -s $(Beryl)/Ask.py                                                       obk.py
+	ln -s $(Beryl)/Main.py                                                      obm.py
 	ln -s $(SqlParser)/Parse1.py                                                q1p.py
 	ln -s $(SqlParser)/Comment.py                                               qcm.py
 	ln -s $(SqlParser)/ConjureTreeComment.py                                    qj.py
@@ -606,7 +605,6 @@ links:
 	ln -s $(TremoliteParser)/__init__.py                                        rz.py
 	ln -s $(Restructure)/__init__.py                                            rz2.py
 	ln -s $(TremoliteParser)/TokenizeAtom.py                                    rza.py
-	ln -s $(TremoliteParser)/TokenizeOperator.py                                rzo.py
 	ln -s $(Capital)/Sleep.py                                                   sl.py
 	ln -s $(Capital)/StringOutput.py                                            so.py
 	ln -s $(Capital)/SimpleStringIO.py                                          ssio.py
