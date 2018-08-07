@@ -24,11 +24,14 @@ $(CoreParser)/BookcaseDualTwig.py               bk2.py
 $(CoreParser)/BookcaseCoupleTwig.py             bk2c.py
 $(CoreParser)/TokenCache.py                     bkc.py
 $(CoreParser)/BookcaseExpression.py             bke.py
+$(CoreParser)/BookcaseManyFrill.py              bkf.py
+$(CoreParser)/BookcaseManyExpression.py         bkm.py
 $(CoreParser)/LineMarker.py                     bl.py
 $(CoreParser)/Method.py                         bmd.py
 $(CoreParser)/ManyFrill.py                      bmf.py
 $(CoreParser)/ManyExpression.py                 bmx.py
 $(CoreParser)/Nub.py                            bn.py
+$(CoreParser)/ParseAtom.py                      bpa.py
 $(CoreParser)/TestTree.py                       bte.py
 $(CoreParser)/TupleOfExpression.py              bto.py
 $(CoreParser)/TokenTuple.py                     btt.py
@@ -57,9 +60,12 @@ $(Rex)/__init__.py                              rxz.py
 ../Tremolite/OtherLicenses/README.txt           rlr.txt
 
 $(TremoliteParser)/DualExpressionStatement.py   r2es.py
+$(TremoliteParser)/DualToken.py                 r2t.py
 $(TremoliteParser)/BinaryExpression.py          rbe.py
 $(TremoliteParser)/Development.py               rd.py
 $(TremoliteParser)/Elemental.py                 rem.py
+$(TremoliteParser)/BookcaseDualExpression.py    rkd.py
+$(TremoliteParser)/BookcaseExpression.py        rke.py
 $(TremoliteParser)/Main.py                      rma.py
 $(TremoliteParser)/Match.py                     rmc.py
 $(TremoliteParser)/Pattern.py                   rp.py
