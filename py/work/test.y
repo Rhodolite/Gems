@@ -8,4 +8,4 @@ language pattern                                #   Easier to read than 'languag
 space := ' '                                    #   Just a simple space
 joy   := (
     'Joy' + space) + 'Diamond'            #   me!
-paren := {| '0' .. '9', 'A' .. 'Z', 'a' .. 'z', '_' |}
+paren := {~ x: '0'..'9', A..Z, ~}

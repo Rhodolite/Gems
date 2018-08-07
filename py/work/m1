@@ -61,6 +61,7 @@ $(Rex)/__init__.py                              rxz.py
 
 $(TremoliteParser)/DualExpressionStatement.py   r2es.py
 $(TremoliteParser)/DualToken.py                 r2t.py
+$(TremoliteParser)/TripleToken.py               r3t.py
 $(TremoliteParser)/BinaryExpression.py          rbe.py
 $(TremoliteParser)/Development.py               rd.py
 $(TremoliteParser)/Elemental.py                 rem.py
@@ -72,6 +73,7 @@ $(TremoliteParser)/Pattern.py                   rp.py
 $(TremoliteParser)/ParseAtom.py                 rpa.py
 $(TremoliteParser)/ParseExpression.py           rpe.py
 $(TremoliteParser)/Parse.py                     rpr.py
+$(TremoliteParser)/ParseSet.py                  rps.py
 $(TremoliteParser)/Statement.py                 rs.py
 $(TremoliteParser)/__init__.py                  rz.py
 $(TremoliteParser)/TokenizeAtom.py              rza.py
