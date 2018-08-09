@@ -259,9 +259,9 @@ TremoliteParser_Files = \
     $(TremoliteParser)/__init__.py \
     $(TremoliteParser)/Main.py \
     $(TremoliteParser)/Parse.py $(TremoliteParser)/ParseAtom.py $(TremoliteParser)/ParseExpression.py \
-        $(TremoliteParser)/Pattern.py \
+        $(TremoliteParser)/ParseSet.py $(TremoliteParser)/Pattern.py \
     $(TremoliteParser)/Statement.py \
-    $(TremoliteParser)/TokenizeAtom.py
+    $(TremoliteParser)/TokenizeAtom.py $(TremoliteParser)/TripleToken.py
 
 TremoliteParser_Generated = \
     $(TremoliteParser)/Match.py \
@@ -355,8 +355,8 @@ clean:
 	rm -f   map.py md.py
 	rm -f o.py oba.py obi.py obk.py obm.py
 	rm -f q1p.py qcm.py qj.py qma.py qmc.py qp.py qs.py qz.py
-	rm -f r2es.py r2t.py rbe.py rcm.py rd.py re.py rem.py rkd.py rke.py rkm.py rlp.txt rlr.txt
-	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rpa.py rpe.py rpr.py
+	rm -f r2es.py r2t.py r3t.py rbe.py rcm.py rd.py re.py rem.py rkd.py rke.py rkm.py rlp.txt rlr.txt
+	rm -f   rma.py rma2.py rmc.py rmc2.py rn.py rp.py rpa.py rpe.py rpr.py rps.py
 	rm -f   rs.py ru.py rxc.py rxcr.py rxp.py rxw.py rxz.py rz.py rz2.py rza.py
 	rm -f sl.py so.py ssio.py sy.py
 	rm -f t.java t.py t.y tb.py th.py
@@ -586,6 +586,7 @@ links:
 	ln -s $(SqlParser)/__init__.py                                              qz.py
 	ln -s $(TremoliteParser)/DualExpressionStatement.py                         r2es.py
 	ln -s $(TremoliteParser)/DualToken.py                                       r2t.py
+	ln -s $(TremoliteParser)/TripleToken.py                                     r3t.py
 	ln -s $(TremoliteParser)/BinaryExpression.py                                rbe.py
 	ln -s $(Restructure)/CreateMatch.py                                         rcm.py
 	ln -s $(TremoliteParser)/Development.py                                     rd.py
@@ -605,6 +606,7 @@ links:
 	ln -s $(TremoliteParser)/ParseAtom.py                                       rpa.py
 	ln -s $(TremoliteParser)/ParseExpression.py                                 rpe.py
 	ln -s $(TremoliteParser)/Parse.py                                           rpr.py
+	ln -s $(TremoliteParser)/ParseSet.py                                        rps.py
 	ln -s $(TremoliteParser)/Statement.py                                       rs.py
 	ln -s $(Restructure)/Build.py                                               ru.py
 	ln -s $(Rex)/Compile.py                                                     rxc.py
