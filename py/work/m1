@@ -32,10 +32,14 @@ $(CoreParser)/ManyFrill.py                      bmf.py
 $(CoreParser)/ManyExpression.py                 bmx.py
 $(CoreParser)/Nub.py                            bn.py
 $(CoreParser)/ParseAtom.py                      bpa.py
+$(CoreParser)/ParseExpression.py                bpe.py
 $(CoreParser)/TestTree.py                       bte.py
 $(CoreParser)/TupleOfExpression.py              bto.py
 $(CoreParser)/TokenTuple.py                     btt.py
+$(CoreParser)/UnaryExpression.py                bu.py
+$(CoreParser)/UnaryOrPostfixExpression.py       bux.py
 $(CoreParser)/Whitespace.py                     bw.py
+$(CoreParser)/PostfixExpression.py              bx.py
 $(CoreParser)/CrystalComment.py                 byc.py
 $(CoreParser)/CrystalIndentation.py             byi.py
 $(CoreParser)/ParserToken.py                    byk.py
@@ -44,7 +48,7 @@ $(CoreParser)/__init__.py                       bz.py
 $(CoreParser)/TokenizeAtom.py                   bza.py
 $(CoreParser)/TokenizeOperator.py               bzo.py
 
-$(Restructure)/Build.py                         ru.py
+$(Restructure)/Build.py                         rbu.py
 $(Restructure)/CreateMatch.py                   rcm.py
 $(Restructure)/Main.py                          rma2.py
 $(Restructure)/Match.py                         rmc2.py
@@ -69,11 +73,14 @@ $(TremoliteParser)/BookcaseDualExpression.py    rkd.py
 $(TremoliteParser)/BookcaseExpression.py        rke.py
 $(TremoliteParser)/Main.py                      rma.py
 $(TremoliteParser)/Match.py                     rmc.py
+$(TremoliteParser)/ManyExpression.py            rmx.py
 $(TremoliteParser)/Pattern.py                   rp.py
 $(TremoliteParser)/ParseAtom.py                 rpa.py
 $(TremoliteParser)/ParseExpression.py           rpe.py
 $(TremoliteParser)/Parse.py                     rpr.py
 $(TremoliteParser)/ParseSet.py                  rps.py
 $(TremoliteParser)/Statement.py                 rs.py
+$(TremoliteParser)/UnaryExpression.py           ru.py
+$(TremoliteParser)/PostfixExpression.py         rx.py
 $(TremoliteParser)/__init__.py                  rz.py
 $(TremoliteParser)/TokenizeAtom.py              rza.py
