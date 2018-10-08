@@ -5,7 +5,7 @@ set -e$-
 
 for command in \
     'python ../ErrorCorrecting/Remedy/Main.py'          \
-    'python ../Other/Chess5x2/Main.py'                  \
+    'python ../Games/Chess5x2/Main.py'                  \
     'python ../Other/CodeGenerator/Main.py'             \
     'python ../Other/CodeGenerator/Main.py ascii'       \
     'python ../Other/CodeGenerator/Main.py dev'         \

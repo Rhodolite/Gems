@@ -14,6 +14,8 @@ from    Capital.BuiltIn     import  is_instance                         #   Capi
 from    Capital.BuiltIn     import  privileged_2                        #   Capital.Core
 
 
+    transport('Board.CreateGameBoard',              'create_game_board')
+    transport('Board.SquareFoundation',             'SquareFoundation')
     transport('Capital.Absent',                     'absent')
     transport('Capital.Ascii',                      'lookup_ascii')
     transport('Capital.Ascii',                      'unknown_ascii')
@@ -147,6 +149,8 @@ from    Capital.BuiltIn     import  privileged_2                        #   Capi
     transport('Capital.Thread',                     'start_new_thread')
     transport('Capital.Thread',                     'thread_identifier')
     transport('Capital.Traceback',                  'print_exception_chain')
+    transport('Capital.TupleFunctions',             'produce_append_freeze')
+    transport('Capital.TupleFunctions',             'produce_append_freeze_zap')
     transport('CoreParser.ActionWord',              'conjure_action_word')
     transport('CoreParser.ActionWord',              'conjure_action_word__ends_in_newline')
     transport('CoreParser.ActionWord',              'conjure_ActionWord_WithNewlines')
