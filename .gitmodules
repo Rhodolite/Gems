@@ -37,3 +37,6 @@
 [submodule "Gem.py.UnitTest"]
 	path = py/UnitTest
 	url = git@gitlab.com:gemsmiths/language-devs/gem-devs/Gem.py.UnitTest
+[submodule "Gem.py.Games"]
+	path = py/Games
+	url = joy:JoyDiamond/Gem.py.Games
