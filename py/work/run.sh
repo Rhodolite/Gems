@@ -58,8 +58,8 @@ if [ $Main_py == pick ]; then
     Main_py=../Other/MultiProcessingExample/Main.py
     Main_py=../Other/Mothballed/Rubber/Main.py
     Main_py=../Parser/Mothballed/SqlParser/Main.py
-    Main_py=../Other/LearningPython/Main.py
     Main_py=../Games/Chess5x2/Main.py
+    Main_py=../Other/LearningPython/Main.py
 fi
 
 show=2
@@ -143,5 +143,5 @@ do
        mv $tmp3 3o
     fi
 
-    sleep 0.01
+    sleep 0.1
 done

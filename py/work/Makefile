@@ -30,23 +30,29 @@ Capital_Files = \
     $(Capital)/__init__.py \
     $(Capital)/Absent.py $(Capital)/Ascii.py \
     $(Capital)/Boot.py \
-    $(Capital)/Cache.py $(Capital)/Cache2.py $(Capital)/Cadence.py $(Capital)/Codec.py $(Capital)/ContextManager.py \
-        $(Capital)/Core.py $(Capital)/CatchException.py \
+    $(Capital)/Cache.py $(Capital)/Cache2.py $(Capital)/Cadence.py $(Capital)/Capital_Object.py \
+        $(Capital)/Capital_StringBuilder.py $(Capital)/CatchException.py $(Capital)/ChangePrefix.py \
+        $(Capital)/Class_FindSymbol.py $(Capital)/Class_Object.py $(Capital)/Class_ShowMembers.py \
+        $(Capital)/Class_Support.py $(Capital)/Class_Type.py $(Capital)/Codec.py $(Capital)/ContextManager.py \
+        $(Capital)/Core.py \
     $(Capital)/DelayedFileOutput.py $(Capital)/DroveMany.py $(Capital)/DumpCache.py \
     $(Capital)/ErrorNumber.py $(Capital)/Exception.py $(Capital)/ExecuteFile.py \
     $(Capital)/FileOutput.py $(Capital)/FileStatus.py \
     $(Capital)/Gaggle.py $(Capital)/GarbageCollection.py $(Capital)/Global.py \
     $(Capital)/Hailstone.py $(Capital)/Herd.py $(Capital)/Herd_2.py $(Capital)/Herd_3.py $(Capital)/Herd_4567.py \
         $(Capital)/HerdMany.py $(Capital)/Horde.py \
-    $(Capital)/Import.py $(Capital)/IO.py \
-    $(Capital)/LiquidMap.py \
-    $(Capital)/Map.py $(Capital)/Method.py \
+    $(Capital)/IO.py $(Capital)/Introspection.py $(Capital)/Import.py \
+    $(Capital)/Line.py $(Capital)/LiquidMap.py \
+    $(Capital)/Map.py \
+        $(Capital)/Method.py \
     $(Capital)/Output.py \
     $(Capital)/Path.py $(Capital)/Path2.py $(Capital)/PortrayString.py \
     $(Capital)/Rabble.py $(Capital)/RegularExpression.py \
     $(Capital)/Series.py $(Capital)/Sequence.py $(Capital)/SimpleStringIO.py $(Capital)/Sleep.py \
         $(Capital)/StringOutput.py $(Capital)/System.py \
     $(Capital)/Traceback.py $(Capital)/Thread.py $(Capital)/TupleFunctions.py \
+    $(Capital)/UniqueName.py \
+    $(Capital)/Zone.py \
 
 Capital_Generated = \
     $(Capital)/GeneratedConjureQuadruple.py \
@@ -121,7 +127,13 @@ LearningPython = ../Other/LearningPython
 
 LearningPython_Files = \
     $(LearningPython)/__init__.py \
-    $(LearningPython)/Main.py \
+    $(LearningPython)/Color_1.py $(LearningPython)/Color_2.py $(LearningPython)/Color_3.py \
+        $(LearningPython)/Color_4.py $(LearningPython)/Color_5.py \
+    $(LearningPython)/Descriptor.py $(LearningPython)/Development.py \
+    $(LearningPython)/Main.py $(LearningPython)/Metaclass.py \
+    $(LearningPython)/ObjectParts.py \
+    $(LearningPython)/Show.py \
+    $(LearningPython)/TypeParts.py \
 
 
 License_Files = \
@@ -290,15 +302,18 @@ TremoliteParser_Generated = \
 UnitTest = ../UnitTest/UnitTest
 
 UnitTest_Files = \
-    $(UnitTest)/CacheSupport.py $(UnitTest)/ConjureDual.py $(UnitTest)/ConjureSingle.py \
+    $(UnitTest)/CacheSupport.py $(UnitTest)/Class.py $(UnitTest)/ConjureDual.py $(UnitTest)/ConjureSingle.py \
         $(UnitTest)/ConjureQuadruple.py $(UnitTest)/ConjureTriple.py $(UnitTest)/ConjureTreeComment.py \
     $(UnitTest)/Drove.py \
     $(UnitTest)/ExceptionChain.py \
     $(UnitTest)/Herd.py \
-    $(UnitTest)/__init__.py \
-    $(UnitTest)/Main.py \
+    $(UnitTest)/__init__.py $(UnitTest)/Introspection.py \
+    $(UnitTest)/Main.py $(UnitTest)/Metaclass.py \
     $(UnitTest)/Path.py $(UnitTest)/Pattern.py $(UnitTest)/PortrayString.py \
-    $(UnitTest)/Sequence.py $(UnitTest)/Series.py $(UnitTest)/StringOutput.py \
+    $(UnitTest)/Sequence.py $(UnitTest)/Series.py $(UnitTest)/StringBuilder.py $(UnitTest)/StringOutput.py \
+    $(UnitTest)/Thread.py \
+    $(UnitTest)/UniqueName.py \
+    $(UnitTest)/Zone.py \
 
 UnitTest_Generated = \
     $(UnitTest)/GeneratedConjureDual.py $(UnitTest)/GeneratedConjureQuadruple.py \
@@ -350,13 +365,15 @@ clean:
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
-	rm -f   bat.py bath.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
+	rm -f   bat.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
 	rm -f   bk2.py bk2c.py bkc.py bke.py bkf.py bkm.py bl.py bmd.py bmf.py bmx.py bn.py bpa.py bpe.py
 	rm -f   bs3.py bte.py bto.py btt.py bu.py bux.py bw.py bx.py byc.py byi.py byk.py byt.py bz.py bza.py bzo.py
-	rm -f cab.py cb.py cc2.py cca.py ccd.py cce.py ccm.py cco.py ccq.py ccr.py cdc.py cdfo.py cdm.py
-	rm -f   cef.py cen.py cex.py cfo.py cfs.py cg4.py cga.py cgc.py cgl.py
-	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cin.py cim.py cio.py cmap.py cmd.py co.py cra.py cre.py
-	rm -f   cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cys.py
+	rm -f cab.py cb.py cc2.py cca.py ccd.py cce.py ccf.py cclo.py ccls.py ccly.py
+	rm -f   ccm.py cco.py ccod.py ccq.py ccr.py ccsm.py ccx.py
+	rm -f   cdc.py cdfo.py cdm.py cef.py cen.py cex.py cfo.py cfs.py cg4.py cga.py cgc.py cgl.py
+	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cin.py cinit.py cim.py cio.py
+	rm -f   cl.py cmap.py cmd.py co.py cp.py cq.py cra.py cre.py
+	rm -f   csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cys.py czo.py
 	rm -f erk.py erm.py ers.py
 	rm -f files f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
@@ -371,7 +388,8 @@ clean:
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
 	rm -f jb.py jma.py jmc.py jp0.py jp1.py jpt.py jz.py
 	rm -f ke.py km.py kr.py
-	rm -f l.txt lpm.py lpz.py lr1.txt
+	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py
+	rm -f   lpop.py lps.py lpv.py lpyp.py lpz.py lr1.txt
 	rm -f m
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
 	rm -f oba.py obi.py obk.py obm.py
@@ -385,9 +403,9 @@ clean:
 	rm -f xb.py xf.py
 	rm -f ybi.py ybq.py ycb.py yd7.py yg.py ygb.py yki.py ykn.py
 	rm -f   ym.py yp.py yq.py yr.py yv.py yw.py yz.py yzc.py yyzk.py yzr.py
-	rm -f zcs.py zd.py ze.py zg2.gpy zg2.py zg3.gpy zg3.py zg4.gpy zg4.py
-	rm -f   zgn.gpy zgn.py zh.py zj1.py zj2.py zj3.py zj4.py zjtc.py
-	rm -f   zm.py zo4.py zpa.py zpt.py zse.py zso.py zsq.py zys.py zz.py
+	rm -f zcl.py zcs.py zd.py ze.py zg2.gpy zg2.py zg3.gpy zg3.py zg4.gpy zg4.py
+	rm -f   zgn.gpy zgn.py zh.py zi.py zj1.py zj2.py zj3.py zj4.py zjtc.py
+	rm -f   zma.py zmc.py zo4.py zpa.py zpt.py zq.py zsb.py zse.py zso.py zsq.py zth.py zys.py zz.py zzo.py
 	find .. -name __pycache__ >files.1.tmp; xargs rm -rf <files.1.tmp
 	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
 	rm -f files.1.tmp
@@ -421,7 +439,6 @@ links:
 	ln -s $(CoreParser)/QuadrupleTwig.py                                        b4w.py
 	ln -s $(Capital)/Path2.py                                                   ba2.py
 	ln -s $(CoreParser)/Atom.py                                                 bat.py
-	ln -s $(Capital)/Path.py                                                    bath.py
 	ln -s $(CoreParser)/ActionWord.py                                           baw.py
 	ln -s $(CoreParser)/BinaryExpression.py                                     bbe.py
 	ln -s $(CoreParser)/Cache.py                                                bca.py
@@ -465,10 +482,17 @@ links:
 	ln -s $(Capital)/Cache.py                                                   cca.py
 	ln -s $(Capital)/Cadence.py                                                 ccd.py
 	ln -s $(Capital)/CatchException.py                                          cce.py
+	ln -s $(Capital)/Class_FindSymbol.py                                        ccf.py
+	ln -s $(Capital)/Class_Object.py                                            cclo.py
+	ln -s $(Capital)/Class_Support.py                                           ccls.py
+	ln -s $(Capital)/Class_Type.py                                              ccly.py
 	ln -s $(Capital)/ContextManager.py                                          ccm.py
-	ln -s $(Capital)/Codec.py                                                   cco.py
+	ln -s $(Capital)/Capital_Object.py                                          cco.py
+	ln -s $(Capital)/Codec.py                                                   ccod.py
 	ln -s $(Capital)/LiquidMap.py                                               ccq.py
 	ln -s $(Capital)/Core.py                                                    ccr.py
+	ln -s $(Capital)/Class_ShowMembers.py                                       ccsm.py
+	ln -s $(Capital)/ChangePrefix.py                                            ccx.py
 	ln -s $(Capital)/DumpCache.py                                               cdc.py
 	ln -s $(Capital)/DelayedFileOutput.py                                       cdfo.py
 	ln -s $(Capital)/DroveMany.py                                               cdm.py
@@ -488,14 +512,19 @@ links:
 	ln -s $(Capital)/Hailstone.py                                               chi.py
 	ln -s $(Capital)/HerdMany.py                                                chm.py
 	ln -s $(Capital)/Horde.py                                                   cho.py
-	ln -s $(Capital)/__init__.py                                                cin.py
+	ln -s $(Capital)/Introspection.py                                           cin.py
+	ln -s $(Capital)/__init__.py                                                cinit.py
 	ln -s $(Capital)/Import.py                                                  cim.py
 	ln -s $(Capital)/IO.py                                                      cio.py
+	ln -s $(Capital)/Line.py                                                    cl.py
 	ln -s $(Capital)/Map.py                                                     cmap.py
 	ln -s $(Capital)/Method.py                                                  cmd.py
 	ln -s $(Capital)/Output.py                                                  co.py
+	ln -s $(Capital)/Path.py                                                    cp.py
+	ln -s $(Capital)/UniqueName.py                                              cq.py
 	ln -s $(Capital)/Rabble.py                                                  cra.py
 	ln -s $(Capital)/RegularExpression.py                                       cre.py
+	ln -s $(Capital)/Capital_StringBuilder.py                                   csb.py
 	ln -s $(Capital)/Series.py                                                  cse.py
 	ln -s $(Capital)/Sleep.py                                                   csl.py
 	ln -s $(Capital)/StringOutput.py                                            cso.py
@@ -506,6 +535,7 @@ links:
 	ln -s $(Capital)/TupleFunctions.py                                          ctf.py
 	ln -s $(Capital)/Thread.py                                                  cth.py
 	ln -s $(Capital)/PortrayString.py                                           cys.py
+	ln -s $(Capital)/Zone.py                                                    czo.py
 	ln -s $(Remedy)/MockSolidStateDevice.py                                     erk.py
 	ln -s $(Remedy)/Main.py                                                     erm.py
 	ln -s $(Remedy)/ReedSolomon.py                                              ers.py
@@ -600,7 +630,18 @@ links:
 	ln -s $(KeyExample)/Main.py                                                 km.py
 	ln -s $(KeyExample)/RSA_Example.py                                          kr.py
 	ln -s log.txt                                                               l.txt
+	ln -s $(LearningPython)/Color_1.py                                          lpc1.py
+	ln -s $(LearningPython)/Color_2.py                                          lpc2.py
+	ln -s $(LearningPython)/Color_3.py                                          lpc3.py
+	ln -s $(LearningPython)/Color_4.py                                          lpc4.py
+	ln -s $(LearningPython)/Color_5.py                                          lpc5.py
+	ln -s $(LearningPython)/Descriptor.py                                       lpd.py
 	ln -s $(LearningPython)/Main.py                                             lpm.py
+	ln -s $(LearningPython)/Metaclass.py                                        lpmc.py
+	ln -s $(LearningPython)/ObjectParts.py                                      lpop.py
+	ln -s $(LearningPython)/Show.py                                             lps.py
+	ln -s $(LearningPython)/Development.py                                      lpv.py
+	ln -s $(LearningPython)/TypeParts.py                                        lpyp.py
 	ln -s $(LearningPython)/__init__.py                                         lpz.py
 	ln -s ../PPK/OtherLicenses/README.txt                                       lr1.txt
 	ln -s Makefile                                                              m
@@ -685,6 +726,7 @@ links:
 	ln -s $(Chess5x2)/__init__.py                                               yz.py
 	ln -s $(Chess5x2)/FrozenChessCard.py                                        yzc.py
 	ln -s $(Chess5x2)/FrozenCardRoot.py                                         yzr.py
+	ln -s $(UnitTest)/Class.py                                                  zcl.py
 	ln -s $(UnitTest)/CacheSupport.py                                           zcs.py
 	ln -s $(UnitTest)/Drove.py                                                  zd.py
 	ln -s $(UnitTest)/ExceptionChain.py                                         ze.py
@@ -697,20 +739,26 @@ links:
 	ln -s $(UnitTest)/GeneratedNew.gpy                                          zgn.gpy
 	ln -s $(UnitTest)/GeneratedNew.py                                           zgn.py
 	ln -s $(UnitTest)/Herd.py                                                   zh.py
+	ln -s $(UnitTest)/Introspection.py                                          zi.py
 	ln -s $(UnitTest)/ConjureSingle.py                                          zj1.py
 	ln -s $(UnitTest)/ConjureDual.py                                            zj2.py
 	ln -s $(UnitTest)/ConjureTriple.py                                          zj3.py
 	ln -s $(UnitTest)/ConjureQuadruple.py                                       zj4.py
 	ln -s $(UnitTest)/ConjureTreeComment.py                                     zjtc.py
-	ln -s $(UnitTest)/Main.py                                                   zm.py
+	ln -s $(UnitTest)/Main.py                                                   zma.py
+	ln -s $(UnitTest)/Metaclass.py                                              zmc.py
 	ln -s $(UnitTest)/OldConjureQuadruple.py                                    zo4.py
 	ln -s $(UnitTest)/Path.py                                                   zpa.py
 	ln -s $(UnitTest)/Pattern.py                                                zpt.py
+	ln -s $(UnitTest)/UniqueName.py                                             zq.py
+	ln -s $(UnitTest)/StringBuilder.py                                          zsb.py
 	ln -s $(UnitTest)/Series.py                                                 zse.py
 	ln -s $(UnitTest)/StringOutput.py                                           zso.py
 	ln -s $(UnitTest)/Sequence.py                                               zsq.py
+	ln -s $(UnitTest)/Thread.py                                                 zth.py
 	ln -s $(UnitTest)/PortrayString.py                                          zys.py
 	ln -s $(UnitTest)/__init__.py                                               zz.py
+	ln -s $(UnitTest)/Zone.py                                                   zzo.py
 
 
 wc:
