@@ -135,6 +135,7 @@ from    Capital.BuiltIn     import  privileged_2                        #   Capi
     transport('Capital.Exception',                  'PREPARE_attribute_ERROR')
     transport('Capital.Exception',                  'raise_attribute_error')
     transport('Capital.Exception',                  'raise_runtime_error')
+    transport('Capital.Exception',                  'PREPARE_runtime_ERROR')
     transport('Capital.Exception',                  'raise_value_error')
     transport('Capital.Exception',                  'StopIteration')
     transport('Capital.Exception',                  'SystemExit')
