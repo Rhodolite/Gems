@@ -32,25 +32,26 @@ Capital_Files = \
     $(Capital)/Boot.py \
     $(Capital)/Cache.py $(Capital)/Cache2.py $(Capital)/Cadence.py $(Capital)/Capital_Object.py \
         $(Capital)/Capital_StringBuilder.py $(Capital)/CatchException.py $(Capital)/ChangePrefix.py \
-        $(Capital)/Class_FindSymbol.py $(Capital)/Class_Object.py $(Capital)/Class_ShowMembers.py \
-        $(Capital)/Class_Support.py $(Capital)/Class_Type.py $(Capital)/Codec.py $(Capital)/ContextManager.py \
-        $(Capital)/Core.py \
+        $(Capital)/Class_FindSymbol.py $(Capital)/Class_ShowMembers.py \
+        $(Capital)/Codec.py $(Capital)/ContextManager.py $(Capital)/Core.py $(Capital)/Create_Class.py \
+        $(Capital)/Create_Metaclass.py \
     $(Capital)/DelayedFileOutput.py $(Capital)/DroveMany.py $(Capital)/DumpCache.py \
     $(Capital)/ErrorNumber.py $(Capital)/Exception.py $(Capital)/ExecuteFile.py \
     $(Capital)/FileOutput.py $(Capital)/FileStatus.py \
     $(Capital)/Gaggle.py $(Capital)/GarbageCollection.py $(Capital)/Global.py \
     $(Capital)/Hailstone.py $(Capital)/Herd.py $(Capital)/Herd_2.py $(Capital)/Herd_3.py $(Capital)/Herd_4567.py \
         $(Capital)/HerdMany.py $(Capital)/Horde.py \
-    $(Capital)/IO.py $(Capital)/Introspection.py $(Capital)/Import.py \
+    $(Capital)/IO.py $(Capital)/Inspection_Of_A_Class.py $(Capital)/Inspection_Of_A_Metaclass.py \
+        $(Capital)/Inspection_Of_An_Instance.py $(Capital)/Introspection.py $(Capital)/Import.py \
     $(Capital)/Line.py $(Capital)/LiquidMap.py \
-    $(Capital)/Map.py \
-        $(Capital)/Method.py \
-    $(Capital)/Output.py \
-    $(Capital)/Path.py $(Capital)/Path2.py $(Capital)/PortrayString.py \
+    $(Capital)/Map.py $(Capital)/Meta_Metaclass.py $(Capital)/Method.py \
+    $(Capital)/ObjectMembers.py $(Capital)/Output.py \
+    $(Capital)/Path.py $(Capital)/Path2.py $(Capital)/PortrayString.py $(Capital)/ProcessObjectMembers.py \
+        $(Capital)/ProcessTypeMembers.py $(Capital)/PropertyInspect.py \
     $(Capital)/Rabble.py $(Capital)/RegularExpression.py \
     $(Capital)/Series.py $(Capital)/Sequence.py $(Capital)/SimpleStringIO.py $(Capital)/Sleep.py \
-        $(Capital)/StringOutput.py $(Capital)/System.py \
-    $(Capital)/Traceback.py $(Capital)/Thread.py $(Capital)/TupleFunctions.py \
+        $(Capital)/StaticMethod_OnlyViaClass.py $(Capital)/StringOutput.py $(Capital)/System.py \
+    $(Capital)/Traceback.py $(Capital)/Thread.py $(Capital)/TupleFunctions.py $(Capital)/TypeMembers.py \
     $(Capital)/UniqueName.py \
     $(Capital)/Zone.py \
 
@@ -115,7 +116,8 @@ CoreParser_Files = \
 Elemental = ../Games/Elemental
 
 Elemental_Files = \
-    $(Elemental)/Ice.y
+    $(Elemental)/Ice.py \
+    $(Elemental)/Ice.y \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -136,7 +138,7 @@ LearningPython_Files = \
     $(LearningPython)/Color_1.py $(LearningPython)/Color_2.py $(LearningPython)/Color_3.py \
         $(LearningPython)/Color_4.py $(LearningPython)/Color_5.py \
     $(LearningPython)/Descriptor.py $(LearningPython)/Development.py \
-    $(LearningPython)/Main.py $(LearningPython)/Metaclass.py \
+    $(LearningPython)/Main.py $(LearningPython)/Metaclass.py $(LearningPython)/Meta_Metaclass.py \
     $(LearningPython)/ObjectParts.py \
     $(LearningPython)/Show.py \
     $(LearningPython)/TypeParts.py \
@@ -383,12 +385,12 @@ clean:
 	rm -f   bat.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
 	rm -f   bk2.py bk2c.py bkc.py bke.py bkf.py bkm.py bl.py bmd.py bmf.py bmx.py bn.py bpa.py bpe.py
 	rm -f   bs3.py bte.py bto.py btt.py bu.py bux.py bw.py bx.py byc.py byi.py byk.py byt.py bz.py bza.py bzo.py
-	rm -f cab.py cb.py cc2.py cca.py ccd.py cce.py ccf.py cclo.py ccls.py ccly.py
-	rm -f   ccm.py cco.py ccod.py ccq.py ccr.py ccsm.py ccx.py
+	rm -f cab.py cb.py cc2.py cca.py ccc.py ccd.py cce.py ccf.py
+	rm -f   ccm.py ccmc.py cco.py ccod.py ccq.py ccr.py ccsm.py ccx.py
 	rm -f   cdc.py cdfo.py cdm.py cef.py cen.py cex.py cfo.py cfs.py cg4.py cga.py cgc.py cgl.py
-	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cin.py cinit.py cim.py cio.py
-	rm -f   cl.py cmap.py cmd.py co.py cp.py cq.py cra.py cre.py
-	rm -f   csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cys.py czo.py
+	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cic.py cii.py cin.py cinit.py cim.py cimc.py cio.py
+	rm -f   cl.py cmap.py cmd.py cmm.py com.py cop.py cov.py cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py
+	rm -f   csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cym.py cys.py czo.py
 	rm -f erk.py erm.py ers.py
 	rm -f files f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
@@ -401,10 +403,10 @@ clean:
 	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py
 	rm -f   hp.py hpa.py hpath.py hpc.py hpe.py hpes.py hpf.py hpi.py hpm.py hpr.py hps.py hpx.py hpy.py
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
-	rm -f ice.y
+	rm -f ice.py ice.y
 	rm -f jb.py jma.py jmc.py jp0.py jp1.py jpt.py jz.py
 	rm -f ke.py km.py kr.py
-	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py
+	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py lpmm.py
 	rm -f   lpop.py lps.py lpv.py lpyp.py lpz.py lr1.txt
 	rm -f m
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
@@ -497,13 +499,12 @@ links:
 	ln -s $(Capital)/Boot.py                                                    cb.py
 	ln -s $(Capital)/Cache2.py                                                  cc2.py
 	ln -s $(Capital)/Cache.py                                                   cca.py
+	ln -s $(Capital)/Create_Class.py                                            ccc.py
 	ln -s $(Capital)/Cadence.py                                                 ccd.py
 	ln -s $(Capital)/CatchException.py                                          cce.py
 	ln -s $(Capital)/Class_FindSymbol.py                                        ccf.py
-	ln -s $(Capital)/Class_Object.py                                            cclo.py
-	ln -s $(Capital)/Class_Support.py                                           ccls.py
-	ln -s $(Capital)/Class_Type.py                                              ccly.py
 	ln -s $(Capital)/ContextManager.py                                          ccm.py
+	ln -s $(Capital)/Create_Metaclass.py                                        ccmc.py
 	ln -s $(Capital)/Capital_Object.py                                          cco.py
 	ln -s $(Capital)/Codec.py                                                   ccod.py
 	ln -s $(Capital)/LiquidMap.py                                               ccq.py
@@ -529,15 +530,24 @@ links:
 	ln -s $(Capital)/Hailstone.py                                               chi.py
 	ln -s $(Capital)/HerdMany.py                                                chm.py
 	ln -s $(Capital)/Horde.py                                                   cho.py
+	ln -s $(Capital)/Inspection_Of_A_Class.py                                   cic.py
+	ln -s $(Capital)/Inspection_Of_An_Instance.py                               cii.py
 	ln -s $(Capital)/Introspection.py                                           cin.py
 	ln -s $(Capital)/__init__.py                                                cinit.py
 	ln -s $(Capital)/Import.py                                                  cim.py
+	ln -s $(Capital)/Inspection_Of_A_Metaclass.py                               cimc.py
 	ln -s $(Capital)/IO.py                                                      cio.py
 	ln -s $(Capital)/Line.py                                                    cl.py
 	ln -s $(Capital)/Map.py                                                     cmap.py
 	ln -s $(Capital)/Method.py                                                  cmd.py
-	ln -s $(Capital)/Output.py                                                  co.py
-	ln -s $(Capital)/Path.py                                                    cp.py
+	ln -s $(Capital)/Meta_Metaclass.py                                          cmm.py
+	ln -s $(Capital)/ObjectMembers.py                                           com.py
+	ln -s $(Capital)/Output.py                                                  cop.py
+	ln -s $(Capital)/StaticMethod_OnlyViaClass.py                               cov.py
+	ln -s $(Capital)/Path.py                                                    cpa.py
+	ln -s $(Capital)/PropertyInspect.py                                         cpi.py
+	ln -s $(Capital)/ProcessObjectMembers.py                                    cpom.py
+	ln -s $(Capital)/ProcessTypeMembers.py                                      cpym.py
 	ln -s $(Capital)/UniqueName.py                                              cq.py
 	ln -s $(Capital)/Rabble.py                                                  cra.py
 	ln -s $(Capital)/RegularExpression.py                                       cre.py
@@ -551,6 +561,7 @@ links:
 	ln -s $(Capital)/Traceback.py                                               ctb.py
 	ln -s $(Capital)/TupleFunctions.py                                          ctf.py
 	ln -s $(Capital)/Thread.py                                                  cth.py
+	ln -s $(Capital)/TypeMembers.py                                             cym.py
 	ln -s $(Capital)/PortrayString.py                                           cys.py
 	ln -s $(Capital)/Zone.py                                                    czo.py
 	ln -s $(Remedy)/MockSolidStateDevice.py                                     erk.py
@@ -636,6 +647,7 @@ links:
 	ln -s $(PythonParser)/TokenizeHeader.py                                     hzh.py
 	ln -s $(PythonParser)/TokenizeName.py                                       hzn.py
 	ln -s $(PythonParser)/TokenizeOperator.py                                   hzo.py
+	ln -s $(Elemental)/Ice.py                                                   ice.py
 	ln -s $(Elemental)/Ice.y                                                    ice.y
 	ln -s ../Old/Junk/Boot.py                                                   jb.py
 	ln -s $(JavaParser)/Main.py                                                 jma.py
@@ -656,6 +668,7 @@ links:
 	ln -s $(LearningPython)/Descriptor.py                                       lpd.py
 	ln -s $(LearningPython)/Main.py                                             lpm.py
 	ln -s $(LearningPython)/Metaclass.py                                        lpmc.py
+	ln -s $(LearningPython)/Meta_Metaclass.py                                   lpmm.py
 	ln -s $(LearningPython)/ObjectParts.py                                      lpop.py
 	ln -s $(LearningPython)/Show.py                                             lps.py
 	ln -s $(LearningPython)/Development.py                                      lpv.py
