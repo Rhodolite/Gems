@@ -11,6 +11,7 @@ python=python2
 for command in \
     "$python2 ../ErrorCorrecting/Remedy/Main.py"          \
     "$python  ../Games/Chess5x2/Main.py"                  \
+    "$python  ../Games/Storyquest/Main.py"                \
     "$python  ../Other/CodeGenerator/Main.py"             \
     "$python  ../Other/CodeGenerator/Main.py ascii"       \
     "$python  ../Other/CodeGenerator/Main.py dev"         \

@@ -73,7 +73,7 @@ command3="python3 $Main_py"
 command3O="python3 -O $Main_py"
 #command="../bin/x"
 
-option="dev"
+option="development"
 
 cat >$tmp1 <<END
 Rhodolite

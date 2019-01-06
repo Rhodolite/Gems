@@ -1,5 +1,5 @@
 #
-#   Copyright (c) 2017-2018 Joy Diamond.  All rights reserved.
+#   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
 Agate = ../Old/Agate
 
@@ -110,6 +110,12 @@ CoreParser_Files = \
         $(CoreParser)/TupleOfExpression.py \
     $(CoreParser)/UnaryExpression.py $(CoreParser)/UnaryOrPostfixExpression.py \
     $(CoreParser)/Whitespace.py \
+
+
+Elemental = ../Games/Elemental
+
+Elemental_Files = \
+    $(Elemental)/Ice.y
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -275,9 +281,17 @@ Storyquest = ../Games/Storyquest
 
 Storyquest_Files = \
     $(Storyquest)/__init__.py \
+    $(Storyquest)/Action_Event.py $(Storyquest)/AllowCommand_Attribute.py \
+    $(Storyquest)/CardAttribute.py $(Storyquest)/CardChildren.py $(Storyquest)/CardChildren_0.py \
+        $(Storyquest)/CardChildren_2.py $(Storyquest)/CardChildren_4.py $(Storyquest)/CardCommand.py \
+    $(Storyquest)/Defend_Event.py $(Storyquest)/Development.py \
+    $(Storyquest)/Event_Base.py \
     $(Storyquest)/Game.py \
     $(Storyquest)/Main.py \
-    $(Storyquest)/SquareFoundation.py \
+    $(Storyquest)/Named_Card.py \
+    $(Storyquest)/OrganizedTree.py \
+    $(Storyquest)/Quantity_Card.py \
+    $(Storyquest)/SquareFoundation.py $(Storyquest)/Statement_Attempt.py \
 
 
 TremoliteParser = ../Tremolite/TremoliteParser
@@ -338,6 +352,7 @@ Files = \
     $(Chess5x2_Files) \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
+    $(Elemental_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
     $(KeyExample_Files) \
     $(LearningPython_Files) \
@@ -386,6 +401,7 @@ clean:
 	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py
 	rm -f   hp.py hpa.py hpath.py hpc.py hpe.py hpes.py hpf.py hpi.py hpm.py hpr.py hps.py hpx.py hpy.py
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
+	rm -f ice.y
 	rm -f jb.py jma.py jmc.py jp0.py jp1.py jpt.py jz.py
 	rm -f ke.py km.py kr.py
 	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py
@@ -394,7 +410,8 @@ clean:
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
 	rm -f oba.py obi.py obk.py obm.py
 	rm -f q2p1.py q2c.py q2j.py q2ma.py q2mc.py q2p.py q2s.py q2z.py
-	rm -f   qg.py qm.py qq.py qz.py
+	rm -f   qac.py qae.py qc0.py qc2.py qc4.py qca.py qcc.py qccm.py qde.py qeb.py
+	rm -f   qf.py qg.py qm.py qnc.py qot.py qqc.py qsa.py qv.py qz.py
 	rm -f r2es.py r2t.py r3t.py rbe.py rbu.py rcm.py rd.py rem.py rkd.py rke.py rkm.py rlp.txt rlr.txt
 	rm -f   rma.py rma2.py rmc.py rmc2.py rmx.py rn.py rp.py rpa.py rpe.py rpr.py rps.py
 	rm -f   rs.py ru.py rx.py rxc.py rxcr.py rxp.py rxw.py rxz.py rz.py rz2.py rza.py
@@ -619,6 +636,7 @@ links:
 	ln -s $(PythonParser)/TokenizeHeader.py                                     hzh.py
 	ln -s $(PythonParser)/TokenizeName.py                                       hzn.py
 	ln -s $(PythonParser)/TokenizeOperator.py                                   hzo.py
+	ln -s $(Elemental)/Ice.y                                                    ice.y
 	ln -s ../Old/Junk/Boot.py                                                   jb.py
 	ln -s $(JavaParser)/Main.py                                                 jma.py
 	ln -s $(JavaParser)/Match.py                                                jmc.py
@@ -662,9 +680,24 @@ links:
 	ln -s $(SqlParser)/Pattern.py                                               q2p.py
 	ln -s $(SqlParser)/Statement.py                                             q2s.py
 	ln -s $(SqlParser)/__init__.py                                              q2z.py
+	ln -s $(Storyquest)/AllowCommand_Attribute.py                               qac.py
+	ln -s $(Storyquest)/Action_Event.py                                         qae.py
+	ln -s $(Storyquest)/CardChildren_0.py                                       qc0.py
+	ln -s $(Storyquest)/CardChildren_2.py                                       qc2.py
+	ln -s $(Storyquest)/CardChildren_4.py                                       qc4.py
+	ln -s $(Storyquest)/CardAttribute.py                                        qca.py
+	ln -s $(Storyquest)/CardChildren.py                                         qcc.py
+	ln -s $(Storyquest)/CardCommand.py                                          qccm.py
+	ln -s $(Storyquest)/Defend_Event.py                                         qde.py
+	ln -s $(Storyquest)/Event_Base.py                                           qeb.py
+	ln -s $(Storyquest)/SquareFoundation.py                                     qf.py
 	ln -s $(Storyquest)/Game.py                                                 qg.py
 	ln -s $(Storyquest)/Main.py                                                 qm.py
-	ln -s $(Storyquest)/SquareFoundation.py                                     qq.py
+	ln -s $(Storyquest)/Named_Card.py                                           qnc.py
+	ln -s $(Storyquest)/OrganizedTree.py                                        qot.py
+	ln -s $(Storyquest)/Quantity_Card.py                                        qqc.py
+	ln -s $(Storyquest)/Statement_Attempt.py                                    qsa.py
+	ln -s $(Storyquest)/Development.py                                          qv.py
 	ln -s $(Storyquest)/__init__.py                                             qz.py
 	ln -s $(TremoliteParser)/DualExpressionStatement.py                         r2es.py
 	ln -s $(TremoliteParser)/DualToken.py                                       r2t.py
@@ -772,6 +805,7 @@ wc:
         $(Chess5x2_Files) \
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
+        $(Elemental_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
@@ -799,6 +833,7 @@ test:
         $(Chess5x2_Files) \
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
+        $(Elemental_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
