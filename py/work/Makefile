@@ -296,6 +296,38 @@ Storyquest_Files = \
     $(Storyquest)/SquareFoundation.py $(Storyquest)/Statement_Attempt.py \
 
 
+TeacherSample = ../Other/TeacherSample
+
+TeacherSample_Files = \
+	$(TeacherSample)/BehaveFramework.py \
+    $(TeacherSample)/Choice.py $(TeacherSample)/Course.py \
+    $(TeacherSample)/Fact.py \
+	$(TeacherSample)/features/Course.feature \
+        $(TeacherSample)/features/environment.py \
+        $(TeacherSample)/features/SchoolIdentifier.feature \
+        $(TeacherSample)/features/steps/CourseSteps.py \
+        $(TeacherSample)/features/steps/IterateRow.py \
+        $(TeacherSample)/features/steps/SchoolIdentifier_Steps.py \
+        $(TeacherSample)/features/steps/TeacherSteps.py \
+        $(TeacherSample)/features/Teacher.feature \
+    $(TeacherSample)/MustCatch.py \
+    $(TeacherSample)/Percentage.py $(TeacherSample)/Person.py $(TeacherSample)/ProduceByName.py \
+    $(TeacherSample)/Question.py $(TeacherSample)/Quiz.py \
+    $(TeacherSample)/SchoolIdentifier.py $(TeacherSample)/Student.py \
+    $(TeacherSample)/Teacher.py \
+        $(TeacherSample)/TeacherSample.py \
+        $(TeacherSample)/TestingFramework.py \
+        $(TeacherSample)/Test_Choice.py $(TeacherSample)/Test_Course.py \
+        $(TeacherSample)/Test_DebugDump.py \
+        $(TeacherSample)/Test_Fact.py \
+        $(TeacherSample)/Test_MustCatch.py \
+        $(TeacherSample)/Test_Percentage.py \
+        $(TeacherSample)/Test_Question.py $(TeacherSample)/Test_Quiz.py \
+        $(TeacherSample)/Test_SchoolIdentifier.py \
+        $(TeacherSample)/Test_Student.py \
+        $(TeacherSample)/Test_Teacher.py \
+
+
 TremoliteParser = ../Tremolite/TremoliteParser
 
 TremoliteParser_Files = \
@@ -369,6 +401,7 @@ Files = \
     $(SinglePythonFileBoot_Files) \
     $(Storyquest_Files) \
     $(SqlParser_Generated) $(SqlParser_Files) \
+    $(TeacherSample_Files) \
     $(TremoliteParser_Generated) $(TremoliteParser_Files) \
     $(UnitTest_Generated) $(UnitTest_Files) \
     $(Work_Duplicates) $(Work_Files) \
@@ -405,7 +438,10 @@ clean:
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
 	rm -f ice.py ice.y
 	rm -f jb.py jma.py jmc.py jp0.py jp1.py jpt.py jz.py
-	rm -f ke.py km.py kr.py
+	rm -f k2e.py k2m.py k2r.py
+	rm -f   kbf.py kc.feature kc.py kc2.py kc2z.py kcs.py kcz.py kdz.py ke.py kf.py kfz.py
+	rm -f   ki.feature ki.py kir.py kis.py kiz.py kj.py km.py kmc.py kmcz.py kp.py kp2.py kp2z.py kpb.py
+	rm -f   kq.py kq2.py kq2z.py kqz.py ks.py ksz.py kt.feature kt.py ktf.py kts.py ktz.py
 	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py lpmm.py
 	rm -f   lpop.py lps.py lpv.py lpyp.py lpz.py lr1.txt
 	rm -f m
@@ -656,9 +692,44 @@ links:
 	ln -s $(JavaParser)/Parse1.py                                               jp1.py
 	ln -s $(JavaParser)/Pattern.py                                              jpt.py
 	ln -s $(JavaParser)/__init__.py                                             jz.py
-	ln -s $(KeyExample)/Euclid.py                                               ke.py
-	ln -s $(KeyExample)/Main.py                                                 km.py
-	ln -s $(KeyExample)/RSA_Example.py                                          kr.py
+	ln -s $(KeyExample)/Euclid.py                                               k2e.py
+	ln -s $(KeyExample)/Main.py                                                 k2m.py
+	ln -s $(KeyExample)/RSA_Example.py                                          k2r.py
+	ln -s $(TeacherSample)/BehaveFramework.py                                   kbf.py
+	ln -s $(TeacherSample)/features/Course.feature                              kc.feature
+	ln -s $(TeacherSample)/Course.py                                            kc.py
+	ln -s $(TeacherSample)/features/steps/CourseSteps.py                        kcs.py
+	ln -s $(TeacherSample)/Choice.py                                            kc2.py
+	ln -s $(TeacherSample)/Test_Choice.py                                       kc2z.py
+	ln -s $(TeacherSample)/Test_Course.py                                       kcz.py
+	ln -s $(TeacherSample)/Test_DebugDump.py                                    kdz.py
+	ln -s $(TeacherSample)/features/environment.py                              ke.py
+	ln -s $(TeacherSample)/Fact.py                                              kf.py
+	ln -s $(TeacherSample)/Test_Fact.py                                         kfz.py
+	ln -s $(TeacherSample)/features/SchoolIdentifier.feature                    ki.feature
+	ln -s $(TeacherSample)/SchoolIdentifier.py                                  ki.py
+	ln -s $(TeacherSample)/features/steps/IterateRow.py                         kir.py
+	ln -s $(TeacherSample)/features/steps/SchoolIdentifier_Steps.py             kis.py
+	ln -s $(TeacherSample)/Test_SchoolIdentifier.py                             kiz.py
+	ln -s $(TeacherSample)/Junk.py                                              kj.py
+	ln -s $(TeacherSample)/TeacherSample.py                                     km.py
+	ln -s $(TeacherSample)/MustCatch.py                                         kmc.py
+	ln -s $(TeacherSample)/Test_MustCatch.py                                    kmcz.py
+	ln -s $(TeacherSample)/Person.py                                            kp.py
+	ln -s $(TeacherSample)/Percentage.py                                        kp2.py
+	ln -s $(TeacherSample)/Test_Percentage.py                                   kp2z.py
+	ln -s $(TeacherSample)/ProduceByName.py                                     kpb.py
+	ln -s $(TeacherSample)/Quiz.py                                              kq.py
+	ln -s $(TeacherSample)/Question.py                                          kq2.py
+	ln -s $(TeacherSample)/Test_Quiz.py                                         kqz.py
+	ln -s $(TeacherSample)/Test_Question.py                                     kq2z.py
+	ln -s $(TeacherSample)/Student.py                                           ks.py
+	ln -s $(TeacherSample)/Test_Student.py                                      ksz.py
+	ln -s $(TeacherSample)/features/Teacher.feature                             kt.feature
+	ln -s $(TeacherSample)/Teacher.py                                           kt.py
+	ln -s $(TeacherSample)/TestingFramework.py                                  ktf.py
+	ln -s $(TeacherSample)/features/steps/TeacherSteps.py                       kts.py
+	ln -s $(TeacherSample)/Test_Teacher.py                                      ktz.py
 	ln -s log.txt                                                               l.txt
 	ln -s $(LearningPython)/Color_1.py                                          lpc1.py
 	ln -s $(LearningPython)/Color_2.py                                          lpc2.py
@@ -806,8 +877,8 @@ links:
 	ln -s $(UnitTest)/__init__.py                                               zz.py
 	ln -s $(UnitTest)/Zone.py                                                   zzo.py
 
-
 wc:
+
 	#
 	#  Excludes $(Agate_Files) and $(*_GENERATED)
 	#
@@ -833,6 +904,7 @@ wc:
         $(SinglePythonFileBoot_Files) \
         $(SqlParser_Files) \
         $(Storyquest_Files) \
+        $(TeacherSample_Files) \
         $(TremoliteParser_Files) \
         $(UnitTest_Files) \
         $(Work_Files)
@@ -860,6 +932,7 @@ test:
         $(SinglePythonFileBoot_Files) \
         $(SqlParser_Files) \
         $(Storyquest_Files) \
+        $(TeacherSample_Files) \
         $(TremoliteParser_Files) \
         $(UnitTest_Files) \
             >test.py

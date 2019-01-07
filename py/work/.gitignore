@@ -1,8 +1,10 @@
 #
-#   Copyright (c) 2017-2018 Joy Diamond.  All rights reserved.
+#   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
 [23]
 [23]o
+4
+*.feature
 files
 *.gpy
 ice.y
