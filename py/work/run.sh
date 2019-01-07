@@ -1,5 +1,5 @@
 #
-#   Copyright (c) 2017-2018 Joy Diamond.  All rights reserved.
+#   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
 set -e$-
 
@@ -15,6 +15,7 @@ case $# in
             j) Main_py=../Parser/Mothballed/JavaParser/Main.py ;;
             r) Main_py=../Tremolite/TremoliteParser/Main.py ;;
             q) Main_py=../Games/Storyquest/Main.py ;;
+            ts) Main_py=../Other/TeacherSample/Test_SchoolIdentifer.py ;;
             z) Main_py=../UnitTest/UnitTest/Main.py ;;
             *) usage=true ;;
         esac
@@ -62,7 +63,7 @@ if [ $Main_py == pick ]; then
     Main_py=../Other/LearningPython/Main.py
 fi
 
-show=2
+show=4
 all=false
 #all=true
 total=75
@@ -137,10 +138,27 @@ do
             fi
         fi
     fi
-   
+
     if [ $show = 3o -o $all = true ]; then
        $command3O $option <$tmp1 >&$tmp3
        mv $tmp3 3o
+    fi
+
+    if [ $show = 4 ]; then
+        if (cd ../Other/TeacherSample; py.test --capture=no Test_*.py) <$tmp1 >&$tmp3; then
+            :
+        fi
+
+        if cmp -s $tmp3 4; then
+            :
+        else
+            mv $tmp3 4
+   
+            if [ $show = 4 ]; then
+                echo -en '\E[H\E[J'
+                tail -$total 4
+            fi
+        fi
     fi
 
     sleep 0.1
