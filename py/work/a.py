@@ -1,5 +1,5 @@
 #
-#   Copyright (c) 2017-2018 Joy Diamond.  All rights reserved.
+#   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
 import  Capital.Builtin                                                 #   Capital.Boot
 import  Capital.Privileged                                              #   Capital.Boot
@@ -148,6 +148,7 @@ from    Capital.BuiltIn     import  privileged_2                        #   Capi
     transport('Capital.Line',                       'blank_suppress')
     transport('Capital.Line',                       'change_prefix')
     transport('Capital.Line',                       'indent')
+    transport('Capital.Line',                       'output')
     transport('Capital.Map',                        'first_map_item')
     transport('Capital.Map',                        'iterate_items_sorted_by_key')
     transport('Capital.Map',                        'iterate_values_sorted_by_key')
