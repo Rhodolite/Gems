@@ -63,7 +63,7 @@ if [ $Main_py == pick ]; then
     Main_py=../Other/LearningPython/Main.py
 fi
 
-show=4
+show=2
 all=false
 #all=true
 total=75
