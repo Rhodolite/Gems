@@ -215,6 +215,7 @@ from    Capital.BuiltIn     import  privileged_2                        #   Capi
     transport('CoreParser.Atom',                    'produce_conjure_atom')
     transport('CoreParser.Atom',                    'SingleQuote')
     transport('CoreParser.Atom',                    'TokenName')
+    transport('CoreParser.Atom',                    'token_name_key')
     transport('CoreParser.BinaryExpression',        'AddExpression')
     transport('CoreParser.BinaryExpression',        'BinaryExpression')
     transport('CoreParser.BinaryExpression',        'conjure_add_expression')
