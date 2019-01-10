@@ -136,7 +136,8 @@ LearningPython = ../Other/LearningPython
 
 LearningPython_Files = \
     $(LearningPython)/__init__.py \
-    $(LearningPython)/Color_1.py $(LearningPython)/Color_2.py $(LearningPython)/Color_3.py \
+    $(LearningPython)/Code_1.py $(LearningPython)/Code_Sample.py \
+        $(LearningPython)/Color_1.py $(LearningPython)/Color_2.py $(LearningPython)/Color_3.py \
         $(LearningPython)/Color_4.py $(LearningPython)/Color_5.py \
     $(LearningPython)/Descriptor.py $(LearningPython)/Development.py \
     $(LearningPython)/Main.py $(LearningPython)/Metaclass.py $(LearningPython)/Meta_Metaclass.py \
@@ -443,7 +444,7 @@ clean:
 	rm -f   kbf.py kc.feature kc.py kc2.py kc2z.py kcs.py kcz.py kdz.py ke.py kf.py kfz.py
 	rm -f   ki.feature ki.py kir.py kis.py kiz.py kj.py km.py kmc.py kmcz.py kp.py kp2.py kp2z.py kpb.py
 	rm -f   kq.py kq2.py kq2z.py kqz.py ks.py ksz.py kt.feature kt.py ktf.py kts.py ktz.py
-	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpm.py lpmc.py lpmm.py
+	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpd1.py lpds.py lpm.py lpmc.py lpmm.py
 	rm -f   lpop.py lps.py lpv.py lpyp.py lpz.py lr1.txt
 	rm -f m
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
@@ -741,6 +742,8 @@ links:
 	ln -s $(LearningPython)/Color_4.py                                          lpc4.py
 	ln -s $(LearningPython)/Color_5.py                                          lpc5.py
 	ln -s $(LearningPython)/Descriptor.py                                       lpd.py
+	ln -s $(LearningPython)/Code_1.py                                           lpd1.py
+	ln -s $(LearningPython)/Code_Sample.py                                      lpds.py
 	ln -s $(LearningPython)/Main.py                                             lpm.py
 	ln -s $(LearningPython)/Metaclass.py                                        lpmc.py
 	ln -s $(LearningPython)/Meta_Metaclass.py                                   lpmm.py
