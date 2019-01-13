@@ -51,7 +51,7 @@ Capital_Files = \
         $(Capital)/PythonType.py \
     $(Capital)/Rabble.py $(Capital)/RegularExpression.py \
     $(Capital)/Series.py $(Capital)/Sequence.py $(Capital)/SimpleStringIO.py $(Capital)/Sleep.py \
-        $(Capital)/StaticMethod_OnlyViaClass.py $(Capital)/StringOutput.py $(Capital)/System.py \
+        $(Capital)/Sort.py $(Capital)/StaticMethod_OnlyViaClass.py $(Capital)/StringOutput.py $(Capital)/System.py \
     $(Capital)/Traceback.py $(Capital)/Thread.py $(Capital)/TupleFunctions.py $(Capital)/TypeMembers.py \
     $(Capital)/UniqueName.py \
     $(Capital)/Zone.py \
@@ -425,7 +425,7 @@ clean:
 	rm -f   cdc.py cdfo.py cdm.py cef.py cen.py cex.py cfo.py cfs.py cg4.py cga.py cgc.py cgl.py
 	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cic.py cii.py cin.py cinit.py cim.py cimc.py cio.py
 	rm -f   cl.py cly.py cmap.py cmd.py cmm.py com.py cop.py cov.py cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py
-	rm -f   csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
+	rm -f   cs.py csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
 	rm -f erk.py erm.py ers.py
 	rm -f files f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
@@ -590,6 +590,7 @@ links:
 	ln -s $(Capital)/UniqueName.py                                              cq.py
 	ln -s $(Capital)/Rabble.py                                                  cra.py
 	ln -s $(Capital)/RegularExpression.py                                       cre.py
+	ln -s $(Capital)/Sort.py                                                    cs.py
 	ln -s $(Capital)/Capital_StringBuilder.py                                   csb.py
 	ln -s $(Capital)/Series.py                                                  cse.py
 	ln -s $(Capital)/Sleep.py                                                   csl.py
