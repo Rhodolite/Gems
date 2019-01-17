@@ -1,5 +1,5 @@
 #
-#   Copyright (c) 2018 Joy Diamond.  All rights reserved.
+#   Copyright (c) 2018-2019 Joy Diamond.  All rights reserved.
 #
 set -e$-
 
@@ -17,7 +17,6 @@ for command in \
     "$python  ../Other/CodeGenerator/Main.py dev"         \
     "$python  ../Other/LearningPython/Main.py"            \
     "$python2 ../Other/LockFree/Main.py"                  \
-    "$python2 ../Other/Mothballed/Rubber/Main.py"         \
     "$python  ../Other/MultiProcessingExample/Main.py"    \
     "$python  ../Parser/Mothballed/JavaParser/Main.py"    \
     "$python  ../Parser/Mothballed/SqlParser/Main.py"     \
@@ -33,3 +32,11 @@ do
 
     $command >/dev/null
 done
+
+
+exit
+
+#
+#   Having problems connecting to elastic search -- will look into later
+#
+#   "$python2 ../Other/Mothballed/Rubber/Main.py"         \

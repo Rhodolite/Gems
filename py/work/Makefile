@@ -45,7 +45,7 @@ Capital_Files = \
         $(Capital)/Inspection_Of_An_Instance.py $(Capital)/Introspection.py $(Capital)/Import.py \
     $(Capital)/LifeCycle.py $(Capital)/Line.py $(Capital)/LiquidMap.py \
     $(Capital)/Map.py $(Capital)/Meta_Metaclass.py $(Capital)/Method.py \
-    $(Capital)/ObjectMembers.py $(Capital)/Output.py \
+    $(Capital)/ObjectMembers.py $(Capital)/Optional.py $(Capital)/Output.py \
     $(Capital)/Path.py $(Capital)/Path2.py $(Capital)/Portray.py $(Capital)/PortrayString.py \
         $(Capital)/ProcessObjectMembers.py $(Capital)/ProcessTypeMembers.py $(Capital)/PropertyInspect.py \
         $(Capital)/PythonType.py \
@@ -119,6 +119,22 @@ Elemental = ../Games/Elemental
 Elemental_Files = \
     $(Elemental)/Ice.py \
     $(Elemental)/Ice.y \
+
+
+Grow = ../Other/Grow
+
+Grow_Junk_Files = \
+    $(Grow)/Junk/1.py \
+
+
+Grow_1 = $(Grow)/1
+
+Grow_1_Files = \
+    $(Grow_1)/Crystal.py \
+    $(Grow_1)/Doc.py \
+    $(Grow_1)/ConstrutorError.txt \
+    $(Grow_1)/Test_Vision.py \
+    $(Grow_1)/Vision.py \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -413,6 +429,7 @@ all: clean files links
 
 
 clean:
+	rm -f 1ce.txt 1d.py 1j.py 1tv.py 1v.py 1y.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
@@ -423,9 +440,10 @@ clean:
 	rm -f cab.py cb.py cc2.py cca.py ccc.py ccd.py cce.py ccf.py
 	rm -f   ccm.py ccmc.py cco.py ccod.py ccq.py ccr.py ccsm.py ccx.py
 	rm -f   cdc.py cdfo.py cdm.py cef.py cen.py cex.py cfo.py cfs.py cg4.py cga.py cgc.py cgl.py
-	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cic.py cii.py cin.py cinit.py cim.py cimc.py cio.py
-	rm -f   cl.py cly.py cmap.py cmd.py cmm.py com.py cop.py cov.py cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py
-	rm -f   cs.py csb.py cse.py csl.py csq.py cso.py cssio.py csy.py ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
+	rm -f   ch2.py ch3.py ch4.py che.py chi.py chm.py cho.py cic.py cii.py cin.py cinit.py
+	rm -f   cim.py cimc.py cio.py cl.py cly.py cmap.py cmd.py cmm.py com.py cop.py cou.py cov.py
+	rm -f   cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py cs.py csb.py cse.py csl.py csq.py cso.py cssio.py csy.py
+	rm -f   ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
 	rm -f erk.py erm.py ers.py
 	rm -f files f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
@@ -475,6 +493,12 @@ files:
 
 
 links:
+	ln -s $(Grow_1)/ConstrutorError.txt                                         1ce.txt
+	ln -s $(Grow_1)/Doc.py                                                      1d.py
+	ln -s $(Grow)/Junk/1.py                                                     1j.py
+	ln -s $(Grow_1)/Test_Vision.py                                              1tv.py
+	ln -s $(Grow_1)/Vision.py                                                   1v.py
+	ln -s $(Grow_1)/Crystal.py                                                  1y.py
 	ln -s /usr/lib/python2.7/re.py                                              2re.py
 	ln -s /usr/lib/python2.7/sre_compile.py                                     2sc.py
 	ln -s /usr/lib/python2.7/sre_constants.py                                   2sf.py
@@ -581,7 +605,8 @@ links:
 	ln -s $(Capital)/Method.py                                                  cmd.py
 	ln -s $(Capital)/Meta_Metaclass.py                                          cmm.py
 	ln -s $(Capital)/ObjectMembers.py                                           com.py
-	ln -s $(Capital)/Output.py                                                  cop.py
+	ln -s $(Capital)/Optional.py                                                cop.py
+	ln -s $(Capital)/Output.py                                                  cou.py
 	ln -s $(Capital)/StaticMethod_OnlyViaClass.py                               cov.py
 	ln -s $(Capital)/Path.py                                                    cpa.py
 	ln -s $(Capital)/PropertyInspect.py                                         cpi.py
@@ -888,7 +913,7 @@ links:
 wc:
 
 	#
-	#  Excludes $(Agate_Files) and $(*_GENERATED)
+	#  Excludes $Agate_Files, $Grow_Junk_Files and $*_GENERATED
 	#
 	wc -l \
         $(Beryl_Files) \
@@ -898,6 +923,7 @@ wc:
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
         $(Elemental_Files) \
+        $(Grow_1_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
@@ -927,6 +953,7 @@ test:
         $(CodeGenerator_Files) \
         $(CoreParser_Files) \
         $(Elemental_Files) \
+        $(Grow_1_Files) \
         $(JavaParser_Files) \
         $(KeyExample_Files) \
         $(LearningPython_Files) \
