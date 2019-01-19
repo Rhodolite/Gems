@@ -131,10 +131,9 @@ Grow_1 = $(Grow)/1
 
 Grow_1_Files = \
     $(Grow_1)/Crystal.py \
-    $(Grow_1)/Doc.py \
+    $(Grow)/Junk/Doc.py \
     $(Grow_1)/ConstrutorError.txt \
-    $(Grow_1)/Test_Vision.py \
-    $(Grow_1)/Vision.py \
+    $(Grow_1)/Vision.x \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -429,7 +428,7 @@ all: clean files links
 
 
 clean:
-	rm -f 1ce.txt 1d.py 1j.py 1tv.py 1v.py 1y.py
+	rm -f 1ce.txt 1d.py 1j.py 1tv.py 1v.py 1v.x 1y.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
@@ -494,10 +493,11 @@ files:
 
 links:
 	ln -s $(Grow_1)/ConstrutorError.txt                                         1ce.txt
-	ln -s $(Grow_1)/Doc.py                                                      1d.py
+	ln -s $(Grow)/Junk/Doc.py                                                   1d.py
 	ln -s $(Grow)/Junk/1.py                                                     1j.py
 	ln -s $(Grow_1)/Test_Vision.py                                              1tv.py
 	ln -s $(Grow_1)/Vision.py                                                   1v.py
+	ln -s $(Grow_1)/Vision.x                                                    1v.x
 	ln -s $(Grow_1)/Crystal.py                                                  1y.py
 	ln -s /usr/lib/python2.7/re.py                                              2re.py
 	ln -s /usr/lib/python2.7/sre_compile.py                                     2sc.py
