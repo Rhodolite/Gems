@@ -125,14 +125,22 @@ Grow = ../Other/Grow
 
 Grow_Junk_Files = \
     $(Grow)/Junk/1.py \
-
+    $(Grow)/Junk/Doc2.py \
+    $(Grow)/Junk/Doc.py \
+    $(Grow)/Junk/Immutable.py \
 
 Grow_1 = $(Grow)/1
 
 Grow_1_Files = \
+    $(Grow_1)/ConstructorError.txt \
+    $(Grow_1)/Crystal/Core.py \
+    $(Grow_1)/Crystal/Fact.py \
+    $(Grow_1)/Crystal/Map.py \
+    $(Grow_1)/Crystal/Module.py \
+    $(Grow_1)/Crystal/Share.py \
+    $(Grow_1)/Crystal/Z_Mode.py \
     $(Grow_1)/Crystal.py \
-    $(Grow)/Junk/Doc.py \
-    $(Grow_1)/ConstrutorError.txt \
+    $(Grow_1)/Test_Vision.py \
     $(Grow_1)/Vision.x \
 
 
@@ -404,6 +412,7 @@ Files = \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
     $(Elemental_Files) \
+    $(Grow_1_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
     $(KeyExample_Files) \
     $(LearningPython_Files) \
@@ -428,7 +437,7 @@ all: clean files links
 
 
 clean:
-	rm -f 1ce.txt 1d.py 1j.py 1tv.py 1v.py 1v.x 1y.py
+	rm -f 1c.py 1ce.txt 1d.py 1d2.py 1f.py 1id.py 1j.py 1m.py 1mm.py 1s.py 1tv.py 1v.py 1v.x 1y.py 1z.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
@@ -492,13 +501,21 @@ files:
 
 
 links:
-	ln -s $(Grow_1)/ConstrutorError.txt                                         1ce.txt
+	ln -s $(Grow_1)/Crystal/Core.py                                             1c.py
+	ln -s $(Grow_1)/ConstructorError.txt                                        1ce.txt
 	ln -s $(Grow)/Junk/Doc.py                                                   1d.py
+	ln -s $(Grow)/Junk/Doc2.py                                                  1d2.py
+	ln -s $(Grow_1)/Crystal/Fact.py                                             1f.py
+	ln -s $(Grow)/Junk/ImmutablePoint.py                                        1id.py
 	ln -s $(Grow)/Junk/1.py                                                     1j.py
+	ln -s $(Grow_1)/Crystal/Module.py                                           1m.py
+	ln -s $(Grow_1)/Crystal/Map.py                                              1mm.py
+	ln -s $(Grow_1)/Crystal/Share.py                                            1s.py
 	ln -s $(Grow_1)/Test_Vision.py                                              1tv.py
 	ln -s $(Grow_1)/Vision.py                                                   1v.py
 	ln -s $(Grow_1)/Vision.x                                                    1v.x
 	ln -s $(Grow_1)/Crystal.py                                                  1y.py
+	ln -s $(Grow_1)/Crystal/Z_Mode.py                                           1z.py
 	ln -s /usr/lib/python2.7/re.py                                              2re.py
 	ln -s /usr/lib/python2.7/sre_compile.py                                     2sc.py
 	ln -s /usr/lib/python2.7/sre_constants.py                                   2sf.py
@@ -911,7 +928,6 @@ links:
 	ln -s $(UnitTest)/Zone.py                                                   zzo.py
 
 wc:
-
 	#
 	#  Excludes $Agate_Files, $Grow_Junk_Files and $*_GENERATED
 	#

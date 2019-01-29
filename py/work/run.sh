@@ -16,6 +16,7 @@ case $# in
             r) Main_py=../Tremolite/TremoliteParser/Main.py ;;
             q) Main_py=../Games/Storyquest/Main.py ;;
             ts) Main_py=../Other/TeacherSample/Test_SchoolIdentifer.py ;;
+            x) Main_py=Vision.x ;;
             z) Main_py=../UnitTest/UnitTest/Main.py ;;
             *) usage=true ;;
         esac
@@ -67,6 +68,11 @@ show=2
 all=false
 #all=true
 total=75
+
+case $Main_py in
+    Vision.x) show=5 ;;
+esac
+
 
 command="python -sS $Main_py"
 commandO="python -O $Main_py"
@@ -157,6 +163,23 @@ do
             if [ $show = 4 ]; then
                 echo -en '\E[H\E[J'
                 tail -$total 4
+            fi
+        fi
+    fi
+
+    if [ $show = 5 ]; then
+        if (cd ../Other/Grow/1; python $Main_py) <$tmp1 >&$tmp3; then
+            :
+        fi
+
+        if cmp -s $tmp3 5; then
+            :
+        else
+            mv $tmp3 5
+   
+            if [ $show = 5 ]; then
+                echo -en '\E[H\E[J'
+                tail -$total 5
             fi
         fi
     fi
