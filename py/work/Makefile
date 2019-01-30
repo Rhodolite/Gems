@@ -162,6 +162,7 @@ LearningPython_Files = \
     $(LearningPython)/Code_1.py $(LearningPython)/Code_Sample.py \
         $(LearningPython)/Color_1.py $(LearningPython)/Color_2.py $(LearningPython)/Color_3.py \
         $(LearningPython)/Color_4.py $(LearningPython)/Color_5.py \
+        $(LearningPython)/Ctypes_1.py \
     $(LearningPython)/Descriptor.py $(LearningPython)/Development.py \
     $(LearningPython)/Main.py $(LearningPython)/Metaclass.py $(LearningPython)/Meta_Metaclass.py \
     $(LearningPython)/ObjectParts.py \
@@ -471,7 +472,7 @@ clean:
 	rm -f   ki.feature ki.py kir.py kis.py kiz.py kj.py km.py kmc.py kmcz.py kp.py kp2.py kp2z.py kpb.py
 	rm -f   kq.py kq2.py kq2z.py kqz.py ks.py ksz.py kt.feature kt.py ktf.py kts.py ktz.py
 	rm -f l.txt lpc1.py lpc2.py lpc3.py lpc4.py lpc5.py lpd.py lpd1.py lpds.py lpm.py lpmc.py lpmm.py
-	rm -f   lpop.py lps.py lpv.py lpyp.py lpz.py lr1.txt
+	rm -f   lpop.py lps.py lpv.py lpy1.py lpyp.py lpz.py lr1.txt
 	rm -f m
 	rm -f   m2ch.py m2d.py m2m.py m2ma.py m2z.py m3m.py
 	rm -f oba.py obi.py obk.py obm.py
@@ -482,7 +483,7 @@ clean:
 	rm -f   rma.py rma2.py rmc.py rmc2.py rmx.py rn.py rp.py rpa.py rpe.py rpr.py rps.py
 	rm -f   rs.py ru.py rx.py rxc.py rxcr.py rxp.py rxw.py rxz.py rz.py rz2.py rza.py
 	rm -f t.java t.py t.y
-	rm -f ud.py ue.py um.py uz.py
+	rm -f ud.py ue.py um.py uy.py uz.py
 	rm -f xb.py xf.py
 	rm -f ybi.py ybq.py ycb.py yd7.py yg.py ygb.py yki.py ykn.py
 	rm -f   ym.py yp.py yq.py yr.py yv.py yw.py yz.py yzc.py yyzk.py yzr.py
@@ -793,6 +794,7 @@ links:
 	ln -s $(LearningPython)/ObjectParts.py                                      lpop.py
 	ln -s $(LearningPython)/Show.py                                             lps.py
 	ln -s $(LearningPython)/Development.py                                      lpv.py
+	ln -s $(LearningPython)/Ctypes_1.py                                         lpy1.py
 	ln -s $(LearningPython)/TypeParts.py                                        lpyp.py
 	ln -s $(LearningPython)/__init__.py                                         lpz.py
 	ln -s ../PPK/OtherLicenses/README.txt                                       lr1.txt
@@ -873,6 +875,7 @@ links:
 	ln -s $(Rubber)/Development.py                                              ud.py
 	ln -s $(Rubber)/ElasticSearch.py                                            ue.py
 	ln -s $(Rubber)/Main.py                                                     um.py
+	ln -s ../Old/pyxie/.gem/UseCtypes.py                                        uy.py
 	ln -s $(Rubber)/__init__.py                                                 uz.py
 	ln -s $(SinglePythonFileBoot)/SinglePythonFileBoot.py                       xb.py
 	ln -s $(PythonParser)/Transform.py                                          xf.py

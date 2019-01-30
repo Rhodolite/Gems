@@ -1,7 +1,7 @@
 #
 #   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
-import  Capital.Builtin                                                 #   Capital.Boot
+import  Capital.BuiltIn                                                 #   Capital.Boot
 import  Capital.Privileged                                              #   Capital.Boot
 import  Capital.Shared                                                  #   Capital.Boot
 import  Python_Exception                                                #   Capital.Boot
