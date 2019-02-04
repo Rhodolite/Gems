@@ -129,19 +129,25 @@ Grow_Junk_Files = \
     $(Grow)/Junk/Doc.py \
     $(Grow)/Junk/Immutable.py \
 
-Grow_1 = $(Grow)/1
+Grow_1  = $(Grow)/1
+Grow_1Y = $(Grow_1)/Crystal
 
 Grow_1_Files = \
     $(Grow_1)/ConstructorError.txt \
-    $(Grow_1)/Crystal/Core.py \
-    $(Grow_1)/Crystal/Fact.py \
-    $(Grow_1)/Crystal/Map.py \
-    $(Grow_1)/Crystal/Module.py \
-    $(Grow_1)/Crystal/Share.py \
-    $(Grow_1)/Crystal/Z_Mode.py \
     $(Grow_1)/Crystal.py \
     $(Grow_1)/Test_Vision.py \
     $(Grow_1)/Vision.x \
+    $(Grow_1Y)/BuildInstance.py \
+    $(Grow_1Y)/Cannot.py $(Grow_1Y)/Core.py \
+    $(Grow_1Y)/Exception.py \
+    $(Grow_1Y)/Fact.py $(Grow_1Y)/Fixed_6.py $(Grow_1Y)/Fixup_CrystalGlobals.py \
+    $(Grow_1Y)/Map.py $(Grow_1Y)/Module.py $(Grow_1Y)/Mutable_3.py \
+    $(Grow_1Y)/ObjectMembers.py \
+    $(Grow_1Y)/Share.py $(Grow_1Y)/Show_CrystalGlobals.py $(Grow_1Y)/SimpleContextLifecycle.py \
+        $(Grow_1Y)/Show_Portray.py $(Grow_1Y)/StringOutput.py \
+    $(Grow_1Y)/Verify_CrystalGlobals.py \
+    $(Grow_1Y)/Wipe_CrystalGlobals.py \
+    $(Grow_1Y)/Z_Mode.py \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -438,7 +444,8 @@ all: clean files links
 
 
 clean:
-	rm -f 1c.py 1ce.txt 1d.py 1d2.py 1f.py 1id.py 1j.py 1m.py 1mm.py 1s.py 1tv.py 1v.py 1v.x 1y.py 1z.py
+	rm -f 1b.py 1c.py 1ce.txt 1cn.py 1d.py 1d2.py 1f.py 1f6.py 1fg.py 1id.py 1j.py 1m.py 1m3.py 1mm.py 1om.py
+	rm -f   1s.py 1sg.py 1so.py 1sxy.py 1sy.py 1tv.py 1v.py 1v.x 1vg.py 1wg.py 1x.py 1y.py 1z.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
@@ -465,7 +472,7 @@ clean:
 	rm -f   hma.py hma1.py hma2.py hmc.py hmd.py hmdf.py hme.py hmx.py hmy.py
 	rm -f   hp.py hpa.py hpath.py hpc.py hpe.py hpes.py hpf.py hpi.py hpm.py hpr.py hps.py hpx.py hpy.py
 	rm -f   hs.py hu.py hv.py hx.py hy.py hz.py hza.py hzh.py hzn.py hzo.py
-	rm -f ice.py ice.y
+	rm -f ib.py ibe.py ice.py ice.y ii.py im.py iu.py
 	rm -f jb.py jma.py jmc.py jp0.py jp1.py jpt.py jz.py
 	rm -f k2e.py k2m.py k2r.py
 	rm -f   kbf.py kc.feature kc.py kc2.py kc2z.py kcs.py kcz.py kdz.py ke.py kf.py kfz.py
@@ -502,21 +509,34 @@ files:
 
 
 links:
-	ln -s $(Grow_1)/Crystal/Core.py                                             1c.py
+	ln -s $(Grow_1Y)/BuildInstance.py                                           1b.py
+	ln -s $(Grow_1Y)/Core.py                                                    1c.py
 	ln -s $(Grow_1)/ConstructorError.txt                                        1ce.txt
+	ln -s $(Grow_1Y)/Cannot.py                                                  1cn.py
 	ln -s $(Grow)/Junk/Doc.py                                                   1d.py
 	ln -s $(Grow)/Junk/Doc2.py                                                  1d2.py
-	ln -s $(Grow_1)/Crystal/Fact.py                                             1f.py
+	ln -s $(Grow_1Y)/Fact.py                                                    1f.py
+	ln -s $(Grow_1Y)/Fixed_6.py                                                 1f6.py
+	ln -s $(Grow_1Y)/Fixup_CrystalGlobals.py                                    1fg.py
 	ln -s $(Grow)/Junk/ImmutablePoint.py                                        1id.py
 	ln -s $(Grow)/Junk/1.py                                                     1j.py
-	ln -s $(Grow_1)/Crystal/Module.py                                           1m.py
-	ln -s $(Grow_1)/Crystal/Map.py                                              1mm.py
-	ln -s $(Grow_1)/Crystal/Share.py                                            1s.py
+	ln -s $(Grow_1Y)/Module.py                                                  1m.py
+	ln -s $(Grow_1Y)/Mutable_3.py                                               1m3.py
+	ln -s $(Grow_1Y)/Map.py                                                     1mm.py
+	ln -s $(Grow_1Y)/ObjectMembers.py                                           1om.py
+	ln -s $(Grow_1Y)/Share.py                                                   1s.py
+	ln -s $(Grow_1Y)/Show_CrystalGlobals.py                                     1sg.py
+	ln -s $(Grow_1Y)/StringOutput.py                                            1so.py
+	ln -s $(Grow_1Y)/SimpleContextLifecycle.py                                  1sxy.py
+	ln -s $(Grow_1Y)/Show_Portray.py                                            1sy.py
 	ln -s $(Grow_1)/Test_Vision.py                                              1tv.py
 	ln -s $(Grow_1)/Vision.py                                                   1v.py
 	ln -s $(Grow_1)/Vision.x                                                    1v.x
+	ln -s $(Grow_1Y)/Verify_CrystalGlobals.py                                   1vg.py
+	ln -s $(Grow_1Y)/Wipe_CrystalGlobals.py                                     1wg.py
+	ln -s $(Grow_1Y)/Exception.py                                               1x.py
 	ln -s $(Grow_1)/Crystal.py                                                  1y.py
-	ln -s $(Grow_1)/Crystal/Z_Mode.py                                           1z.py
+	ln -s $(Grow_1Y)/Z_Mode.py                                                  1z.py
 	ln -s /usr/lib/python2.7/re.py                                              2re.py
 	ln -s /usr/lib/python2.7/sre_compile.py                                     2sc.py
 	ln -s /usr/lib/python2.7/sre_constants.py                                   2sf.py
@@ -732,8 +752,13 @@ links:
 	ln -s $(PythonParser)/TokenizeHeader.py                                     hzh.py
 	ln -s $(PythonParser)/TokenizeName.py                                       hzn.py
 	ln -s $(PythonParser)/TokenizeOperator.py                                   hzo.py
+	ln -s /usr/lib/python3.5/importlib/_bootstrap.py                            ib.py
+	ln -s /usr/lib/python3.5/importlib/_bootstrap_external.py                   ibe.py
 	ln -s $(Elemental)/Ice.py                                                   ice.py
 	ln -s $(Elemental)/Ice.y                                                    ice.y
+	ln -s /usr/lib/python3.5/importlib/__init__.py                              ii.py
+	ln -s /usr/lib/python3.5/importlib/machinery.py                             im.py
+	ln -s /usr/lib/python3.5/importlib/util.py                                  iu.py
 	ln -s ../Old/Junk/Boot.py                                                   jb.py
 	ln -s $(JavaParser)/Main.py                                                 jma.py
 	ln -s $(JavaParser)/Match.py                                                jmc.py
