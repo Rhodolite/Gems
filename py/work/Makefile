@@ -137,12 +137,15 @@ Grow_1_Files = \
     $(Grow_1)/Crystal.py \
     $(Grow_1)/Test_Vision.py \
     $(Grow_1)/Vision.x \
-    $(Grow_1Y)/BuildInstance.py \
-    $(Grow_1Y)/Cannot.py $(Grow_1Y)/Core.py \
+    $(Grow_1Y)/Build_MutableMap.py \
+    $(Grow_1Y)/Cache.py $(Grow_1Y)/Cannot.py $(Grow_1Y)/ChangePrefix.py $(Grow_1Y)/Core.py \
     $(Grow_1Y)/Exception.py \
-    $(Grow_1Y)/Fact.py $(Grow_1Y)/Fixed_6.py $(Grow_1Y)/Fixup_CrystalGlobals.py \
-    $(Grow_1Y)/Map.py $(Grow_1Y)/Module.py $(Grow_1Y)/Mutable_3.py \
+    $(Grow_1Y)/Fact.py $(Grow_1Y)/Fixed_3.py $(Grow_1Y)/Fixed_5.py $(Grow_1Y)/Fixed_6.py \
+        $(Grow_1Y)/Fixup_CrystalGlobals.py \
+    $(Grow_1Y)/Module.py $(Grow_1Y)/MutableMap.py $(Grow_1Y)/Mutable_12.py $(Grow_1Y)/Mutable_3.py \
+        $(Grow_1Y)/Mutable_4.py \
     $(Grow_1Y)/ObjectMembers.py \
+    $(Grow_1Y)/ReusableContextLifecycle.py \
     $(Grow_1Y)/Share.py $(Grow_1Y)/Show_CrystalGlobals.py $(Grow_1Y)/SimpleContextLifecycle.py \
         $(Grow_1Y)/Show_Portray.py $(Grow_1Y)/StringOutput.py \
     $(Grow_1Y)/Verify_CrystalGlobals.py \
@@ -444,8 +447,9 @@ all: clean files links
 
 
 clean:
-	rm -f 1b.py 1c.py 1ce.txt 1cn.py 1d.py 1d2.py 1f.py 1f6.py 1fg.py 1id.py 1j.py 1m.py 1m3.py 1mm.py 1om.py
-	rm -f   1s.py 1sg.py 1so.py 1sxy.py 1sy.py 1tv.py 1v.py 1v.x 1vg.py 1wg.py 1x.py 1y.py 1z.py
+	rm -f 1bmm.py 1ca.py 1ce.txt 1cn.py 1co.py 1cx.py 1d.py 1d2.py 1f.py 1f3.py 1f5.py 1f6.py 1fg.py 1id.py 1j.py
+	rm -f   1m.py 1m12.py 1m3.py 1m4.py 1mm.py 1om.py 1rxy.py 1s.py 1sg.py 1so.py 1sxy.py 1sy.py
+	rm -f   1tv.py 1v.py 1v.x 1vg.py 1wg.py 1x.py 1y.py 1z.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
 	rm -f ac.py ag.py
@@ -509,21 +513,28 @@ files:
 
 
 links:
-	ln -s $(Grow_1Y)/BuildInstance.py                                           1b.py
-	ln -s $(Grow_1Y)/Core.py                                                    1c.py
+	ln -s $(Grow_1Y)/Build_MutableMap.py                                        1bmm.py
+	ln -s $(Grow_1Y)/Cache.py                                                   1ca.py
 	ln -s $(Grow_1)/ConstructorError.txt                                        1ce.txt
 	ln -s $(Grow_1Y)/Cannot.py                                                  1cn.py
+	ln -s $(Grow_1Y)/Core.py                                                    1co.py
+	ln -s $(Grow_1Y)/ChangePrefix.py                                            1cx.py
 	ln -s $(Grow)/Junk/Doc.py                                                   1d.py
 	ln -s $(Grow)/Junk/Doc2.py                                                  1d2.py
 	ln -s $(Grow_1Y)/Fact.py                                                    1f.py
+	ln -s $(Grow_1Y)/Fixed_3.py                                                 1f3.py
+	ln -s $(Grow_1Y)/Fixed_5.py                                                 1f5.py
 	ln -s $(Grow_1Y)/Fixed_6.py                                                 1f6.py
 	ln -s $(Grow_1Y)/Fixup_CrystalGlobals.py                                    1fg.py
 	ln -s $(Grow)/Junk/ImmutablePoint.py                                        1id.py
 	ln -s $(Grow)/Junk/1.py                                                     1j.py
 	ln -s $(Grow_1Y)/Module.py                                                  1m.py
+	ln -s $(Grow_1Y)/Mutable_12.py                                              1m12.py
 	ln -s $(Grow_1Y)/Mutable_3.py                                               1m3.py
-	ln -s $(Grow_1Y)/Map.py                                                     1mm.py
+	ln -s $(Grow_1Y)/Mutable_4.py                                               1m4.py
+	ln -s $(Grow_1Y)/MutableMap.py                                              1mm.py
 	ln -s $(Grow_1Y)/ObjectMembers.py                                           1om.py
+	ln -s $(Grow_1Y)/ReusableContextLifecycle.py                                1rxy.py
 	ln -s $(Grow_1Y)/Share.py                                                   1s.py
 	ln -s $(Grow_1Y)/Show_CrystalGlobals.py                                     1sg.py
 	ln -s $(Grow_1Y)/StringOutput.py                                            1so.py
