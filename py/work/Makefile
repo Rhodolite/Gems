@@ -129,6 +129,12 @@ Grow_Junk_Files = \
     $(Grow)/Junk/Doc.py \
     $(Grow)/Junk/Immutable.py \
 
+Grow_1  = $(Grow)/1
+
+Grow_1_Files = \
+    $(Grow_1)/Crystal.py \
+    $(Grow_1)/Vision.x \
+
 Grow_2  = $(Grow)/2
 Grow_2Y = $(Grow_2)/Crystal
 
@@ -423,6 +429,7 @@ Files = \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
     $(Elemental_Files) \
+    $(Grow_1_Files) \
     $(Grow_2_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
     $(KeyExample_Files) \
@@ -448,6 +455,7 @@ all: clean files links
 
 
 clean:
+	rm -f 1v.x 1y.py
 	rm -f 2bmm.py 2ca.py 2ce.txt 2cn.py 2co.py 2cx.py 2d.py 2d2.py 2f.py 2f3.py 2f5.py 2f6.py 2fg.py 2id.py 2j.py
 	rm -f   2m.py 2m10.py 2m12.py 2m3.py 2m4.py 2mm.py 2om.py 2rxy.py 2s.py 2sg.py 2so.py 2sxy.py 2sy.py
 	rm -f   2t.py 2tv.py 2v.py 2v.x 2vg.py 2wg.py 2x.py 2y.py 2z.py
@@ -513,6 +521,8 @@ files:
 
 
 links:
+	ln -s $(Grow_1)/Vision.x                                                    1v.x
+	ln -s $(Grow_1)/Crystal.py                                                  1y.py
 	ln -s $(Grow_2Y)/Build_MutableMap.py                                        2bmm.py
 	ln -s $(Grow_2Y)/Cache.py                                                   2ca.py
 	ln -s $(Grow_2)/ConstructorError.txt                                        2ce.txt
