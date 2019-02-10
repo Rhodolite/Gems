@@ -142,8 +142,8 @@ Grow_1_Files = \
     $(Grow_1Y)/Exception.py \
     $(Grow_1Y)/Fact.py $(Grow_1Y)/Fixed_3.py $(Grow_1Y)/Fixed_5.py $(Grow_1Y)/Fixed_6.py \
         $(Grow_1Y)/Fixup_CrystalGlobals.py \
-    $(Grow_1Y)/Module.py $(Grow_1Y)/MutableMap.py $(Grow_1Y)/Mutable_12.py $(Grow_1Y)/Mutable_3.py \
-        $(Grow_1Y)/Mutable_4.py \
+    $(Grow_1Y)/Module.py $(Grow_1Y)/MutableMap.py $(Grow_1Y)/Mutable_10.py $(Grow_1Y)/Mutable_12.py \
+        $(Grow_1Y)/Mutable_3.py $(Grow_1Y)/Mutable_4.py \
     $(Grow_1Y)/ObjectMembers.py \
     $(Grow_1Y)/ReusableContextLifecycle.py \
     $(Grow_1Y)/Share.py $(Grow_1Y)/Show_CrystalGlobals.py $(Grow_1Y)/SimpleContextLifecycle.py \
@@ -448,7 +448,7 @@ all: clean files links
 
 clean:
 	rm -f 1bmm.py 1ca.py 1ce.txt 1cn.py 1co.py 1cx.py 1d.py 1d2.py 1f.py 1f3.py 1f5.py 1f6.py 1fg.py 1id.py 1j.py
-	rm -f   1m.py 1m12.py 1m3.py 1m4.py 1mm.py 1om.py 1rxy.py 1s.py 1sg.py 1so.py 1sxy.py 1sy.py
+	rm -f   1m.py 1m10.py 1m12.py 1m3.py 1m4.py 1mm.py 1om.py 1rxy.py 1s.py 1sg.py 1so.py 1sxy.py 1sy.py
 	rm -f   1tv.py 1v.py 1v.x 1vg.py 1wg.py 1x.py 1y.py 1z.py
 	rm -f 2re.py 2sf.py 2sp.py 2sc.py
 	rm -f 3re.py 3sf.py 3sp.py 3sc.py
@@ -529,6 +529,7 @@ links:
 	ln -s $(Grow)/Junk/ImmutablePoint.py                                        1id.py
 	ln -s $(Grow)/Junk/1.py                                                     1j.py
 	ln -s $(Grow_1Y)/Module.py                                                  1m.py
+	ln -s $(Grow_1Y)/Mutable_10.py                                              1m10.py
 	ln -s $(Grow_1Y)/Mutable_12.py                                              1m12.py
 	ln -s $(Grow_1Y)/Mutable_3.py                                               1m3.py
 	ln -s $(Grow_1Y)/Mutable_4.py                                               1m4.py
@@ -997,6 +998,7 @@ wc:
         $(TremoliteParser_Files) \
         $(UnitTest_Files) \
         $(Work_Files)
+	wc -l $(Grow_1_Files)
 
 
 test:
