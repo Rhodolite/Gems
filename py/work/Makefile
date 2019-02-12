@@ -130,10 +130,23 @@ Grow_Junk_Files = \
     $(Grow)/Junk/Immutable.py \
 
 Grow_1  = $(Grow)/1
+Grow_1Z = $(Grow_1)/Z
 
 Grow_1_Files = \
-    $(Grow_1)/Crystal.py \
-    $(Grow_1)/Vision.x \
+    $(Grow_1)/Vision.z \
+    $(Grow_1)/Z.py \
+    $(Grow_1Z)/CodeGenerator_OnExit.py \
+    $(Grow_1Z)/Core.py \
+    $(Grow_1Z)/Crystal_ParseTree.py \
+    $(Grow_1Z)/Extract.py \
+    $(Grow_1Z)/Python_ParseTree.py \
+    $(Grow_1Z)/Transform_Crystal_to_Python.py \
+
+Grow_1_Previous  = $(Grow)/1.previous
+
+Grow_1_Previous_Files = \
+    $(Grow_1_Previous)/Crystal.py \
+    $(Grow_1_Previous)/Vision.x \
 
 Grow_2  = $(Grow)/2
 Grow_2Y = $(Grow_2)/Crystal
@@ -455,7 +468,7 @@ all: clean files links
 
 
 clean:
-	rm -f 1v.x 1y.py
+	rm -f 1c.py 1e.py 1g.py 1p.py 1pv.x 1py.py 1x.py 1v.z 1y.py 1z.py
 	rm -f 2bmm.py 2ca.py 2ce.txt 2cn.py 2co.py 2cx.py 2d.py 2d2.py 2f.py 2f3.py 2f5.py 2f6.py 2fg.py 2id.py 2j.py
 	rm -f   2m.py 2m10.py 2m12.py 2m3.py 2m4.py 2mm.py 2om.py 2rxy.py 2s.py 2sg.py 2so.py 2sxy.py 2sy.py
 	rm -f   2t.py 2tv.py 2v.py 2v.x 2vg.py 2wg.py 2x.py 2y.py 2z.py
@@ -521,8 +534,16 @@ files:
 
 
 links:
-	ln -s $(Grow_1)/Vision.x                                                    1v.x
-	ln -s $(Grow_1)/Crystal.py                                                  1y.py
+	ln -s $(Grow_1Z)/Core.py                                                    1c.py
+	ln -s $(Grow_1Z)/Extract.py                                                 1e.py
+	ln -s $(Grow_1Z)/CodeGenerator_OnExit.py                                    1g.py
+	ln -s $(Grow_1Z)/Python_ParseTree.py                                        1p.py
+	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
+	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
+	ln -s $(Grow_1)/Vision.z                                                    1v.z
+	ln -s $(Grow_1Z)/Transform_Crystal_to_Python.py                             1x.py
+	ln -s $(Grow_1Z)/Crystal_ParseTree.py                                       1y.py
+	ln -s $(Grow_1)/Z.py                                                        1z.py
 	ln -s $(Grow_2Y)/Build_MutableMap.py                                        2bmm.py
 	ln -s $(Grow_2Y)/Cache.py                                                   2ca.py
 	ln -s $(Grow_2)/ConstructorError.txt                                        2ce.txt
@@ -1009,7 +1030,9 @@ wc:
         $(TremoliteParser_Files) \
         $(UnitTest_Files) \
         $(Work_Files)
-	wc -l $(Grow_2_Files)
+
+wc1:
+	wc -l $(Grow_1_Files)
 
 
 test:
