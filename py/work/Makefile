@@ -142,35 +142,36 @@ Grow_1_Files = \
     $(Grow_1Z)/Python_ParseTree.py \
     $(Grow_1Z)/Transform_Crystal_to_Python.py \
 
-Grow_1_Previous  = $(Grow)/1.previous
+
+Grow_1_Previous = $(Grow)/1.previous
 
 Grow_1_Previous_Files = \
     $(Grow_1_Previous)/Crystal.py \
     $(Grow_1_Previous)/Vision.x \
 
-Grow_2  = $(Grow)/2
-Grow_2Y = $(Grow_2)/Crystal
+Grow_22  = $(Grow)/22
+Grow_22Y = $(Grow_22)/Crystal
 
-Grow_2_Files = \
-    $(Grow_2)/ConstructorError.txt \
-    $(Grow_2)/Crystal.py \
-    $(Grow_2)/Test_Vision.py \
-    $(Grow_2)/Vision.x \
-    $(Grow_2Y)/Build_MutableMap.py \
-    $(Grow_2Y)/Cache.py $(Grow_2Y)/Cannot.py $(Grow_2Y)/ChangePrefix.py $(Grow_2Y)/Core.py \
-    $(Grow_2Y)/Exception.py \
-    $(Grow_2Y)/Fact.py $(Grow_2Y)/Fixed_3.py $(Grow_2Y)/Fixed_5.py $(Grow_2Y)/Fixed_6.py \
-        $(Grow_2Y)/Fixup_CrystalGlobals.py \
-    $(Grow_2Y)/Module.py $(Grow_2Y)/MutableMap.py $(Grow_2Y)/Mutable_10.py $(Grow_2Y)/Mutable_12.py \
-        $(Grow_2Y)/Mutable_3.py $(Grow_2Y)/Mutable_4.py \
-    $(Grow_2Y)/ObjectMembers.py \
-    $(Grow_2Y)/ReusableContextLifecycle.py \
-    $(Grow_2Y)/Share.py $(Grow_2Y)/Show_CrystalGlobals.py $(Grow_2Y)/SimpleContextLifecycle.py \
-        $(Grow_2Y)/Show_Portray.py $(Grow_2Y)/StringOutput.py \
-    $(Grow_2Y)/Tree.py \
-    $(Grow_2Y)/Verify_CrystalGlobals.py \
-    $(Grow_2Y)/Wipe_CrystalGlobals.py \
-    $(Grow_2Y)/Z_Mode.py \
+Grow_22_Files = \
+    $(Grow_22)/ConstructorError.txt \
+    $(Grow_22)/Crystal.py \
+    $(Grow_22)/Test_Vision.py \
+    $(Grow_22)/Vision.x \
+    $(Grow_22Y)/Build_MutableMap.py \
+    $(Grow_22Y)/Cache.py $(Grow_22Y)/Cannot.py $(Grow_22Y)/ChangePrefix.py $(Grow_22Y)/Core.py \
+    $(Grow_22Y)/Exception.py \
+    $(Grow_22Y)/Fact.py $(Grow_22Y)/Fixed_3.py $(Grow_22Y)/Fixed_5.py $(Grow_22Y)/Fixed_6.py \
+        $(Grow_22Y)/Fixup_CrystalGlobals.py \
+    $(Grow_22Y)/Module.py $(Grow_22Y)/MutableMap.py $(Grow_22Y)/Mutable_10.py $(Grow_22Y)/Mutable_122.py \
+        $(Grow_22Y)/Mutable_3.py $(Grow_22Y)/Mutable_4.py \
+    $(Grow_22Y)/ObjectMembers.py \
+    $(Grow_22Y)/ReusableContextLifecycle.py \
+    $(Grow_22Y)/Share.py $(Grow_22Y)/Show_CrystalGlobals.py $(Grow_22Y)/SimpleContextLifecycle.py \
+        $(Grow_22Y)/Show_Portray.py $(Grow_22Y)/StringOutput.py \
+    $(Grow_22Y)/Tree.py \
+    $(Grow_22Y)/Verify_CrystalGlobals.py \
+    $(Grow_22Y)/Wipe_CrystalGlobals.py \
+    $(Grow_22Y)/Z_Mode.py \
 
 
 JavaParser = ../Parser/Mothballed/JavaParser
@@ -443,7 +444,7 @@ Files = \
     $(CoreParser_Files) \
     $(Elemental_Files) \
     $(Grow_1_Files) \
-    $(Grow_2_Files) \
+    $(Grow_22_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
     $(KeyExample_Files) \
     $(LearningPython_Files) \
@@ -468,10 +469,10 @@ all: clean files links
 
 
 clean:
-	rm -f 1c.py 1e.py 1g.py 1p.py 1pv.x 1py.py 1x.py 1v.z 1y.py 1z.py
-	rm -f 2bmm.py 2ca.py 2ce.txt 2cn.py 2co.py 2cx.py 2d.py 2d2.py 2f.py 2f3.py 2f5.py 2f6.py 2fg.py 2id.py 2j.py
-	rm -f   2m.py 2m10.py 2m12.py 2m3.py 2m4.py 2mm.py 2om.py 2rxy.py 2s.py 2sg.py 2so.py 2sxy.py 2sy.py
-	rm -f   2t.py 2tv.py 2v.py 2v.x 2vg.py 2wg.py 2x.py 2y.py 2z.py
+	rm -f 1c.py 1e.py 1g.py 1p.py 1pv.x 1py.py 1r.txt 1v.z 1x.py 1y.py 1z.py
+	rm -f 22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
+	rm -f   22id.py 22j.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
+	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
 	rm -f   bat.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
@@ -540,47 +541,48 @@ links:
 	ln -s $(Grow_1Z)/Python_ParseTree.py                                        1p.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
+	ln -s $(Grow_1)/README.txt                                                  1r.txt
 	ln -s $(Grow_1)/Vision.z                                                    1v.z
 	ln -s $(Grow_1Z)/Transform_Crystal_to_Python.py                             1x.py
 	ln -s $(Grow_1Z)/Crystal_ParseTree.py                                       1y.py
 	ln -s $(Grow_1)/Z.py                                                        1z.py
-	ln -s $(Grow_2Y)/Build_MutableMap.py                                        2bmm.py
-	ln -s $(Grow_2Y)/Cache.py                                                   2ca.py
-	ln -s $(Grow_2)/ConstructorError.txt                                        2ce.txt
-	ln -s $(Grow_2Y)/Cannot.py                                                  2cn.py
-	ln -s $(Grow_2Y)/Core.py                                                    2co.py
-	ln -s $(Grow_2Y)/ChangePrefix.py                                            2cx.py
-	ln -s $(Grow)/Junk/Doc.py                                                   2d.py
-	ln -s $(Grow)/Junk/Doc2.py                                                  2d2.py
-	ln -s $(Grow_2Y)/Fact.py                                                    2f.py
-	ln -s $(Grow_2Y)/Fixed_3.py                                                 2f3.py
-	ln -s $(Grow_2Y)/Fixed_5.py                                                 2f5.py
-	ln -s $(Grow_2Y)/Fixed_6.py                                                 2f6.py
-	ln -s $(Grow_2Y)/Fixup_CrystalGlobals.py                                    2fg.py
-	ln -s $(Grow)/Junk/ImmutablePoint.py                                        2id.py
-	ln -s $(Grow)/Junk/1.py                                                     2j.py
-	ln -s $(Grow_2Y)/Module.py                                                  2m.py
-	ln -s $(Grow_2Y)/Mutable_10.py                                              2m10.py
-	ln -s $(Grow_2Y)/Mutable_12.py                                              2m12.py
-	ln -s $(Grow_2Y)/Mutable_3.py                                               2m3.py
-	ln -s $(Grow_2Y)/Mutable_4.py                                               2m4.py
-	ln -s $(Grow_2Y)/MutableMap.py                                              2mm.py
-	ln -s $(Grow_2Y)/ObjectMembers.py                                           2om.py
-	ln -s $(Grow_2Y)/ReusableContextLifecycle.py                                2rxy.py
-	ln -s $(Grow_2Y)/Share.py                                                   2s.py
-	ln -s $(Grow_2Y)/Show_CrystalGlobals.py                                     2sg.py
-	ln -s $(Grow_2Y)/StringOutput.py                                            2so.py
-	ln -s $(Grow_2Y)/SimpleContextLifecycle.py                                  2sxy.py
-	ln -s $(Grow_2Y)/Show_Portray.py                                            2sy.py
-	ln -s $(Grow_2Y)/Tree.py                                                    2t.py
-	ln -s $(Grow_2)/Test_Vision.py                                              2tv.py
-	ln -s $(Grow_2)/Vision.py                                                   2v.py
-	ln -s $(Grow_2)/Vision.x                                                    2v.x
-	ln -s $(Grow_2Y)/Verify_CrystalGlobals.py                                   2vg.py
-	ln -s $(Grow_2Y)/Wipe_CrystalGlobals.py                                     2wg.py
-	ln -s $(Grow_2Y)/Exception.py                                               2x.py
-	ln -s $(Grow_2)/Crystal.py                                                  2y.py
-	ln -s $(Grow_2Y)/Z_Mode.py                                                  2z.py
+	ln -s $(GROW_22Y)/Build_MutableMap.py                                       22bmm.py
+	ln -s $(GROW_22Y)/Cache.py                                                  22ca.py
+	ln -s $(GROW_22)/ConstructorError.txt                                       22ce.txt
+	ln -s $(GROW_22Y)/Cannot.py                                                 22cn.py
+	ln -s $(GROW_22Y)/Core.py                                                   22co.py
+	ln -s $(GROW_22Y)/ChangePrefix.py                                           22cx.py
+	ln -s $(Grow)/Junk/Doc.py                                                   22d.py
+	ln -s $(Grow)/Junk/Doc2.py                                                  22d2.py
+	ln -s $(GROW_22Y)/Fact.py                                                   22f.py
+	ln -s $(GROW_22Y)/Fixed_3.py                                                22f3.py
+	ln -s $(GROW_22Y)/Fixed_5.py                                                22f5.py
+	ln -s $(GROW_22Y)/Fixed_6.py                                                22f6.py
+	ln -s $(GROW_22Y)/Fixup_CrystalGlobals.py                                   22fg.py
+	ln -s $(Grow)/Junk/ImmutablePoint.py                                        22id.py
+	ln -s $(Grow)/Junk/1.py                                                     22j.py
+	ln -s $(GROW_22Y)/Module.py                                                 22m.py
+	ln -s $(GROW_22Y)/Mutable_10.py                                             22m10.py
+	ln -s $(GROW_22Y)/Mutable_12.py                                             22m12.py
+	ln -s $(GROW_22Y)/Mutable_3.py                                              22m3.py
+	ln -s $(GROW_22Y)/Mutable_4.py                                              22m4.py
+	ln -s $(GROW_22Y)/MutableMap.py                                             22mm.py
+	ln -s $(GROW_22Y)/ObjectMembers.py                                          22om.py
+	ln -s $(GROW_22Y)/ReusableContextLifecycle.py                               22rxy.py
+	ln -s $(GROW_22Y)/Share.py                                                  22s.py
+	ln -s $(GROW_22Y)/Show_CrystalGlobals.py                                    22sg.py
+	ln -s $(GROW_22Y)/StringOutput.py                                           22so.py
+	ln -s $(GROW_22Y)/SimpleContextLifecycle.py                                 22sxy.py
+	ln -s $(GROW_22Y)/Show_Portray.py                                           22sy.py
+	ln -s $(GROW_22Y)/Tree.py                                                   22t.py
+	ln -s $(Grow_22)/Test_Vision.py                                             22tv.py
+	ln -s $(Grow_22)/Vision.py                                                  22v.py
+	ln -s $(Grow_22)/Vision.x                                                   22v.x
+	ln -s $(Grow_22Y)/Verify_CrystalGlobals.py                                  22vg.py
+	ln -s $(Grow_22Y)/Wipe_CrystalGlobals.py                                    22wg.py
+	ln -s $(Grow_22Y)/Exception.py                                              22x.py
+	ln -s $(Grow_22)/Crystal.py                                                 22y.py
+	ln -s $(Grow_22Y)/Z_Mode.py                                                 22z.py
 	ln -s $(Capital)/Ascii.py                                                   ac.py
 	ln -s $(Agate)/RUNME.py                                                     ag.py
 	ln -s $(CoreParser)/DualExpressionStatement.py                              b2es.py
