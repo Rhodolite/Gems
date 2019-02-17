@@ -517,7 +517,7 @@ clean:
 	rm -f t.java t.py t.y
 	rm -f ud.py ue.py um.py uy.py uz.py
 	rm -f xb.py xf.py
-	rm -f y2re.py y2sf.py y2sp.py y2sc.py y3re.py y3sf.py y3sp.py y3sc.py
+	rm -f y2a.py y2re.py y2sf.py y2sp.py y2sc.py y3re.py y3sf.py y3sp.py y3sc.py
 	rm -f   ybi.py ybq.py ycb.py yd7.py yg.py ygb.py yki.py ykn.py
 	rm -f   ym.py yp.py yq.py yr.py yv.py yw.py yz.py yzc.py yyzk.py yzr.py
 	rm -f zcl.py zcs.py zd.py ze.py zg2.gpy zg2.py zg3.gpy zg3.py zg4.gpy zg4.py
@@ -942,6 +942,7 @@ links:
 	ln -s $(Rubber)/__init__.py                                                 uz.py
 	ln -s $(SinglePythonFileBoot)/SinglePythonFileBoot.py                       xb.py
 	ln -s $(PythonParser)/Transform.py                                          xf.py
+	ln -s /usr/lib/python2.7/ast.py                                             y2a.py
 	ln -s /usr/lib/python2.7/re.py                                              y2re.py
 	ln -s /usr/lib/python2.7/sre_compile.py                                     y2sc.py
 	ln -s /usr/lib/python2.7/sre_constants.py                                   y2sf.py
