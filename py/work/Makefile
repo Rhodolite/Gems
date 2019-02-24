@@ -128,6 +128,7 @@ Grow_Junk_Files = \
     $(Grow)/Junk/Doc2.py \
     $(Grow)/Junk/Doc.py \
     $(Grow)/Junk/Immutable.py \
+    $(Grow)/Junk/String_0.py \
 
 
 Grow_1  = $(Grow)/1
@@ -152,7 +153,27 @@ Grow_1_Previous_Files = \
     $(Grow_1_Previous)/Vision.x \
 
 
-Grow_3  = $(Grow)/2
+Grow_2  = $(Grow)/2
+Grow_2C = $(Grow_2)/Capital
+Grow_2Z = $(Grow_2)/Z
+
+Grow_2_Files = \
+    $(Grow_2)/README.txt \
+    $(Grow_2)/Vision.z \
+    $(Grow_2)/Z.py \
+    $(Grow_2C)/BuiltIn.py \
+    $(Grow_2C)/Core.py \
+    $(Grow_2C)/Fact.py \
+    $(Grow_2C)/String.py $(Grow_2C)/String_Implementation.py \
+    $(Grow_2C)/Types.py \
+    $(Grow_2Z)/CodeGenerator_OnExit.py \
+    $(Grow_2Z)/Crystal_ParseTree.py \
+    $(Grow_2Z)/Extract.py \
+    $(Grow_2Z)/Python_ParseTree.py \
+    $(Grow_2Z)/Transform_Crystal_to_Python.py \
+
+
+Grow_3  = $(Grow)/3
 Grow_3C = $(Grow_3)/Capital
 Grow_3Z = $(Grow_3)/Z
 
@@ -501,7 +522,8 @@ all: clean files files2 links
 
 clean:
 	rm -f 1c.py 1e.py 1g.py 1pt.py 1pv.x 1py.py 1r.txt 1v.z 1x.py 1y.py 1z.py
-	rm -f   2c.py 2e.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt 2v.z 2x.py 2y.py 2z.py
+	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
+	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
 	rm -f   22id.py 22j.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
 	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
@@ -584,6 +606,24 @@ links:
 	ln -s $(Grow_1Z)/Transform_Crystal_to_Python.py                             1x.py
 	ln -s $(Grow_1Z)/Crystal_ParseTree.py                                       1y.py
 	ln -s $(Grow_1)/Z.py                                                        1z.py
+	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
+	ln -s $(Grow_2)/Capital.py                                                  2ca.py
+	ln -s $(Grow_2C)/Core.py                                                    2co.py
+	ln -s $(Grow_2Z)/Extract.py                                                 2e.py
+	ln -s $(Grow_2C)/Fact.py                                                    2f.py
+	ln -s $(Grow_2Z)/CodeGenerator_OnExit.py                                    2g.py
+	ln -s $(Grow_2Z)/Python_ParseTree.py                                        2pt.py
+	ln -s $(Grow_2_Previous)/Vision.x                                           2pv.x
+	ln -s $(Grow_2_Previous)/Crystal.py                                         2py.py
+	ln -s $(Grow_2)/README.txt                                                  2r.txt
+	ln -s $(Grow_2C)/String.py                                                  2s.py
+	ln -s $(Grow)/Junk/String_0.py                                              2s0.py
+	ln -s $(Grow_2C)/String_Implementation.py                                   2si.py
+	ln -s $(Grow_2)/Vision.z                                                    2v.z
+	ln -s $(Grow_2Z)/Transform_Crystal_to_Python.py                             2x.py
+	ln -s $(Grow_3C)/Types.py                                                   2y.py
+	ln -s $(Grow_2Z)/Crystal_ParseTree.py                                       2yt.py
+	ln -s $(Grow_2)/Z.py                                                        2z.py
 	ln -s $(Grow_3Z)/Python_AbstractSyntaxTree.py                               3a.py
 	ln -s $(Grow_3C)/BuiltIn.py                                                 3b.py
 	ln -s $(Grow_3)/Capital.py                                                  3ca.py
