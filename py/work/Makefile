@@ -139,11 +139,8 @@ Grow_1_Files = \
     $(Grow_1)/Vision.z \
     $(Grow_1)/Z.py \
     $(Grow_1Z)/CodeGenerator_OnExit.py \
-    $(Grow_1Z)/Core.py \
-    $(Grow_1Z)/Crystal_ParseTree.py \
     $(Grow_1Z)/Extract.py \
-    $(Grow_1Z)/Python_ParseTree.py \
-    $(Grow_1Z)/Transform_Crystal_to_Python.py \
+    $(Grow_1Z)/ParseTree.py \
 
 
 Grow_1_Previous = $(Grow)/1.previous
@@ -517,11 +514,11 @@ Files = \
     $(Work_Duplicates) $(Work_Files) \
 
 
-all: clean files files2 links
+all: clean files files1 files2 links
 
 
 clean:
-	rm -f 1c.py 1e.py 1g.py 1pt.py 1pv.x 1py.py 1r.txt 1v.z 1x.py 1y.py 1z.py
+	rm -f 1e.py 1g.py 1pv.x 1py.py 1r.txt 1v.z 1y.py 1z.py
 	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
 	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
@@ -542,7 +539,7 @@ clean:
 	rm -f   cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py cs.py csb.py cse.py csl.py csq.py cso.py cssio.py csy.py
 	rm -f   ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
 	rm -f erk.py erm.py ers.py
-	rm -f files files2 f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
+	rm -f files files1 files2 f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
 	rm -f   gc.py gq.py gz.py
 	rm -f h2es.py h2ps.py h2s.py h2s.py h2t.py
@@ -589,22 +586,24 @@ files:
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
 	mv files.2.tmp files
 
+files1:
+	echo $(Grow_1_Files) >files.1.tmp
+	tr ' ' '\n' <files.1.tmp >files.2.tmp
+	mv files.2.tmp files1
+
 files2:
 	echo $(Grow_2_Files) >files.1.tmp
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
 	mv files.2.tmp files2
 
 links:
-	ln -s $(Grow_1Z)/Core.py                                                    1c.py
 	ln -s $(Grow_1Z)/Extract.py                                                 1e.py
 	ln -s $(Grow_1Z)/CodeGenerator_OnExit.py                                    1g.py
-	ln -s $(Grow_1Z)/Python_ParseTree.py                                        1pt.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
 	ln -s $(Grow_1)/README.txt                                                  1r.txt
 	ln -s $(Grow_1)/Vision.z                                                    1v.z
-	ln -s $(Grow_1Z)/Transform_Crystal_to_Python.py                             1x.py
-	ln -s $(Grow_1Z)/Crystal_ParseTree.py                                       1y.py
+	ln -s $(Grow_1Z)/ParseTree.py                                               1y.py
 	ln -s $(Grow_1)/Z.py                                                        1z.py
 	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
 	ln -s $(Grow_2)/Capital.py                                                  2ca.py
