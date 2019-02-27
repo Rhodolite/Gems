@@ -131,16 +131,17 @@ Grow_Junk_Files = \
     $(Grow)/Junk/String_0.py \
 
 
-Grow_1  = $(Grow)/1
-Grow_1Z = $(Grow_1)/Z
+Grow_1A = $(Grow)/1/A
+Grow_1AZ = $(Grow_1A)/Z
 
-Grow_1_Files = \
-    $(Grow_1)/README.txt \
-    $(Grow_1)/Vision.z \
-    $(Grow_1)/Z.py \
-    $(Grow_1Z)/CodeGenerator_OnExit.py \
-    $(Grow_1Z)/Extract.py \
-    $(Grow_1Z)/ParseTree.py \
+Grow_1A_Files = \
+    $(Grow_1A)/README.txt \
+    $(Grow_1A)/Test.py \
+    $(Grow_1A)/Vision.z \
+    $(Grow_1A)/Z.py \
+    $(Grow_1AZ)/CodeGenerator_OnExit.py \
+    $(Grow_1AZ)/Extract.py \
+    $(Grow_1AZ)/ParseTree.py \
 
 
 Grow_1_Previous = $(Grow)/1.previous
@@ -491,7 +492,7 @@ Files = \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
     $(Elemental_Files) \
-    $(Grow_1_Files) \
+    $(Grow_1A_Files) \
     $(Grow_2_Files) \
     $(Grow_22_Files) \
     $(JavaParser_Generated) $(JavaParser_Files) \
@@ -514,11 +515,15 @@ Files = \
     $(Work_Duplicates) $(Work_Files) \
 
 
-all: clean files files1 files2 links
+all: clean files files1a files2 links
 
 
 clean:
-	rm -f 1e.py 1g.py 1pv.x 1py.py 1r.txt 1v.z 1y.py 1z.py
+	find .. -name __pycache__ >files.1.tmp; xargs rm -rf <files.1.tmp
+	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
+	rm -f files*
+	rm -f 1ae.py 1ag.py 1ar.txt 1at.py 1av.z 1ay.py 1az.py
+	rm -f   1pv.x 1py.py
 	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
 	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
@@ -539,7 +544,7 @@ clean:
 	rm -f   cpa.py cpi.py cpom.py cpym.py cq.py cra.py cre.py cs.py csb.py cse.py csl.py csq.py cso.py cssio.py csy.py
 	rm -f   ctb.py ctf.py cth.py cy.py cym.py cys.py cyy.py czo.py
 	rm -f erk.py erm.py ers.py
-	rm -f files files1 files2 f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
+	rm -f f.py ff.py fi.py fm.py fsh.py fst.py ft.py fw.py fy.py fz.py
 	rm -f g1ga.py g1gt.py g1m.py g1n.py g1z.py
 	rm -f   gc.py gq.py gz.py
 	rm -f h2es.py h2ps.py h2s.py h2s.py h2t.py
@@ -576,9 +581,6 @@ clean:
 	rm -f zcl.py zcs.py zd.py ze.py zg2.gpy zg2.py zg3.gpy zg3.py zg4.gpy zg4.py
 	rm -f   zgn.gpy zgn.py zh.py zi.py zj1.py zj2.py zj3.py zj4.py zjtc.py
 	rm -f   zma.py zmc.py zo4.py zpa.py zpt.py zq.py zsb.py zse.py zso.py zsq.py zth.py zys.py zz.py zzo.py
-	find .. -name __pycache__ >files.1.tmp; xargs rm -rf <files.1.tmp
-	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
-	rm -f files.1.tmp
 
 
 files:
@@ -586,10 +588,10 @@ files:
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
 	mv files.2.tmp files
 
-files1:
-	echo $(Grow_1_Files) >files.1.tmp
+files1a:
+	echo $(Grow_1A_Files) >files.1.tmp
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
-	mv files.2.tmp files1
+	mv files.2.tmp files1a
 
 files2:
 	echo $(Grow_2_Files) >files.1.tmp
@@ -597,14 +599,15 @@ files2:
 	mv files.2.tmp files2
 
 links:
-	ln -s $(Grow_1Z)/Extract.py                                                 1e.py
-	ln -s $(Grow_1Z)/CodeGenerator_OnExit.py                                    1g.py
+	ln -s $(Grow_1AZ)/Extract.py                                                1ae.py
+	ln -s $(Grow_1AZ)/CodeGenerator_OnExit.py                                   1ag.py
+	ln -s $(Grow_1A)/README.txt                                                 1ar.txt
+	ln -s $(Grow_1A)/Test.py                                                    1at.py
+	ln -s $(Grow_1A)/Vision.z                                                   1av.z
+	ln -s $(Grow_1AZ)/ParseTree.py                                              1ay.py
+	ln -s $(Grow_1A)/Z.py                                                       1az.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
-	ln -s $(Grow_1)/README.txt                                                  1r.txt
-	ln -s $(Grow_1)/Vision.z                                                    1v.z
-	ln -s $(Grow_1Z)/ParseTree.py                                               1y.py
-	ln -s $(Grow_1)/Z.py                                                        1z.py
 	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
 	ln -s $(Grow_2)/Capital.py                                                  2ca.py
 	ln -s $(Grow_2C)/Core.py                                                    2co.py
