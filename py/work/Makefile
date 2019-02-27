@@ -131,7 +131,13 @@ Grow_Junk_Files = \
     $(Grow)/Junk/String_0.py \
 
 
-Grow_1A = $(Grow)/1/A
+Grow_1 = $(Grow)/1
+
+Grow_1_Files = \
+    $(Grow_1)/README.txt
+
+
+Grow_1A = $(Grow_1)/a
 Grow_1AZ = $(Grow_1A)/Z
 
 Grow_1A_Files = \
@@ -492,6 +498,7 @@ Files = \
     $(CodeGenerator_Files) \
     $(CoreParser_Files) \
     $(Elemental_Files) \
+    $(Grow_1_Files) \
     $(Grow_1A_Files) \
     $(Grow_2_Files) \
     $(Grow_22_Files) \
@@ -523,7 +530,7 @@ clean:
 	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
 	rm -f files*
 	rm -f 1ae.py 1ag.py 1ar.txt 1at.py 1av.z 1ay.py 1az.py
-	rm -f   1pv.x 1py.py
+	rm -f   1pv.x 1py.py 1r.txt
 	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
 	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
@@ -608,6 +615,7 @@ links:
 	ln -s $(Grow_1A)/Z.py                                                       1az.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
+	ln -s $(Grow_1)/README.txt                                                  1r.txt
 	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
 	ln -s $(Grow_2)/Capital.py                                                  2ca.py
 	ln -s $(Grow_2C)/Core.py                                                    2co.py
