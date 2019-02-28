@@ -169,8 +169,8 @@ do
     fi
 
     if [ $show = 5 ]; then
-#        if (cd ../Other/Grow/1; python $Main_py; python Vision.py) <$tmp1 >&$tmp3; then
-        if (cd ../Other/Grow/1/a; python Test.py) <$tmp1 >&$tmp3; then
+#        if (cd ../Other/Grow/1/b; python Test.py) <$tmp1 >&$tmp3; then
+        if (cd ../Other/Grow/1/b; python $Main_py; python Vision.py) <$tmp1 >&$tmp3; then
             :
         fi
 

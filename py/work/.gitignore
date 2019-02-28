@@ -6,7 +6,7 @@
 [23]o
 *.feature
 files
-files1a
+files1[ab]
 files2
 *.gpy
 ice.y

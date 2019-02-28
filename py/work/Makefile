@@ -142,12 +142,29 @@ Grow_1AZ = $(Grow_1A)/Z
 
 Grow_1A_Files = \
     $(Grow_1A)/README.txt \
-    $(Grow_1A)/Test.py \
     $(Grow_1A)/Vision.z \
     $(Grow_1A)/Z.py \
-    $(Grow_1AZ)/CodeGenerator_OnExit.py \
+    $(Grow_1AZ)/CodeGenerator_OnExit.py $(Grow_1AZ)/Crystal_ParseTree.py \
     $(Grow_1AZ)/Extract.py \
-    $(Grow_1AZ)/ParseTree.py \
+
+
+Grow_1B = $(Grow_1)/b
+Grow_1BZ = $(Grow_1B)/Z
+
+Grow_1B_Files = \
+    $(Grow_1B)/README.txt \
+    $(Grow_1B)/Test.py \
+    $(Grow_1B)/Vision.z \
+    $(Grow_1B)/Z.py \
+    $(Grow_1BZ)/CodeGenerator_OnExit.py $(Grow_1AZ)/Crystal_ParseTree.py \
+    $(Grow_1BZ)/Extract.py \
+
+
+Grow_1Z = $(Grow_1)/z
+Grow_1ZZ = $(Grow_1Z)/Z
+
+Grow_1Z_Files = \
+    $(Grow_1Z)/README.txt \
 
 
 Grow_1_Previous = $(Grow)/1.previous
@@ -522,15 +539,17 @@ Files = \
     $(Work_Duplicates) $(Work_Files) \
 
 
-all: clean files files1a files2 links
+all: clean files files1a files1b files2 links
 
 
 clean:
 	find .. -name __pycache__ >files.1.tmp; xargs rm -rf <files.1.tmp
 	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
 	rm -f files*
-	rm -f 1ae.py 1ag.py 1ar.txt 1at.py 1av.z 1ay.py 1az.py
+	rm -f 1ae.py 1ag.py 1ar.txt 1av.z 1ay.py 1az.py
+	rm -f   1be.py 1bg.py 1br.txt 1bt.py 1bv.z 1by.py 1bz.py
 	rm -f   1pv.x 1py.py 1r.txt
+	rm -f   1zr.txt
 	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
 	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
@@ -600,6 +619,11 @@ files1a:
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
 	mv files.2.tmp files1a
 
+files1b:
+	echo $(Grow_1B_Files) >files.1.tmp
+	tr ' ' '\n' <files.1.tmp >files.2.tmp
+	mv files.2.tmp files1b
+
 files2:
 	echo $(Grow_2_Files) >files.1.tmp
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
@@ -609,13 +633,20 @@ links:
 	ln -s $(Grow_1AZ)/Extract.py                                                1ae.py
 	ln -s $(Grow_1AZ)/CodeGenerator_OnExit.py                                   1ag.py
 	ln -s $(Grow_1A)/README.txt                                                 1ar.txt
-	ln -s $(Grow_1A)/Test.py                                                    1at.py
 	ln -s $(Grow_1A)/Vision.z                                                   1av.z
-	ln -s $(Grow_1AZ)/ParseTree.py                                              1ay.py
+	ln -s $(Grow_1AZ)/Crystal_ParseTree.py                                      1ay.py
 	ln -s $(Grow_1A)/Z.py                                                       1az.py
+	ln -s $(Grow_1BZ)/Extract.py                                                1be.py
+	ln -s $(Grow_1BZ)/CodeGenerator_OnExit.py                                   1bg.py
+	ln -s $(Grow_1B)/README.txt                                                 1br.txt
+	ln -s $(Grow_1B)/Test.py                                                    1bt.py
+	ln -s $(Grow_1B)/Vision.z                                                   1bv.z
+	ln -s $(Grow_1BZ)/Crystal_ParseTree.py                                      1by.py
+	ln -s $(Grow_1B)/Z.py                                                       1bz.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
 	ln -s $(Grow_1)/README.txt                                                  1r.txt
+	ln -s $(Grow_1Z)/README.txt                                                 1zr.txt
 	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
 	ln -s $(Grow_2)/Capital.py                                                  2ca.py
 	ln -s $(Grow_2C)/Core.py                                                    2co.py
