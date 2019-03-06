@@ -1,7 +1,6 @@
-
+#
 #   Copyright (c) 2017-2019 Joy Diamond.  All rights reserved.
 #
-22ce.txt
 [2345]
 [23]o
 *.feature
@@ -11,15 +10,10 @@ files2
 *.gpy
 ice.y
 jm.xml
-lr1.txt
-l.txt
 m
-oops[12].txt
-oops.txt
 *.py
-rl[pr].txt
-*r.txt
 t.java
+*.txt
 t.y
 *.x
 *.z

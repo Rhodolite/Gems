@@ -141,6 +141,7 @@ Grow_1A = $(Grow_1)/a
 Grow_1AZ = $(Grow_1A)/Z
 
 Grow_1A_Files = \
+    $(Grow_1A)/python-execution.txt \
     $(Grow_1A)/README.txt \
     $(Grow_1A)/Vision.z \
     $(Grow_1A)/Z.py \
@@ -546,7 +547,7 @@ clean:
 	find .. -name __pycache__ >files.1.tmp; xargs rm -rf <files.1.tmp
 	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
 	rm -f files*
-	rm -f 1ae.py 1ag.py 1ar.txt 1av.z 1ay.py 1az.py
+	rm -f 1ae.py 1ag.py 1ap.txt 1ar.txt 1av.z 1ay.py 1az.py
 	rm -f   1be.py 1bg.py 1br.txt 1bt.py 1bv.z 1by.py 1bz.py
 	rm -f   1pv.x 1py.py 1r.txt
 	rm -f   1zr.txt
@@ -632,6 +633,7 @@ files2:
 links:
 	ln -s $(Grow_1AZ)/Extract.py                                                1ae.py
 	ln -s $(Grow_1AZ)/CodeGenerator_OnExit.py                                   1ag.py
+	ln -s $(Grow_1A)/python-execution.txt                                       1ap.txt
 	ln -s $(Grow_1A)/README.txt                                                 1ar.txt
 	ln -s $(Grow_1A)/Vision.z                                                   1av.z
 	ln -s $(Grow_1AZ)/Crystal_ParseTree.py                                      1ay.py
