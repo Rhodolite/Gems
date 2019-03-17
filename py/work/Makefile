@@ -206,20 +206,15 @@ Grow_3_Files = \
     $(Grow_3)/Z.py \
     $(Grow_3C)/BuiltIn.py \
     $(Grow_3C)/Core.py \
+    $(Grow_3C)/SimpleContextLifecycle.py \
     $(Grow_3C)/Types.py \
-    $(Grow_3Z)/CodeGenerator_OnExit.py \
-    $(Grow_3Z)/Core.py \
-    $(Grow_3Z)/Crystal_ParseTree.py \
+    $(Grow_3Z)/CodeGenerator_OnExit.py $(Grow_3Z)/Core.py $(Grow_3Z)/Crystal_ParseTree.py \
     $(Grow_3Z)/Extract.py \
     $(Grow_3Z)/Fact.py \
     $(Grow_3Z)/Main.py \
-    $(Grow_3Z)/Path.py \
-    $(Grow_3Z)/Python_AbstractSyntaxTree.py \
-    $(Grow_3Z)/Python_ParseTree.py \
-    $(Grow_3Z)/SyntaxTree.py \
-    $(Grow_3Z)/System.py \
-    $(Grow_3Z)/Transform_Crystal_to_Python.py \
-    $(Grow_3Z)/TreeContext.py \
+    $(Grow_3Z)/Path.py $(Grow_3Z)/Python_AbstractSyntaxTree.py $(Grow_3Z)/Python_ParseTree.py \
+    $(Grow_3Z)/SyntaxTree.py $(Grow_3Z)/System.py \
+    $(Grow_3Z)/Transform_Crystal_to_Python.py $(Grow_3Z)/TreeContext.py \
 
 
 Grow_22  = $(Grow)/22
@@ -557,7 +552,7 @@ clean:
 	rm -f   22id.py 22j.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
 	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
 	rm -f 3a.py 3b.py 3ca.py 3co.py 3e.py 3f.py 3g.py 3m.py 3ph.py 3pt.py 3pv.x 3py.py
-	rm -f   3r.txt 3st.py 3sy.py 3tx.py 3v.z 3x.py 3y.py 3yt.py 3z.py 3zc.py
+	rm -f   3r.txt 3st.py 3sxy.py 3sy.py 3tx.py 3v.z 3x.py 3y.py 3yt.py 3z.py 3zc.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
 	rm -f   bat.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
@@ -649,46 +644,6 @@ links:
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
 	ln -s $(Grow_1)/README.txt                                                  1r.txt
 	ln -s $(Grow_1Z)/README.txt                                                 1zr.txt
-	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
-	ln -s $(Grow_2)/Capital.py                                                  2ca.py
-	ln -s $(Grow_2C)/Core.py                                                    2co.py
-	ln -s $(Grow_2Z)/Extract.py                                                 2e.py
-	ln -s $(Grow_2C)/Fact.py                                                    2f.py
-	ln -s $(Grow_2Z)/CodeGenerator_OnExit.py                                    2g.py
-	ln -s $(Grow_2Z)/Python_ParseTree.py                                        2pt.py
-	ln -s $(Grow_2_Previous)/Vision.x                                           2pv.x
-	ln -s $(Grow_2_Previous)/Crystal.py                                         2py.py
-	ln -s $(Grow_2)/README.txt                                                  2r.txt
-	ln -s $(Grow_2C)/String.py                                                  2s.py
-	ln -s $(Grow)/Junk/String_0.py                                              2s0.py
-	ln -s $(Grow_2C)/String_Implementation.py                                   2si.py
-	ln -s $(Grow_2)/Vision.z                                                    2v.z
-	ln -s $(Grow_2Z)/Transform_Crystal_to_Python.py                             2x.py
-	ln -s $(Grow_3C)/Types.py                                                   2y.py
-	ln -s $(Grow_2Z)/Crystal_ParseTree.py                                       2yt.py
-	ln -s $(Grow_2)/Z.py                                                        2z.py
-	ln -s $(Grow_3Z)/Python_AbstractSyntaxTree.py                               3a.py
-	ln -s $(Grow_3C)/BuiltIn.py                                                 3b.py
-	ln -s $(Grow_3)/Capital.py                                                  3ca.py
-	ln -s $(Grow_3C)/Core.py                                                    3co.py
-	ln -s $(Grow_3Z)/Extract.py                                                 3e.py
-	ln -s $(Grow_3Z)/Fact.py                                                    3f.py
-	ln -s $(Grow_3Z)/CodeGenerator_OnExit.py                                    3g.py
-	ln -s $(Grow_3Z)/Main.py                                                    3m.py
-	ln -s $(Grow_3Z)/Path.py                                                    3ph.py
-	ln -s $(Grow_3Z)/Python_ParseTree.py                                        3pt.py
-	ln -s $(Grow_3_Previous)/Vision.x                                           3pv.x
-	ln -s $(Grow_3_Previous)/Crystal.py                                         3py.py
-	ln -s $(Grow_3)/README.txt                                                  3r.txt
-	ln -s $(Grow_3Z)/SyntaxTree.py                                              3st.py
-	ln -s $(Grow_3Z)/System.py                                                  3sy.py
-	ln -s $(Grow_3Z)/TreeContext.py                                             3tx.py
-	ln -s $(Grow_3)/Vision.z                                                    3v.z
-	ln -s $(Grow_3Z)/Transform_Crystal_to_Python.py                             3x.py
-	ln -s $(Grow_3C)/Types.py                                                   3y.py
-	ln -s $(Grow_3Z)/Crystal_ParseTree.py                                       3yt.py
-	ln -s $(Grow_3)/Z.py                                                        3z.py
-	ln -s $(Grow_3Z)/Core.py                                                    3zc.py
 	ln -s $(Grow_22Y)/Build_MutableMap.py                                       22bmm.py
 	ln -s $(Grow_22Y)/Cache.py                                                  22ca.py
 	ln -s $(Grow_22)/ConstructorError.txt                                       22ce.txt
@@ -726,6 +681,47 @@ links:
 	ln -s $(Grow_22Y)/Exception.py                                              22x.py
 	ln -s $(Grow_22)/Crystal.py                                                 22y.py
 	ln -s $(Grow_22Y)/Z_Mode.py                                                 22z.py
+	ln -s $(Grow_2C)/BuiltIn.py                                                 2b.py
+	ln -s $(Grow_2)/Capital.py                                                  2ca.py
+	ln -s $(Grow_2C)/Core.py                                                    2co.py
+	ln -s $(Grow_2Z)/Extract.py                                                 2e.py
+	ln -s $(Grow_2C)/Fact.py                                                    2f.py
+	ln -s $(Grow_2Z)/CodeGenerator_OnExit.py                                    2g.py
+	ln -s $(Grow_2Z)/Python_ParseTree.py                                        2pt.py
+	ln -s $(Grow_2_Previous)/Vision.x                                           2pv.x
+	ln -s $(Grow_2_Previous)/Crystal.py                                         2py.py
+	ln -s $(Grow_2)/README.txt                                                  2r.txt
+	ln -s $(Grow_2C)/String.py                                                  2s.py
+	ln -s $(Grow)/Junk/String_0.py                                              2s0.py
+	ln -s $(Grow_2C)/String_Implementation.py                                   2si.py
+	ln -s $(Grow_2)/Vision.z                                                    2v.z
+	ln -s $(Grow_2Z)/Transform_Crystal_to_Python.py                             2x.py
+	ln -s $(Grow_3C)/Types.py                                                   2y.py
+	ln -s $(Grow_2Z)/Crystal_ParseTree.py                                       2yt.py
+	ln -s $(Grow_2)/Z.py                                                        2z.py
+	ln -s $(Grow_3Z)/Python_AbstractSyntaxTree.py                               3a.py
+	ln -s $(Grow_3C)/BuiltIn.py                                                 3b.py
+	ln -s $(Grow_3)/Capital.py                                                  3ca.py
+	ln -s $(Grow_3C)/Core.py                                                    3co.py
+	ln -s $(Grow_3Z)/Extract.py                                                 3e.py
+	ln -s $(Grow_3Z)/Fact.py                                                    3f.py
+	ln -s $(Grow_3Z)/CodeGenerator_OnExit.py                                    3g.py
+	ln -s $(Grow_3Z)/Main.py                                                    3m.py
+	ln -s $(Grow_3Z)/Path.py                                                    3ph.py
+	ln -s $(Grow_3Z)/Python_ParseTree.py                                        3pt.py
+	ln -s $(Grow_3_Previous)/Vision.x                                           3pv.x
+	ln -s $(Grow_3_Previous)/Crystal.py                                         3py.py
+	ln -s $(Grow_3)/README.txt                                                  3r.txt
+	ln -s $(Grow_3Z)/SyntaxTree.py                                              3st.py
+	ln -s $(Grow_3C)/SimpleContextLifecycle.py                                  3sxy.py
+	ln -s $(Grow_3Z)/System.py                                                  3sy.py
+	ln -s $(Grow_3Z)/TreeContext.py                                             3tx.py
+	ln -s $(Grow_3)/Vision.z                                                    3v.z
+	ln -s $(Grow_3Z)/Transform_Crystal_to_Python.py                             3x.py
+	ln -s $(Grow_3C)/Types.py                                                   3y.py
+	ln -s $(Grow_3Z)/Crystal_ParseTree.py                                       3yt.py
+	ln -s $(Grow_3)/Z.py                                                        3z.py
+	ln -s $(Grow_3Z)/Core.py                                                    3zc.py
 	ln -s $(Capital)/Ascii.py                                                   ac.py
 	ln -s $(Agate)/RUNME.py                                                     ag.py
 	ln -s $(CoreParser)/DualExpressionStatement.py                              b2es.py
