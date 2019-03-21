@@ -170,7 +170,7 @@ do
 
     if [ $show = 5 ]; then
 #        if (cd ../Other/Grow/1/b; python Test.py) <$tmp1 >&$tmp3; then
-        if (cd ../Other/Grow/3; python $Main_py; python Vision.py) <$tmp1 >&$tmp3; then
+        if (cd ../Other/Grow/3/; python $Main_py; python Vision.py) <$tmp1 >&$tmp3; then
             :
         fi
 

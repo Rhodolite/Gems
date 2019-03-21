@@ -206,6 +206,7 @@ Grow_3_Files = \
     $(Grow_3)/Z.py \
     $(Grow_3C)/BuiltIn.py \
     $(Grow_3C)/Core.py \
+    $(Grow_3C)/Python_Type.py \
     $(Grow_3C)/SimpleContextLifecycle.py \
     $(Grow_3C)/Types.py \
     $(Grow_3Z)/CodeGenerator_OnExit.py $(Grow_3Z)/Core.py $(Grow_3Z)/Crystal_ParseTree.py \
@@ -535,7 +536,7 @@ Files = \
     $(Work_Duplicates) $(Work_Files) \
 
 
-all: clean files files1a files1b files2 links
+all: clean files files1a files1b files2 files3 links
 
 
 clean:
@@ -552,7 +553,7 @@ clean:
 	rm -f   22id.py 22j.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
 	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
 	rm -f 3a.py 3b.py 3ca.py 3co.py 3e.py 3f.py 3g.py 3m.py 3ph.py 3pt.py 3pv.x 3py.py
-	rm -f   3r.txt 3st.py 3sxy.py 3sy.py 3tx.py 3v.z 3x.py 3y.py 3yt.py 3z.py 3zc.py
+	rm -f   3r.txt 3st.py 3sxy.py 3sy.py 3tx.py 3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
 	rm -f   bat.py baw.py bbe.py bca.py bcc.py bco.py bdt.py bel.py bem.py bf.py
@@ -624,6 +625,11 @@ files2:
 	echo $(Grow_2_Files) >files.1.tmp
 	tr ' ' '\n' <files.1.tmp >files.2.tmp
 	mv files.2.tmp files2
+
+files3:
+	echo $(Grow_3_Files) >files.1.tmp
+	tr ' ' '\n' <files.1.tmp >files.2.tmp
+	mv files.2.tmp files3
 
 links:
 	ln -s $(Grow_1AZ)/Extract.py                                                1ae.py
@@ -720,6 +726,7 @@ links:
 	ln -s $(Grow_3Z)/Transform_Crystal_to_Python.py                             3x.py
 	ln -s $(Grow_3C)/Types.py                                                   3y.py
 	ln -s $(Grow_3Z)/Crystal_ParseTree.py                                       3yt.py
+	ln -s $(Grow_3C)/Python_Type.py                                             3yy.py
 	ln -s $(Grow_3)/Z.py                                                        3z.py
 	ln -s $(Grow_3Z)/Core.py                                                    3zc.py
 	ln -s $(Capital)/Ascii.py                                                   ac.py

@@ -6,7 +6,7 @@
 *.feature
 files
 files1[ab]
-files2
+files[23]
 *.gpy
 ice.y
 jm.xml
