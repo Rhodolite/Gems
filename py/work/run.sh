@@ -11,7 +11,7 @@ case $# in
 
     1)
         case "$1" in
-            a) Main_py=../Other/Grow/1/Z.py ;;
+            a) Main_py=../Other/Grow/3/Z.py ;;
             h) Main_py=../Parser/PythonParser/Main.py ;;
             j) Main_py=../Parser/Mothballed/JavaParser/Main.py ;;
             r) Main_py=../Tremolite/TremoliteParser/Main.py ;;
