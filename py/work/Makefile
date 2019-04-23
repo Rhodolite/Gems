@@ -125,6 +125,7 @@ Grow = ../Other/Grow
 
 Grow_Junk_Files = \
     $(Grow)/Junk/1.py \
+    $(Grow)/Junk/3.py \
     $(Grow)/Junk/Doc2.py \
     $(Grow)/Junk/Doc.py \
     $(Grow)/Junk/Immutable.py \
@@ -228,7 +229,6 @@ Grow_3_Files = \
     $(Grow_3Z)/Extract.py \
     $(Grow_3Z)/Main.py \
     $(Grow_3Z)/Path.py $(Grow_3Z)/Python_ParseTree.py \
-    $(Grow_3Z)/SyntaxTree.py \
     $(Grow_3Z)/Transform_Crystal_to_Python.py $(Grow_3Z)/Tree.py \
 
 
@@ -559,16 +559,17 @@ clean:
 	find .. \( -name '*.py[co]' -o -name '*.old' -o -name '*.tmp' \) -print >files.1.tmp; xargs rm -f <files.1.tmp
 	rm -f files*
 	rm -f 1ae.py 1ag.py 1ap.txt 1ar.txt 1av.z 1ay.py 1az.py
-	rm -f   1be.py 1bg.py 1br.txt 1bt.py 1bv.z 1by.py 1bz.py
+	rm -f   1be.py 1bg.py 1br.txt 1bt.py 1bv.z 1by.py 1bz.py 1j.py
 	rm -f   1pv.x 1py.py 1r.txt
 	rm -f   1zr.txt
 	rm -f   2b.py 2ca.py 2co.py 2e.py 2f.py 2g.py 2pt.py 2pv.x 2py.py 2r.txt
 	rm -f   2s.py 2s0.py 2si.py 2v.z 2x.py 2y.py 2yt.py 2z.py
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
-	rm -f   22id.py 22j.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
+	rm -f   22id.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
 	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
 	rm -f 3b.py 3bd.py 3bl.py 3bns.py 3bxy.py 3ca.py 3cap.py 3cd.py 3ce.py 3cm.py 3co.py 3cp.py 3cpx.py 3cs.py 3cx.py
-	rm -f    3e.py 3f.py 3g.py 3j.py 3m.py 3na.py 3ns.py 3ph.py 3pt.py 3pv.x 3py.py 3r.txt 3st.py 3sxy.py 3sy.py
+	rm -f    3e.py 3f.py 3g.py 3j.py 3jst.py 3m.py 3na.py 3ns.py 3ph.py 3pt.py 3pv.x 3py.py 3r.txt
+	rm -f    3sxy.py 3sy.py
 	rm -f    3t.py 3ta.py 3ta1.py 3te.py 3te1.py 3test.py 3tg.py 3tm.py 3tn.py 3tp.py 3tp1.py 3tpa1.py
 	rm -f      3ts.py 3ts1.py 3tsu.py 3tx.py 3tx1.py 3tx2.py 3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
 	rm -f ac.py ag.py
@@ -663,6 +664,7 @@ links:
 	ln -s $(Grow_1B)/Vision.z                                                   1bv.z
 	ln -s $(Grow_1BZ)/Crystal_ParseTree.py                                      1by.py
 	ln -s $(Grow_1B)/Z.py                                                       1bz.py
+	ln -s $(Grow)/Junk/1.py                                                     1j.py
 	ln -s $(Grow_1_Previous)/Vision.x                                           1pv.x
 	ln -s $(Grow_1_Previous)/Crystal.py                                         1py.py
 	ln -s $(Grow_1)/README.txt                                                  1r.txt
@@ -681,7 +683,6 @@ links:
 	ln -s $(Grow_22Y)/Fixed_6.py                                                22f6.py
 	ln -s $(Grow_22Y)/Fixup_CrystalGlobals.py                                   22fg.py
 	ln -s $(Grow)/Junk/ImmutablePoint.py                                        22id.py
-	ln -s $(Grow)/Junk/1.py                                                     22j.py
 	ln -s $(Grow_22Y)/Module.py                                                 22m.py
 	ln -s $(Grow_22Y)/Mutable_10.py                                             22m10.py
 	ln -s $(Grow_22Y)/Mutable_12.py                                             22m12.py
@@ -740,7 +741,8 @@ links:
 	ln -s $(Grow_3Z)/Extract.py                                                 3e.py
 	ln -s $(Grow_3C)/Fact.py                                                    3f.py
 	ln -s $(Grow_3Z)/CodeGenerator_OnExit.py                                    3g.py
-	ln -s $(Grow)/Junk/SyntaxTree.py                                            3j.py
+	ln -s $(Grow)/Junk/3.py                                                     3j.py
+	ln -s $(Grow)/Junk/SyntaxTree.py                                            3jst.py
 	ln -s $(Grow_3Z)/Main.py                                                    3m.py
 	ln -s $(Grow_3T)/Native_AbstractSyntaxTree.py                               3na.py
 	ln -s $(Grow_3C)/NativeString.py                                            3ns.py
@@ -749,7 +751,6 @@ links:
 	ln -s $(Grow_3_Previous)/Vision.x                                           3pv.x
 	ln -s $(Grow_3_Previous)/Crystal.py                                         3py.py
 	ln -s $(Grow_3)/README.txt                                                  3r.txt
-	ln -s $(Grow_3Z)/SyntaxTree.py                                              3st.py
 	ln -s $(Grow_3C)/SimpleContextLifecycle.py                                  3sxy.py
 	ln -s $(Grow_3C)/System.py                                                  3sy.py
 	ln -s $(Grow_3Z)/Tree.py                                                    3t.py
