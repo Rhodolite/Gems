@@ -6,6 +6,11 @@ set -e$-
 Main_py=../Other/Grow/3/Z.py
 
 for i in 3*.py; do
+    case $i in
+        3jst.py)    continue ;;
+        3test.py)   continue ;;
+    esac
+
     echo
     echo "===  $i  ==="
     echo
