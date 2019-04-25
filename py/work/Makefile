@@ -215,10 +215,11 @@ Grow_3_Files = \
     $(Grow_3C)/SimpleContextLifecycle.py $(Grow_3C)/System.py \
     $(Grow_3C)/Types.py \
     $(Grow_3T)/Alias.py $(Grow_3T)/Alias_1.py $(Grow_3T)/Argument.py $(Grow_3T)/Argument_1.py \
-        $(Grow_3T)/Context.py $(Grow_3T)/Context_V1.py $(Grow_3T)/Context_V2.py $(Grow_3T)/Convert_Alias.py \
-            $(Grow_3T)/Convert_Argument.py $(Grow_3T)/Convert_Context.py $(Grow_3T)/Convert_Decorator.py \
+        $(Grow_3T)/Comprehension.py $(Grow_3T)//Comprehension_V1.py $(Grow_3T)/Context.py $(Grow_3T)/Context_V1.py \
+            $(Grow_3T)/Context_V2.py $(Grow_3T)/Convert_Alias.py $(Grow_3T)/Convert_Argument.py \
+            $(Grow_3T)/Convert_Context.py $(Grow_3T)/Convert_Comprehension.py $(Grow_3T)/Convert_Decorator.py \
             $(Grow_3T)/Convert_Expression.py $(Grow_3T)/Convert_Module.py $(Grow_3T)/Convert_Operator.py \
-            $(Grow_3T)/Convert_Parameter.py $(Grow_3T)/Convert_Statement.py \
+            $(Grow_3T)/Convert_Parameter.py $(Grow_3T)/Convert_Statement.py $(Grow_3T)/Convert_Target.py \
         $(Grow_3T)/Expression.py $(Grow_3T)/Expression_V1.py \
         $(Grow_3T)/Global.py \
         $(Grow_3T)/Module.py \
@@ -226,6 +227,7 @@ Grow_3_Files = \
         $(Grow_3T)/Operator.py $(Grow_3T)/Operator_V1.py \
         $(Grow_3T)/Parameter.py $(Grow_3T)/Parameter_V1.py $(Grow_3T)/Parameters_All_V1.py \
         $(Grow_3T)/Statement.py $(Grow_3T)/Statement_V1.py $(Grow_3T)/Support.py \
+        $(Grow_3T)/Target.py $(Grow_3T)/Target_V1.py \
     $(Grow_3Z)/Build_DumpToken.py \
     $(Grow_3Z)/CodeGenerator_OnExit.py $(Grow_3Z)/Core.py $(Grow_3Z)/Crystal_ParseTree.py \
     $(Grow_3Z)/Extract.py \
@@ -569,11 +571,12 @@ clean:
 	rm -f   22bmm.py 22ca.py 22ce.txt 22cn.py 22co.py 22cx.py 22d.py 22d2.py 22f.py 22f3.py 22f5.py 22f6.py 22fg.py
 	rm -f   22id.py 22m.py 22m10.py 22m12.py 22m3.py 22m4.py 22mm.py 22om.py 22rxy.py
 	rm -f   22s.py 22sg.py 22so.py 22sxy.py 22sy.py 22t.py 22tv.py 22v.py 22v.x 22vg.py 22wg.py 22x.py 22y.py 22z.py
-	rm -f 3b.py 3bd.py 3bl.py 3bns.py 3bxy.py 3cag.py 3cal.py 3cap.py 3cd.py 3ce.py 3cm.py 3co.py 3core.py
-	rm -f    3cp.py 3cpx.py 3cs.py 3cx.py 3e.py 3f.py 3g.py 3j.py 3jst.py 3m.py 3na.py 3ns.py
+	rm -f 3b.py 3bd.py 3bl.py 3bns.py 3bxy.py 3cag.py 3cal.py 3cap.py 3cc.py 3cd.py 3ce.py 3cm.py 3co.py 3core.py
+	rm -f    3cp.py 3cpx.py 3cs.py 3ct.py 3cx.py 3e.py 3f.py 3g.py 3j.py 3jst.py 3m.py 3na.py 3ns.py
 	rm -f    3ph.py 3pt.py 3pv.x 3py.py 3r.txt 3sxy.py 3sy.py
-	rm -f    3t.py 3tag.py 3tag1.py 3tal.py 3tag1.py 3tal1.py 3te.py 3te1.py 3test.py 3tg.py 3tm.py 3tn.py
-	rm -f      3to.py 3to1.py 3tp.py 3tp1.py 3tpa1.py 3ts.py 3ts1.py 3tsu.py 3tx.py 3tx1.py 3tx2.py
+	rm -f    3t.py 3tag.py 3tag1.py 3tal.py 3tag1.py 3tal1.py 3tc.py 3tc1.py 3te.py 3te1.py 3test.py 3tg.py
+	rm -f      3tm.py 3tn.py 3to.py 3to1.py 3tp.py 3tp1.py 3tpa1.py 3ts.py 3ts1.py 3tsu.py
+	rm -f      3tt.py 3tt1.py 3tx.py 3tx1.py 3tx2.py
 	rm -f    3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
@@ -734,6 +737,7 @@ links:
 	ln -s $(Grow_3T)/Convert_Argument.py                                        3cag.py
 	ln -s $(Grow_3T)/Convert_Alias.py                                           3cal.py
 	ln -s $(Grow_3)/Capital.py                                                  3cap.py
+	ln -s $(Grow_3T)/Convert_Comprehension.py                                   3cc.py
 	ln -s $(Grow_3T)/Convert_Decorator.py                                       3cd.py
 	ln -s $(Grow_3T)/Convert_Expression.py                                      3ce.py
 	ln -s $(Grow_3T)/Convert_Module.py                                          3cm.py
@@ -742,6 +746,7 @@ links:
 	ln -s $(Grow_3T)/Convert_Parameter.py                                       3cp.py
 	ln -s $(Grow_3C)/ChangePrefix.py                                            3cpx.py
 	ln -s $(Grow_3T)/Convert_Statement.py                                       3cs.py
+	ln -s $(Grow_3T)/Convert_Target.py                                          3ct.py
 	ln -s $(Grow_3T)/Convert_Context.py                                         3cx.py
 	ln -s $(Grow_3Z)/Extract.py                                                 3e.py
 	ln -s $(Grow_3C)/Fact.py                                                    3f.py
@@ -763,6 +768,8 @@ links:
 	ln -s $(Grow_3T)/Argument_1.py                                              3tag1.py
 	ln -s $(Grow_3T)/Alias.py                                                   3tal.py
 	ln -s $(Grow_3T)/Alias_1.py                                                 3tal1.py
+	ln -s $(Grow_3T)/Comprehension.py                                           3tc.py
+	ln -s $(Grow_3T)/Comprehension_V1.py                                        3tc1.py
 	ln -s $(Grow_3T)/Expression.py                                              3te.py
 	ln -s $(Grow_3T)/Expression_V1.py                                           3te1.py
 	ln -s $(Grow_3)/ParseTest.py                                                3test.py
@@ -777,6 +784,8 @@ links:
 	ln -s $(Grow_3T)/Statement.py                                               3ts.py
 	ln -s $(Grow_3T)/Statement_V1.py                                            3ts1.py
 	ln -s $(Grow_3T)/Support.py                                                 3tsu.py
+	ln -s $(Grow_3T)/Target.py                                                  3tt.py
+	ln -s $(Grow_3T)/Target_V1.py                                               3tt1.py
 	ln -s $(Grow_3T)/Context.py                                                 3tx.py
 	ln -s $(Grow_3T)/Context_V1.py                                              3tx1.py
 	ln -s $(Grow_3T)/Context_V2.py                                              3tx2.py
