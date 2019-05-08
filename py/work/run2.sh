@@ -12,10 +12,14 @@ for i in 3*.py; do
         3test.py)   continue ;;
     esac
 
-    echo
-    echo "===  $i  ==="
-    echo
-
     cp $i 3test.py
-    python $Main_py development
+
+    for version in 1 15 8 4 12 16 14 2 6 10 3 5 7 9 11 13
+    do
+        echo
+        echo "===  $version $i  ==="
+        echo
+
+        python $Main_py $version
+    done
 done
