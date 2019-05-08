@@ -14,7 +14,7 @@ for i in 3*.py; do
 
     cp $i 3test.py
 
-    for version in 1 15 8 4 12 16 14 2 6 10 3 5 7 9 11 13
+    for version in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
     do
         echo
         echo "===  $version $i  ==="

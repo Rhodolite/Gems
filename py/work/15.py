@@ -667,7 +667,7 @@ class Tree_Global_Statement(
         'line_number',                  #   Positive_Integer
         'column',                       #   Substantial_Integer
 
-        'names',                        #   FullNativeList of Full_Native_String
+        'symbols',                      #   FullNativeList of Parser_Symbol
     ))
 
 
@@ -759,7 +759,7 @@ class Tree_Context_Enumeration(
         TRAIT_Tree_Context,
 ):
     __slots__ = ((
-        'name',                         #   Full_Native_String
+        'name',                         #   String
 
         #
         #   Interface Tree_Context
