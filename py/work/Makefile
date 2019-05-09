@@ -215,11 +215,11 @@ Grow_3_Files = \
         $(Grow_3C)/Global.py \
         $(Grow_3C)/Exception.py \
         $(Grow_3C)/Fact.py \
+        $(Grow_3C)/Maybe_Temporary.py \
         $(Grow_3C)/Native_String.py \
         $(Grow_3C)/Private.py $(Grow_3C)/Produce_ConjureFullString.py $(Grow_3C)/Python_Type.py \
-        $(Grow_3C)/SimpleContextLifecycle.py $(Grow_3C)/Some_String.py $(Grow_3C)/System.py \
-        $(Grow_3C)/Temporary_Element.py \
-            $(Grow_3C)/Temporary_String_V6.py $(Grow_3C)/Temporary_String_V7.py \
+        $(Grow_3C)/SimpleContextLifecycle.py $(Grow_3C)/String.py $(Grow_3C)/System.py \
+            $(Grow_3C)/Temporary_None.py $(Grow_3C)/Temporary_String_V6.py $(Grow_3C)/Temporary_String_V7.py \
             $(Grow_3C)/Types.py \
     $(Grow_3P)/Conjure_Module_Name.py \
         $(Grow_3P)/Module_Name.py $(Grow_3P)/Module_Name_V2.py $(Grow_3P)/Module_Name_V3.py \
@@ -228,11 +228,12 @@ Grow_3_Files = \
         $(Grow_3P)/Symbol.py $(Grow_3P)/Symbol_V2.py $(Grow_3P)/Symbol_V3.py $(Grow_3P)/Symbol_V4.py \
             $(Grow_3P)/Symbol_V5.py $(Grow_3P)/Symbol_V6.py \
             $(Grow_3P)/Symbol_Tuple.py $(Grow_3P)/Symbol_Tuple_V6.py \
-    $(Grow_3R)/ConjureString_V1.py $(Grow_3R)/ConjureString_V3.py $(Grow_3R)/ConjureString_V4.py \
-            $(Grow_3R)/ConjureString_V5.py $(Grow_3R)/ConjureString_V6.py $(Grow_3R)/ConjureString_V7.py \
+    $(Grow_3R)/ConjureString_V1.py $(Grow_3R)/ConjureString_V2.py $(Grow_3R)/ConjureString_V3.py \
+            $(Grow_3R)/ConjureString_V4.py $(Grow_3R)/ConjureString_V5.py $(Grow_3R)/ConjureString_V6.py \
+            $(Grow_3R)/ConjureString_V7.py $(Grow_3R)/ConjureString_V8.py \
         $(Grow_3R)/Exception_V1.py $(Grow_3R)/Exception_V2.py \
-        $(Grow_3R)/String_V1.py $(Grow_3R)/String_V3.py $(Grow_3R)/String_V4.py $(Grow_3R)/String_V5.py \
-            $(Grow_3R)/String_V6.py $(Grow_3R)/String_V7.py \
+        $(Grow_3R)/String_V1.py $(Grow_3R)/String_V4.py $(Grow_3R)/String_V5.py \
+            $(Grow_3R)/String_V6.py $(Grow_3R)/String_V7.py $(Grow_3R)/String_V8.py \
     $(Grow_3T)/Alias.py $(Grow_3T)/Alias_V1.py $(Grow_3T)/Alias_V3.py \
             $(Grow_3T)/Alias_V4.py $(Grow_3T)/Alias_V5.py $(Grow_3T)/Alias_V6.py \
             $(Grow_3T)/Argument.py $(Grow_3T)/Argument_V1.py $(Grow_3T)/Argument_V3.py \
@@ -646,18 +647,19 @@ clean:
 	rm -f     3co1.py 3co2.py 3core.py 3cp1.py 3cp2.py 3cpx.py
 	rm -f     3cs1.py 3cs2.py 3cse1.py 3cse2.py 3css1.py 3css2.py 3csu1.py 3csu2.py 3csu4.py
 	rm -f     3ct1.py 3ct2.py 3cx1.py 3cx2.py 3cz.py
-	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3g.py 3j.py 3js1.py 3js3.py 3js4.py 3js5.py 3js6.py 3js7.py 3jst.py
-	rm -f   3m.py 3mcl1.py 3mcl2.py 3mj.py 3na.py 3ns.py
+	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3g.py
+	rm -f   3j.py 3js1.py 3js2.py 3js3.py 3js4.py 3js5.py 3js6.py 3js7.py 3js8.py 3jst.py
+	rm -f   3m.py 3mcl1.py 3mcl2.py 3mj.py 3mt.py 3na.py 3ns.py
 	rm -f   3pa.py 3ph.py 3pjmn.py 3pmj.py 3pmn.py 3pmn2.py 3pmn3.py 3pn.py
 	rm -f     3pr.py 3pt.py 3py.py 3py2.py 3py3.py 3py4.py 3py5.py 3py6.py 3pyt.py 3pyt6.py
-	rm -f   3r.txt 3s1.py 3s3.py 3s4.py 3s5.py 3s6.py 3s7.py 3ss.py 3sxy.py 3sy.py
+	rm -f   3r.txt 3s.py 3s1.py 3s4.py 3s5.py 3s6.py 3s7.py 3s8.py 3sxy.py 3sy.py
 	rm -f   3t.py 3tag.py 3tag1.py 3tag3.py 3tal.py 3tal1.py 3tal3.py 3tal4.py 3tal5.py 3tal6.py
 	rm -f       3tat1.py 3tat3.py 3tat4.py
 	rm -f     3tc.py 3tc1.py 3tcs1.py 3tcs7.py 3td1.py 3td3.py 3td7.py
-	rm -f     3te.py 3te1.py 3tel.py 3test.py 3tex.py 3tex1.py
+	rm -f     3te.py 3te1.py 3test.py 3tex.py 3tex1.py
 	rm -f     3tfi1.py 3tfi4.py 3tfi7.py 3tg1.py 3tg5.py 3tg5.py 3tg6.py 3tg7.py
 	rm -f     3ti.py 3tin1.py 3tim1.py 3tim7.py 3tm.py 3tm1.py 3tm4.py
-	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3to.py 3to1.py 3to3.py 3tp.py 3tpa1.py
+	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tno.py 3to.py 3to1.py 3to3.py 3tp.py 3tpa1.py
 	rm -f     3ts.py 3ts6.py 3ts7.py 3tsi1.py 3tsi4.py 3tss1.py 3tss7.py 3tsu.py 3tsu7.py
 	rm -f     3tt.py 3tx.py 3tx1.py 3tx3.py
 	rm -f   3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
@@ -893,16 +895,19 @@ links:
 	ln -s $(Grow_3Z)/CodeGenerator_OnExit.py                                    3g.py
 	ln -s $(Grow)/Junk/3.py                                                     3j.py
 	ln -s $(Grow_3R)/ConjureString_V1.py                                        3js1.py
+	ln -s $(Grow_3R)/ConjureString_V2.py                                        3js2.py
 	ln -s $(Grow_3R)/ConjureString_V3.py                                        3js3.py
 	ln -s $(Grow_3R)/ConjureString_V4.py                                        3js4.py
 	ln -s $(Grow_3R)/ConjureString_V5.py                                        3js5.py
 	ln -s $(Grow_3R)/ConjureString_V6.py                                        3js6.py
 	ln -s $(Grow_3R)/ConjureString_V7.py                                        3js7.py
+	ln -s $(Grow_3R)/ConjureString_V8.py                                        3js8.py
 	ln -s $(Grow)/Junk/SyntaxTree.py                                            3jst.py
 	ln -s $(Grow_3Z)/Main.py                                                    3m.py
 	ln -s $(Grow_3T)/Produce_Convert_List_V1.py                                 3mcl1.py
 	ln -s $(Grow_3T)/Produce_Convert_List_V2.py                                 3mcl2.py
 	ln -s $(Grow_3C)/Produce_ConjureFullString.py                               3mj.py
+	ln -s $(Grow_3C)/Maybe_Temporary.py                                         3mt.py
 	ln -s $(Grow_3T)/Native_AbstractSyntaxTree.py                               3na.py
 	ln -s $(Grow_3C)/Native_String.py                                           3ns.py
 	ln -s $(Grow_3Z)/Parser.py                                                  3pa.py
@@ -924,13 +929,13 @@ links:
 	ln -s $(Grow_3P)/Symbol_Tuple.py                                            3pyt.py
 	ln -s $(Grow_3P)/Symbol_Tuple_V6.py                                         3pyt6.py
 	ln -s $(Grow_3)/README.txt                                                  3r.txt
+	ln -s $(Grow_3C)/String.py                                                  3s.py
 	ln -s $(Grow_3R)/String_V1.py                                               3s1.py
-	ln -s $(Grow_3R)/String_V3.py                                               3s3.py
 	ln -s $(Grow_3R)/String_V4.py                                               3s4.py
 	ln -s $(Grow_3R)/String_V5.py                                               3s5.py
 	ln -s $(Grow_3R)/String_V6.py                                               3s6.py
 	ln -s $(Grow_3R)/String_V7.py                                               3s7.py
-	ln -s $(Grow_3C)/Some_String.py                                             3ss.py
+	ln -s $(Grow_3R)/String_V8.py                                               3s8.py
 	ln -s $(Grow_3C)/SimpleContextLifecycle.py                                  3sxy.py
 	ln -s $(Grow_3C)/System.py                                                  3sy.py
 	ln -s $(Grow_3Z)/Tree.py                                                    3t.py
@@ -955,7 +960,6 @@ links:
 	ln -s $(Grow_3T)/Definition_V7.py                                           3td7.py
 	ln -s $(Grow_3T)/Expression.py                                              3te.py
 	ln -s $(Grow_3T)/Expression_V1.py                                           3te1.py
-	ln -s $(Grow_3C)/Temporary_Element.py                                       3tel.py
 	ln -s $(Grow_3)/ParseTest.py                                                3test.py
 	ln -s $(Grow_3T)/Except.py                                                  3tex.py
 	ln -s $(Grow_3T)/Except_V1.py                                               3tex1.py
@@ -977,6 +981,7 @@ links:
 	ln -s $(Grow_3T)/Name_V1.py                                                 3tn1.py
 	ln -s $(Grow_3T)/Name_V3.py                                                 3tn3.py
 	ln -s $(Grow_3T)/Name_V4.py                                                 3tn4.py
+	ln -s $(Grow_3C)/Temporary_None.py                                          3tno.py
 	ln -s $(Grow_3T)/Operator.py                                                3to.py
 	ln -s $(Grow_3T)/Operator_V1.py                                             3to1.py
 	ln -s $(Grow_3T)/Operator_V3.py                                             3to3.py
