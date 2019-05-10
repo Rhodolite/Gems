@@ -507,12 +507,13 @@ class Tree_Operator_Enumeration(
     ))
 
 
-class Tree_Parameters_All(
-        TRAIT_Tree_Parameter,
+class Tree_All_Parameters(
+        TRAIT_Tree_Parameter_Tuple,
+        TRAIT_Tree_Parameter_Tuple_0,
 ):
     __slots__ = ((
         'normal_parameters',            #   SomeNativeList of Tree_NormalParameter
-        'tuple_parameter',              #   None | Full_Native_String
+        'star_parameter',               #   None | Full_Native_String
         'map_parameter',                #   None | Full_Native_String
         'defaults',                     #   SomeNativeList of Tree_Expression
     ))

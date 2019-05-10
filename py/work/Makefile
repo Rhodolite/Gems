@@ -269,6 +269,8 @@ Grow_3_Files = \
                     $(Grow_3T)/Convert_Name_V4.py \
                 $(Grow_3T)/Convert_Operator_V1.py $(Grow_3T)/Convert_Operator_V2.py \
                 $(Grow_3T)/Convert_Parameter_V1.py $(Grow_3T)/Convert_Parameter_V2.py \
+                    $(Grow_3T)/Convert_Parameter_V3.py $(Grow_3T)/Convert_Parameter_V4.py \
+                    $(Grow_3T)/Convert_Parameter_V5.py $(Grow_3T)/Convert_Parameter_V6.py \
                 $(Grow_3T)/Convert_Specific_Expression_V1.py $(Grow_3T)/Convert_Specific_Expression_V2.py \
                     $(Grow_3T)/Convert_Simple_Statement_V1.py $(Grow_3T)/Convert_Simple_Statement_V2.py \
                     $(Grow_3T)/Convert_Statement_V1.py $(Grow_3T)/Convert_Statement_V2.py \
@@ -287,7 +289,10 @@ Grow_3_Files = \
         $(Grow_3T)/Name.py $(Grow_3T)/Name_V1.py $(Grow_3T)/Name_V3.py $(Grow_3T)/Name_V4.py \
             $(Grow_3T)/Native_AbstractSyntaxTree.py \
         $(Grow_3T)/Operator.py $(Grow_3T)/Operator_V1.py $(Grow_3T)/Operator_V3.py \
-        $(Grow_3T)/Parameter.py $(Grow_3T)/Parameters_All_V1.py \
+        $(Grow_3T)/Parameter.py $(Grow_3T)/Parameter_V4.py \
+                $(Grow_3T)/Parameter_V5.py $(Grow_3T)/Parameter_V6.py \
+            $(Grow_3T)/Parameter_Tuple.py $(Grow_3T)/Parameter_Tuple_V1.py $(Grow_3T)/Parameter_Tuple_V5.py \
+                $(Grow_3T)/Parameter_Tuple_V6.py \
             $(Grow_3T)/Produce_Convert_List_V1.py $(Grow_3T)/Produce_Convert_List_V2.py \
         $(Grow_3T)/Simple_Statement_V1.py $(Grow_3T)/Simple_Statement_V7.py \
             $(Grow_3T)/Statement.py \
@@ -644,7 +649,7 @@ clean:
 	rm -f       3ce1.py 3ce2.py 3cec1.py 3cec2.py 3cfi1.py 3cfi2.py 3cfi4.py
 	rm -f       3cg.py 3cg1.py 3cg2.py 3cg5.py 3cg6.py 3cin1.py 3cin2.py 3cim1.py 3cim2.py
 	rm -f       3cm1.py 3cm2.py 3cm4.py 3cmd1.py 3cmd2.py 3cn1.py 3cn2.py 3cn3.py 3cn4.py
-	rm -f     3co1.py 3co2.py 3core.py 3cp1.py 3cp2.py 3cpx.py
+	rm -f     3co1.py 3co2.py 3core.py 3cp1.py 3cp2.py 3cp3.py 3cp4.py 3cp5.py 3cp6.py 3cpx.py
 	rm -f     3cs1.py 3cs2.py 3cse1.py 3cse2.py 3css1.py 3css2.py 3csu1.py 3csu2.py 3csu4.py
 	rm -f     3ct1.py 3ct2.py 3cx1.py 3cx2.py 3cz.py
 	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3g.py
@@ -659,7 +664,8 @@ clean:
 	rm -f     3te.py 3te1.py 3test.py 3tex.py 3tex1.py
 	rm -f     3tfi1.py 3tfi4.py 3tfi7.py 3tg1.py 3tg5.py 3tg5.py 3tg6.py 3tg7.py
 	rm -f     3ti.py 3tin1.py 3tim1.py 3tim7.py 3tm.py 3tm1.py 3tm4.py
-	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tno.py 3to.py 3to1.py 3to3.py 3tp.py 3tpa1.py
+	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tno.py 3to.py 3to1.py 3to3.py
+	rm -f     3tp.py 3tp4.py 3tp5.py 3tp6.py 3tpt.py 3tpt1.py 3tpt5.py 3tpt6.py
 	rm -f     3ts.py 3ts6.py 3ts7.py 3tsi1.py 3tsi4.py 3tss1.py 3tss7.py 3tsu.py 3tsu7.py
 	rm -f     3tt.py 3tx.py 3tx1.py 3tx3.py
 	rm -f   3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
@@ -872,6 +878,10 @@ links:
 	ln -s $(Grow_3C)/Core.py                                                    3core.py
 	ln -s $(Grow_3T)/Convert_Parameter_V1.py                                    3cp1.py
 	ln -s $(Grow_3T)/Convert_Parameter_V2.py                                    3cp2.py
+	ln -s $(Grow_3T)/Convert_Parameter_V3.py                                    3cp3.py
+	ln -s $(Grow_3T)/Convert_Parameter_V4.py                                    3cp4.py
+	ln -s $(Grow_3T)/Convert_Parameter_V5.py                                    3cp5.py
+	ln -s $(Grow_3T)/Convert_Parameter_V6.py                                    3cp6.py
 	ln -s $(Grow_3C)/ChangePrefix.py                                            3cpx.py
 	ln -s $(Grow_3T)/Convert_Statement_V1.py                                    3cs1.py
 	ln -s $(Grow_3T)/Convert_Statement_V2.py                                    3cs2.py
@@ -986,7 +996,13 @@ links:
 	ln -s $(Grow_3T)/Operator_V1.py                                             3to1.py
 	ln -s $(Grow_3T)/Operator_V3.py                                             3to3.py
 	ln -s $(Grow_3T)/Parameter.py                                               3tp.py
-	ln -s $(Grow_3T)/Parameters_All_V1.py                                       3tpa1.py
+	ln -s $(Grow_3T)/Parameter_V4.py                                            3tp4.py
+	ln -s $(Grow_3T)/Parameter_V5.py                                            3tp5.py
+	ln -s $(Grow_3T)/Parameter_V6.py                                            3tp6.py
+	ln -s $(Grow_3T)/Parameter_Tuple.py                                         3tpt.py
+	ln -s $(Grow_3T)/Parameter_Tuple_V1.py                                      3tpt1.py
+	ln -s $(Grow_3T)/Parameter_Tuple_V5.py                                      3tpt5.py
+	ln -s $(Grow_3T)/Parameter_Tuple_V6.py                                      3tpt6.py
 	ln -s $(Grow_3T)/Statement.py                                               3ts.py
 	ln -s $(Grow_3C)/Temporary_String_V6.py                                     3ts6.py
 	ln -s $(Grow_3C)/Temporary_String_V7.py                                     3ts7.py
