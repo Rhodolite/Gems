@@ -216,6 +216,7 @@ Grow_3_Files = \
         $(Grow_3C)/Fact.py \
         $(Grow_3C)/Global.py \
         $(Grow_3C)/Integer.py \
+        $(Grow_3C)/Long.py \
         $(Grow_3C)/Maybe_Temporary.py \
         $(Grow_3C)/Native_Float.py $(Grow_3C)/Native_Integer.py $(Grow_3C)/Native_Long.py $(Grow_3C)/Native_String.py \
         $(Grow_3C)/Private.py $(Grow_3C)/Produce_ConjureFullString.py \
@@ -235,10 +236,11 @@ Grow_3_Files = \
             $(Grow_3R)/ConjureString_V7.py \
         $(Grow_3R)/Exception_V1.py $(Grow_3R)/Exception_V2.py \
         $(Grow_3R)/Integer_V1.py \
+        $(Grow_3R)/Long_V1.py \
         $(Grow_3R)/Produce_ConjureNumber.py \
         $(Grow_3R)/String_V1.py $(Grow_3R)/String_V4.py $(Grow_3R)/String_V5.py \
             $(Grow_3R)/String_V6.py $(Grow_3R)/String_V7.py \
-        $(Grow_3R)/Temporary_Integer_V1.py \
+        $(Grow_3R)/Temporary_Integer_V1.py $(Grow_3R)/Temporary_Long_V1.py \
     $(Grow_3T)/Alias.py $(Grow_3T)/Alias_V1.py $(Grow_3T)/Alias_V3.py \
             $(Grow_3T)/Alias_V4.py $(Grow_3T)/Alias_V5.py $(Grow_3T)/Alias_V6.py \
             $(Grow_3T)/Argument.py $(Grow_3T)/Argument_V1.py $(Grow_3T)/Argument_V3.py \
@@ -662,7 +664,7 @@ clean:
 	rm -f     3ct1.py 3ct2.py 3cx1.py 3cx2.py 3cz.py
 	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3g.py 3i.py 3i1.py
 	rm -f   3j.py 3js1.py 3js2.py 3js3.py 3js4.py 3js5.py 3js6.py 3js7.py 3jst.py
-	rm -f   3m.py 3mcl1.py 3mcl2.py 3mjn.py 3mjs.py 3mt.py 3na.py 3nf.py 3ni.py 3nl.py 3ns.py
+	rm -f   3l.py 3l1.py 3m.py 3mcl1.py 3mcl2.py 3mjn.py 3mjs.py 3mt.py 3na.py 3nf.py 3ni.py 3nl.py 3ns.py
 	rm -f   3pa.py 3ph.py 3pjmn.py 3pmj.py 3pmn.py 3pmn2.py 3pmn3.py 3pn.py
 	rm -f     3pr.py 3pt.py 3py.py 3py2.py 3py3.py 3py4.py 3py5.py 3py6.py 3pyt.py 3pyt6.py
 	rm -f   3r.txt 3s.py 3s1.py 3s4.py 3s5.py 3s6.py 3s7.py 3sxy.py 3sy.py
@@ -671,11 +673,11 @@ clean:
 	rm -f     3tc.py 3tc1.py 3tcs1.py 3tcs7.py 3td1.py 3td3.py 3td7.py
 	rm -f     3te.py 3te1.py 3test.py 3tex.py 3tex1.py
 	rm -f     3tfi1.py 3tfi4.py 3tfi7.py 3tg1.py 3tg5.py 3tg5.py 3tg6.py 3tg7.py
-	rm -f     3ti.py 3ti1.py 3tin.py 3tin1.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tm.py 3tm1.py 3tm4.py
-	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tno.py 3to.py 3to1.py 3to3.py
+	rm -f     3tin.py 3tin1.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tm.py 3tm1.py 3tm4.py
+	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tno.py 3tnu.py 3to.py 3to1.py 3to3.py
 	rm -f     3tp.py 3tp4.py 3tp5.py 3tp6.py 3tpt.py 3tpt1.py 3tpt5.py 3tpt6.py
 	rm -f     3ts.py 3ts6.py 3ts7.py 3tsi1.py 3tsi4.py 3tss1.py 3tss7.py 3tsu.py 3tsu7.py
-	rm -f     3tt.py 3tx.py 3tx1.py 3tx3.py
+	rm -f     3tt.py 3tti1.py 3ttl1.py 3tx.py 3tx1.py 3tx3.py
 	rm -f   3v.z 3x.py 3y.py 3yt.py 3yy.py 3z.py 3zc.py
 	rm -f ac.py ag.py
 	rm -f b2es.py b2f.py b2t.py b2w.py ba2.py b3f.py b3t.py b3w.py b4f.py b4w.py
@@ -926,6 +928,8 @@ links:
 	ln -s $(Grow_3R)/ConjureString_V6.py                                        3js6.py
 	ln -s $(Grow_3R)/ConjureString_V7.py                                        3js7.py
 	ln -s $(Grow)/Junk/SyntaxTree.py                                            3jst.py
+	ln -s $(Grow_3C)/Long.py                                                    3l.py
+	ln -s $(Grow_3R)/Long_V1.py                                                 3l1.py
 	ln -s $(Grow_3Z)/Main.py                                                    3m.py
 	ln -s $(Grow_3T)/Produce_Convert_List_V1.py                                 3mcl1.py
 	ln -s $(Grow_3T)/Produce_Convert_List_V2.py                                 3mcl2.py
@@ -996,8 +1000,6 @@ links:
 	ln -s $(Grow_3T)/Global_V5.py                                               3tg5.py
 	ln -s $(Grow_3T)/Global_V6.py                                               3tg6.py
 	ln -s $(Grow_3T)/Global_V7.py                                               3tg7.py
-	ln -s $(Grow_3Z)/Test_Integer.py                                            3ti.py
-	ln -s $(Grow_3R)/Temporary_Integer_V1.py                                    3ti1.py
 	ln -s $(Grow_3T)/Index.py                                                   3tin.py
 	ln -s $(Grow_3T)/Index_V1.py                                                3tin1.py
 	ln -s $(Grow_3T)/Import_V1.py                                               3tim1.py
@@ -1012,6 +1014,7 @@ links:
 	ln -s $(Grow_3T)/Name_V3.py                                                 3tn3.py
 	ln -s $(Grow_3T)/Name_V4.py                                                 3tn4.py
 	ln -s $(Grow_3C)/Temporary_None.py                                          3tno.py
+	ln -s $(Grow_3Z)/Test_Number.py                                             3tnu.py
 	ln -s $(Grow_3T)/Operator.py                                                3to.py
 	ln -s $(Grow_3T)/Operator_V1.py                                             3to1.py
 	ln -s $(Grow_3T)/Operator_V3.py                                             3to3.py
@@ -1033,6 +1036,8 @@ links:
 	ln -s $(Grow_3T)/Suite.py                                                   3tsu.py
 	ln -s $(Grow_3T)/Suite_V7.py                                                3tsu7.py
 	ln -s $(Grow_3T)/Target.py                                                  3tt.py
+	ln -s $(Grow_3R)/Temporary_Integer_V1.py                                    3tti1.py
+	ln -s $(Grow_3R)/Temporary_Long_V1.py                                       3ttl1.py
 	ln -s $(Grow_3T)/Context.py                                                 3tx.py
 	ln -s $(Grow_3T)/Context_V1.py                                              3tx1.py
 	ln -s $(Grow_3T)/Context_V3.py                                              3tx3.py
