@@ -3,7 +3,7 @@ class Tree_Keyword_Argument(
 ):
     __slots__ = ((
         'symbol',                       #   Parser_Symbol
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -27,11 +27,11 @@ class Tree_Symbol_Alias_Leaf(
 
 class Tree_Attribute(object):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
-        'attribute',                    #   Symbol
+        'value',                        #   Tree_Value_Expression
+        'attribute',                    #   Parser_Symbol
     ))
 
 
@@ -60,9 +60,9 @@ class Tree_Comprehension_Clause_Leaf(
         TRAIT_Tree_Comprehension_Clause,
 ):
     __slots__ = ((
-        'target',                       #   Tree_Expression
-        'sequence',                     #   Tree_Expression
-        'if_tests',                     #   SomeNativeList of Tree_Expression
+        'target',                       #   Tree_Value_Expression
+        'sequence',                     #   Tree_Value_Expression
+        'if_tests',                     #   Native_List of Tree_Value_Expression
     ))
 
 
@@ -72,10 +72,10 @@ class Tree_Test_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'test',                         #   Tree_Expression
+        'test',                         #   Tree_Value_Expression
         'body',                         #   Tree_Statement
         'else_clause_0',                #   Tree_Suite_0
     ))
@@ -87,11 +87,11 @@ class Tree_For_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'target',                       #   Tree_Target
-        'sequence',                     #   Tree_Expression
+        'sequence',                     #   Tree_Value_Expression
         'body',                         #   Tree_Statement
         'else_clause_0',                #   Tree_Suite_0
     ))
@@ -109,11 +109,11 @@ class Tree_Try_Except_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'body',                         #   Tree_Statement
-        'except_handlers',              #   FullNativeList of Tree_Except_Handler
+        'except_handlers',              #   Full_Native_List of Tree_Except_Handler
         'else_clause_0',                #   Tree_Suite_0
     ))
 
@@ -123,8 +123,8 @@ class Tree_Try_Finally_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'body',                         #   Tree_Statement
         'finally_body',                 #   Tree_Statement
@@ -143,10 +143,10 @@ class Tree_With_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
         'target',                       #   None | Tree_Target
         'body',                         #   Tree_Statement
     ))
@@ -158,13 +158,13 @@ class Tree_Class_Definition(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'name',                         #   Parser_Symbol
-        'bases',                        #   SomeNativeList of Tree_Expression
+        'bases',                        #   Native_List of Tree_Value_Expression
         'body',                         #   Tree_Suite
-        'decorator_list',               #   Some_NativeList of Tree_Decorator
+        'decorator_list',               #   Native_List of Tree_Decorator
     ))
 
 
@@ -174,13 +174,13 @@ class Tree_Function_Definition(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'name',                         #   Parser_Symbol
         'parameters',                   #   Tree_Parameter
         'body',                         #   Tree_Suite
-        'decorator_list',               #   SomeNativeList of Tree_Decorator
+        'decorator_list',               #   Native_List of Tree_Decorator
     ))
 
 
@@ -188,11 +188,11 @@ class Tree_Value_Comprehension(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'element',                      #   Tree_Expression
-        'generators',                   #   FullNativeList of Tree_Comprehension
+        'element',                      #   Tree_Value_Expression
+        'generators',                   #   Full_Native_List of Tree_Comprehension
     ))
 
 
@@ -200,10 +200,10 @@ class Tree_Backquote_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -211,12 +211,12 @@ class Tree_Binary_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'left',                         #   Tree_Expression
+        'left',                         #   Tree_Value_Expression
         'operator',                     #   Tree_Operator
-        'right',                        #   Tree_Expression
+        'right',                        #   Tree_Value_Expression
     ))
 
 
@@ -224,14 +224,14 @@ class Tree_Call_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'function',                     #   Tree_Expression
-        'arguments',                    #   Some_NativeList of Tree_Expression
-        'keywords',                     #   Some_NativeList of Tree_Expression
-        'star_arguments',               #   None | Tree_Expression
-        'keyword_arguments',            #   None | Tree_Expression
+        'function',                     #   Tree_Value_Expression
+        'arguments',                    #   Native_List of Tree_Value_Expression
+        'keywords',                     #   Native_List of Tree_Value_Expression
+        'star_arguments',               #   None | Tree_Value_Expression
+        'keyword_arguments',            #   None | Tree_Value_Expression
     ))
 
 
@@ -239,12 +239,12 @@ class Tree_Compare_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'left',                         #   Tree_Expression
-        'operators',                    #   FullNativeList of Tree_Operator
-        'comparators',                  #   FullNativeList of Tree_Expression
+        'left',                         #   Tree_Value_Expression
+        'operators',                    #   Full_Native_List of Tree_Operator
+        'comparators',                  #   Full_Native_List of Tree_Value_Expression
     ))
 
 
@@ -258,12 +258,12 @@ class Tree_If_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'test',                         #   Tree_Expression
-        'body',                         #   Tree_Expression
-        'else_expression',              #   Tree_Expression
+        'test',                         #   Tree_Value_Expression
+        'body',                         #   Tree_Value_Expression
+        'else_expression',              #   Tree_Value_Expression
     ))
 
 
@@ -271,11 +271,11 @@ class Tree_Logical_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'operator',                     #   Tree_Operator
-        'values',                       #   FullNativeList of Tree_Expression
+        'values',                       #   Full_Native_List of Tree_Value_Expression
     ))
 
 
@@ -283,11 +283,11 @@ class Tree_Map_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'keys',                         #   SomeNativeList of Tree_Expression
-        'values',                       #   SomeNativeList of Tree_Expression
+        'keys',                         #   Native_List of Tree_Value_Expression
+        'values',                       #   Native_List of Tree_Value_Expression
     ))
 
 
@@ -295,11 +295,11 @@ class Tree_Lambda_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'parameters',                   #   Tree_Parameter
-        'body',                         #   Tree_Expression
+        'body',                         #   Tree_Value_Expression
     ))
 
 
@@ -311,12 +311,12 @@ class Tree_Map_Comprehension(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'key',                          #   Tree_Expression
-        'value',                        #   Tree_Expression
-        'generators',                   #   FullNativeList of Tree_Comprehension
+        'key',                          #   Tree_Value_Expression
+        'value',                        #   Tree_Value_Expression
+        'generators',                   #   Full_Native_List of Tree_Comprehension
     ))
 
 
@@ -324,10 +324,10 @@ class Tree_Number(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'n',                            #   int
+        'n',                            #   Native_Integer
     ))
 
 
@@ -339,10 +339,10 @@ class Tree_Set_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'values',                       #   SomeNativeList of Tree_Expression
+        'values',                       #   Native_List of Tree_Value_Expression
     ))
 
 
@@ -350,10 +350,10 @@ class Tree_String(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        's',                            #   Some_Native_String
+        's',                            #   String
     ))
 
 
@@ -361,11 +361,11 @@ class Tree_Unary_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'operator',                     #   Tree_Operator
-        'right',                        #   Tree_Expression
+        'right',                        #   Tree_Value_Expression
     ))
 
 
@@ -373,10 +373,10 @@ class Tree_Yield_Expression(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   None | Tree_Expression
+        'value',                        #   None | Tree_Value_Expression
     ))
 
 
@@ -384,12 +384,12 @@ class Tree_Except_Handler(
         TRAIT_Tree_Except_Clause,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'type_expression',              #   None | Tree_Expression
-        'name_expression',              #   None | Tree_Expression
-        'body',                         #   FullNativeList of Tree_Statement
+        'type_expression',              #   None | Tree_Value_Expression
+        'name_expression',              #   None | Tree_Value_Expression
+        'body',                         #   Full_Native_List of Tree_Statement
     ))
 
 class Tree_Ellipses_Index(
@@ -402,7 +402,7 @@ class Tree_Extended_Slice_Index(
         TRAIT_Tree_Index_Clause,
 ):
     __slots__ = ((
-        'many',                         #   NativeList of Tree_Index_Clause
+        'many',                         #   Full_Native_List of Tree_Index_Clause
     ))
 
 
@@ -410,7 +410,7 @@ class Tree_Simple_Index(
         TRAIT_Tree_Index_Clause,
 ):
     __slots__ = ((
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -418,18 +418,18 @@ class Tree_Slice_Index(
         TRAIT_Tree_Index_Clause,
 ):
     __slots__ = ((
-        'lower',                        #   None | Tree_Expression
-        'upper',                        #   None | Tree_Expression
-        'step',                         #   None | Tree_Expression
+        'lower',                        #   None | Tree_Value_Expression
+        'upper',                        #   None | Tree_Value_Expression
+        'step',                         #   None | Tree_Value_Expression
     ))
 
 
 class Tree_Many_Expression(object):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'elements',                     #   SomeNativeList of Tree_Expression
+        'elements',                     #   Native_List of (Tree_Store_Target | Tree_Value_Expression)
     ))
 
 
@@ -437,62 +437,71 @@ class Tree_Evaluate_List(
         Tree_Many_Expression
         TRAIT_Tree_Expression,
 ):
-    __slots__ = (())
+    __slots__ = ((
+    #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
+    #                                   #       Native_List of Tree_Value_Expression
+    ))
 
 
 class Tree_Evaluate_Tuple(
         Tree_Many_Expression,
         TRAIT_Tree_Expression,
 ):
-    __slots__ = (())
+    __slots__ = ((
+    #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
+    #                                   #       Native_List of Tree_Value_Expression
+    ))
 
 
 class Tree_Store_List(
         Tree_Many_Expression,
         TRAIT_Tree_Store_Target,
 ):
-    __slots__ = (())
+    __slots__ = ((
+    #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
+    #                                   #       Native_List of Tree_Store_Target
+    ))
+
+
 
 
 class Tree_Store_Tuple(
         Tree_Many_Expression,
         TRAIT_Tree_Store_Target,
 ):
-    __slots__ = (())
-
-
-class Tree_Name(object):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+    #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
+    #                                   #       Native_List of Tree_Store_Target
+    ))
 
-        'symbol',                       #   Symbol
+
+
+
+class Tree_Name_Branch(object):
+    __slots__ = ((
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
+
+        'symbol',                       #   Parser_Symbol
     ))
 
 
 class Tree_Delete_Name(
-        Tree_Name,
+        Tree_Name_Branch,
         TRAIT_Tree_Delete_Target,
 ):
     __slots__ = (())
 
 
 class Tree_Evaluate_Name(
-        Tree_Name,
+        Tree_Name_Branch,
         TRAIT_Tree_Expression,
 ):
     __slots__ = (())
 
 
-class Tree_Normal_Parameter(
-        Tree_Name,
-        TRAIT_Tree_Parameter,
-):
-    __slots__ = (())
-
-
 class Tree_Store_Name(
-        Tree_Name,
+        Tree_Name_Branch,
         TRAIT_Tree_Store_Target,
 ):
     __slots__ = (())
@@ -506,28 +515,67 @@ class Tree_Operator_Enumeration(
         'operator_token',               #   String
     ))
 
+class Tree_Special_Parameter(object):
+    __slots__ = ((
+        'symbol',                       #   Parser_Symbol
+    ))
 
-class Tree_All_Parameters(
+class Tree_Map_Parameter(
+        Tree_Special_Parameter,
+        TRAIT_Tree_Parameter,
+        TRAIT_Tree_Parameter_0,
+        TRAIT_Tree_Parameter_Tuple,
+        TRAIT_Tree_Parameter_Tuple_0,
+):
+    __slots__ = (())
+
+class Tree_Keyword_Parameter(
+        TRAIT_Tree_Parameter,
         TRAIT_Tree_Parameter_Tuple,
         TRAIT_Tree_Parameter_Tuple_0,
 ):
     __slots__ = ((
-        'normal_parameters',            #   SomeNativeList of Tree_NormalParameter
-        'star_parameter',               #   None | Full_Native_String
-        'map_parameter',                #   None | Full_Native_String
-        'defaults',                     #   SomeNativeList of Tree_Expression
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
+
+        'symbol',                       #   Parser_Symbol
+        'value',                        #   Tree_Value_Expression
     ))
 
+class Tree_Normal_Parameter(
+        Tree_Name_Branch,
+        TRAIT_Tree_Parameter,
+        TRAIT_Tree_Parameter_Tuple,
+        TRAIT_Tree_Parameter_Tuple_0,
+):
+    __slots__ = (())
+
+class Tree_Star_Parameter(
+        Tree_Special_Parameter,
+        TRAIT_Tree_Parameter,
+        TRAIT_Tree_Parameter_0,
+        TRAIT_Tree_Parameter_Tuple,
+        TRAIT_Tree_Parameter_Tuple_0,
+):
+    __slots__ = (())
+
+
+class Tree_Parameter_Tuple_Leaf(
+        tuple,
+        TRAIT_Tree_Parameter_Tuple,
+        TRAIT_Tree_Parameter_Tuple_0
+):
+    __slots__ = (())
 
 class Tree_Subscript_Expression(
         TRAIT_Tree_Delete_Target,
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
         'index',                        #   Tree_Index_Clause
     ))
 
@@ -562,8 +610,8 @@ class Tree_Keyword_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
     ))
 
 
@@ -573,11 +621,11 @@ class Tree_Assert_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'test',                         #   Tree_Expression
-        'message',                      #   None | Tree_Expression
+        'test',                         #   Tree_Value_Expression
+        'message',                      #   None | Tree_Value_Expression
     ))
 
 
@@ -587,11 +635,11 @@ class Tree_Assign_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'targets',                      #   NativeList of Tree_Expression
-        'value',                        #   Tree_Expression
+        'targets',                      #   Full_Native_List of Tree_Store_Target
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -609,10 +657,10 @@ class Tree_Delete_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'targets',                      #   FullNativeList of Tree_Target
+        'targets',                      #   Full_Native_List of Tree_Target
     ))
 
 
@@ -622,12 +670,12 @@ class Tree_Execute_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'body',                         #   Tree_Expression
-        'globals',                      #   None | Tree_Expression
-        'locals',                       #   None | Tree_Expression
+        'body',                         #   Tree_Value_Expression
+        'globals',                      #   None | Tree_Value_Expression
+        'locals',                       #   None | Tree_Value_Expression
     ))
 
 
@@ -637,10 +685,10 @@ class Tree_Expression_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -650,12 +698,12 @@ class Tree_From_Import_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'module',                       #   Parser_Module_Name
-        'names',                        #   FullNativeList of Tree_Symbol_Alias
-        'level',                        #   Substantial_Integer
+        'names',                        #   Full_Native_List of Tree_Symbol_Alias
+        'level',                        #   Avid_Native_Integer
     ))
 
 
@@ -665,8 +713,8 @@ class Tree_Global_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
         'symbols',                      #   Parser_Symbol_Tuple
     ))
@@ -678,10 +726,10 @@ class Tree_Import_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'module_aliases',               #   NativeList of Tree_Module_Alias
+        'module_aliases',               #   Full_Native_List of Tree_Module_Alias
     ))
 
 
@@ -691,12 +739,12 @@ class Tree_Modify_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'left',                         #   Tree_Expression
+        'left',                         #   Tree_Value_Expression
         'operator',                     #   Tree_Operator
-        'right',                        #   Tree_Expression
+        'right',                        #   Tree_Value_Expression
     ))
 
 
@@ -710,11 +758,11 @@ class Tree_Print_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'destination',                  #   None | Tree_Expression
-        'values',                       #   SomeNativeList of Tree_Expression
+        'destination',                  #   None | Tree_Value_Expression
+        'values',                       #   Native_List of Tree_Value_Expression
         'newline',                      #   Native_Boolean
     ))
 
@@ -725,10 +773,10 @@ class Tree_Return_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Expression
+        'value',                        #   Tree_Value_Expression
     ))
 
 
@@ -738,12 +786,12 @@ class Tree_Raise_Statement(
         TRAIT_Tree_Suite_0,
 ):
     __slots__ = ((
-        'line_number',                  #   Positive_Integer
-        'column',                       #   Substantial_Integer
+        'line_number',                  #   Native_Positive_Integer
+        'column',                       #   Avid_Native_Integer
 
-        'type',                         #   None | Tree_Expression
-        'instance',                     #   None | Tree_Expression
-        'traceback',                    #   None | Tree_Expression
+        'type',                         #   None | Tree_Value_Expression
+        'instance',                     #   None | Tree_Value_Expression
+        'traceback',                    #   None | Tree_Value_Expression
     ))
 
 
