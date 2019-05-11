@@ -327,7 +327,7 @@ class Tree_Number(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'n',                            #   Native_Integer
+        'n',                            #   Native_Float | Native_Integer | Native_Long
     ))
 
 

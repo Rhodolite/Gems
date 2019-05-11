@@ -217,7 +217,7 @@ Grow_3_Files = \
         $(Grow_3C)/Global.py \
         $(Grow_3C)/Integer.py \
         $(Grow_3C)/Maybe_Temporary.py \
-        $(Grow_3C)/Native_Integer.py $(Grow_3C)/Native_String.py \
+        $(Grow_3C)/Native_Float.py $(Grow_3C)/Native_Integer.py $(Grow_3C)/Native_Long.py $(Grow_3C)/Native_String.py \
         $(Grow_3C)/Private.py $(Grow_3C)/Produce_ConjureFullString.py \
             $(Grow_3C)/Python_Type.py \
         $(Grow_3C)/SimpleContextLifecycle.py $(Grow_3C)/String.py $(Grow_3C)/System.py \
@@ -662,7 +662,7 @@ clean:
 	rm -f     3ct1.py 3ct2.py 3cx1.py 3cx2.py 3cz.py
 	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3g.py 3i.py 3i1.py
 	rm -f   3j.py 3js1.py 3js2.py 3js3.py 3js4.py 3js5.py 3js6.py 3js7.py 3jst.py
-	rm -f   3m.py 3mcl1.py 3mcl2.py 3mjn.py 3mjs.py 3mt.py 3na.py 3ni.py 3ns.py
+	rm -f   3m.py 3mcl1.py 3mcl2.py 3mjn.py 3mjs.py 3mt.py 3na.py 3nf.py 3ni.py 3nl.py 3ns.py
 	rm -f   3pa.py 3ph.py 3pjmn.py 3pmj.py 3pmn.py 3pmn2.py 3pmn3.py 3pn.py
 	rm -f     3pr.py 3pt.py 3py.py 3py2.py 3py3.py 3py4.py 3py5.py 3py6.py 3pyt.py 3pyt6.py
 	rm -f   3r.txt 3s.py 3s1.py 3s4.py 3s5.py 3s6.py 3s7.py 3sxy.py 3sy.py
@@ -933,7 +933,9 @@ links:
 	ln -s $(Grow_3C)/Produce_ConjureFullString.py                               3mjs.py
 	ln -s $(Grow_3C)/Maybe_Temporary.py                                         3mt.py
 	ln -s $(Grow_3T)/Native_AbstractSyntaxTree.py                               3na.py
+	ln -s $(Grow_3C)/Native_Float.py                                            3nf.py
 	ln -s $(Grow_3C)/Native_Integer.py                                          3ni.py
+	ln -s $(Grow_3C)/Native_Long.py                                             3nl.py
 	ln -s $(Grow_3C)/Native_String.py                                           3ns.py
 	ln -s $(Grow_3Z)/Parser.py                                                  3pa.py
 	ln -s $(Grow_3Z)/Path.py                                                    3ph.py
