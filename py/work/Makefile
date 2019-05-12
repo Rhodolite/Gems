@@ -301,13 +301,14 @@ Grow_3_Files = \
                     $(Grow_3T)/Convert_Target_V5.py \
                 $(Grow_3T)/Convert_Zone.py \
         $(Grow_3T)/Definition_V1.py $(Grow_3T)/Definition_V3.py $(Grow_3T)/Definition_V7.py \
-        $(Grow_3T)/Except.py $(Grow_3T)/Except_V1.py $(Grow_3T)/Except_V7.py $(Grow_3T)/Except_V8.py \
+        $(Grow_3T)/Except_Clause.py $(Grow_3T)/Except_Clause_V1.py $(Grow_3T)/Except_Clause_V7.py \
+                $(Grow_3T)/Except_Clause_V8.py \
             $(Grow_3T)/Execute_Statement_V1.py $(Grow_3T)/Execute_Statement_V7.py $(Grow_3T)/Execute_Statement_V8.py \
             $(Grow_3T)/Expression.py $(Grow_3T)/Expression_V1.py $(Grow_3T)/Expression_V4.py \
         $(Grow_3T)/From_Import_V1.py $(Grow_3T)/From_Import_V4.py $(Grow_3T)/From_Import_V7.py \
         $(Grow_3T)/Global_V1.py $(Grow_3T)/Global_V5.py $(Grow_3T)/Global_V5.py $(Grow_3T)/Global_V6.py \
             $(Grow_3T)/Global_V7.py \
-        $(Grow_3T)/Index.py $(Grow_3T)/Index_V1.py \
+        $(Grow_3T)/Index_Clause.py $(Grow_3T)/Index_Clause_V1.py $(Grow_3T)/Index_Clause_V3.py \
         $(Grow_3T)/Import_V1.py $(Grow_3T)/Import_V7.py \
         $(Grow_3T)/Literal_V1.py $(Grow_3T)/Literal_V3.py $(Grow_3T)/Literal_V4.py \
         $(Grow_3T)/Many_V1.py $(Grow_3T)/Many_V4.py $(Grow_3T)/Many_V5.py \
@@ -697,7 +698,7 @@ clean:
 	rm -f     3tc.py 3tc1.py 3tce1.py 3tce4.py 3tcs1.py 3tcs7.py 3td1.py 3td3.py 3td7.py
 	rm -f     3te.py 3te1.py 3te4.py 3tes1.py 3tes7.py 3tes8.py 3test.py 3tex.py 3tex1.py 3tex7.py 3tex8.py
 	rm -f     3tfi1.py 3tfi4.py 3tfi7.py 3tg1.py 3tg5.py 3tg5.py 3tg6.py 3tg7.py
-	rm -f     3tin.py 3tin1.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tl4.py 3tm.py 3tm1.py 3tm4.py 3tm5.py
+	rm -f     3tin.py 3tin1.py 3tin3.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tl4.py 3tm.py 3tm1.py 3tm4.py 3tm5.py
 	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tn5.py 3tno.py 3tnu.py 3to.py 3to1.py 3to3.py
 	rm -f     3tp.py 3tp4.py 3tp5.py 3tp6.py 3tpt.py 3tpr1.py 3tpr7.py 3tpr8.py 3tpt1.py 3tpt5.py 3tpt6.py
 	rm -f     3tra1.py 3tra7.py 3tra8.py 3tre1.py 3tre7.py 3tre8.py
@@ -1039,10 +1040,10 @@ links:
 	ln -s $(Grow_3T)/Execute_Statement_V7.py                                    3tes7.py
 	ln -s $(Grow_3T)/Execute_Statement_V8.py                                    3tes8.py
 	ln -s $(Grow_3)/ParseTest.py                                                3test.py
-	ln -s $(Grow_3T)/Except.py                                                  3tex.py
-	ln -s $(Grow_3T)/Except_V1.py                                               3tex1.py
-	ln -s $(Grow_3T)/Except_V7.py                                               3tex7.py
-	ln -s $(Grow_3T)/Except_V8.py                                               3tex8.py
+	ln -s $(Grow_3T)/Except_Clause.py                                           3tex.py
+	ln -s $(Grow_3T)/Except_Clause_V1.py                                        3tex1.py
+	ln -s $(Grow_3T)/Except_Clause_V7.py                                        3tex7.py
+	ln -s $(Grow_3T)/Except_Clause_V8.py                                        3tex8.py
 	ln -s $(Grow_3T)/From_Import_V1.py                                          3tfi1.py
 	ln -s $(Grow_3T)/From_Import_V4.py                                          3tfi4.py
 	ln -s $(Grow_3T)/From_Import_V7.py                                          3tfi7.py
@@ -1050,8 +1051,9 @@ links:
 	ln -s $(Grow_3T)/Global_V5.py                                               3tg5.py
 	ln -s $(Grow_3T)/Global_V6.py                                               3tg6.py
 	ln -s $(Grow_3T)/Global_V7.py                                               3tg7.py
-	ln -s $(Grow_3T)/Index.py                                                   3tin.py
-	ln -s $(Grow_3T)/Index_V1.py                                                3tin1.py
+	ln -s $(Grow_3T)/Index_Clause.py                                            3tin.py
+	ln -s $(Grow_3T)/Index_Clause_V1.py                                         3tin1.py
+	ln -s $(Grow_3T)/Index_Clause_V3.py                                         3tin3.py
 	ln -s $(Grow_3T)/Import_V1.py                                               3tim1.py
 	ln -s $(Grow_3T)/Import_V7.py                                               3tim7.py
 	ln -s $(Grow_3T)/Literal_V1.py                                              3tl1.py

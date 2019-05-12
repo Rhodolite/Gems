@@ -404,8 +404,8 @@ class Tree_Except_Handler(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'type_expression',              #   Tree_Value_Expression_0
-        'target_expression',            #   Tree_Store_Target_0
+        'type_expression',              #   None | Tree_Value_Expression
+        'target_expression',            #   None | Tree_Store_Target
         'body',                         #   Tree_Suite
     ))
 
@@ -436,9 +436,9 @@ class Tree_Slice_Index(
         TRAIT_Tree_Index_Clause,
 ):
     __slots__ = ((
-        'lower',                        #   None | Tree_Value_Expression
-        'upper',                        #   None | Tree_Value_Expression
-        'step',                         #   None | Tree_Value_Expression
+        'lower',                        #   Tree_Value_Expression_0
+        'upper',                        #   Tree_Value_Expression_0
+        'step',                         #   Tree_Value_Expression_0
     ))
 
 
