@@ -251,6 +251,8 @@ Grow_3_Files = \
     $(Grow_3T)/Alias.py $(Grow_3T)/Alias_V1.py $(Grow_3T)/Alias_V3.py \
             $(Grow_3T)/Alias_V4.py $(Grow_3T)/Alias_V5.py $(Grow_3T)/Alias_V6.py \
             $(Grow_3T)/Argument.py $(Grow_3T)/Argument_V1.py $(Grow_3T)/Argument_V3.py \
+            $(Grow_3T)/Assert_Statement_V1.py $(Grow_3T)/Assert_Statement_V7.py \
+                $(Grow_3T)/Assert_Statement_V8.py \
             $(Grow_3T)/Attribute_V1.py $(Grow_3T)/Attribute_V3.py $(Grow_3T)/Attribute_V4.py \
                 $(Grow_3T)/Attribute_V5.py \
         $(Grow_3T)/Call_Expression_V1.py $(Grow_3T)/Call_Expression_V4.py \
@@ -300,7 +302,7 @@ Grow_3_Files = \
                 $(Grow_3T)/Convert_Zone.py \
         $(Grow_3T)/Definition_V1.py $(Grow_3T)/Definition_V3.py $(Grow_3T)/Definition_V7.py \
         $(Grow_3T)/Except.py $(Grow_3T)/Except_V1.py $(Grow_3T)/Except_V7.py $(Grow_3T)/Except_V8.py \
-            $(Grow_3T)/Expression.py $(Grow_3T)/Expression_V1.py \
+            $(Grow_3T)/Expression.py $(Grow_3T)/Expression_V1.py $(Grow_3T)/Expression_V4.py \
         $(Grow_3T)/From_Import_V1.py $(Grow_3T)/From_Import_V4.py $(Grow_3T)/From_Import_V7.py \
         $(Grow_3T)/Global_V1.py $(Grow_3T)/Global_V5.py $(Grow_3T)/Global_V5.py $(Grow_3T)/Global_V6.py \
             $(Grow_3T)/Global_V7.py \
@@ -677,7 +679,7 @@ clean:
 	rm -f       3cm1.py 3cm2.py 3cm4.py 3cmd1.py 3cmd2.py 3cmx.py 3cmx1.py
 	rm -f       3cn.py 3cn1.py 3cn2.py 3cn3.py 3cn4.py 3cnu.py
 	rm -f     3co1.py 3co2.py 3core.py 3cp1.py 3cp2.py 3cp3.py 3cp4.py 3cp5.py 3cp6.py 3cpx.py
-	rm -f     3cs1.py 3cs2.py 3cse1.py 3cse2.py 3css1.py 3css2.py 3csu1.py 3csu2.py 3csu4.py
+	rm -f     3cs1.py 3cs2.py 3cse1.py 3cse2.py 3csi1.py 3csi2.py 3csi4.py 3css1.py 3css2.py
 	rm -f     3ct1.py 3ct2.py 3ct5.py 3cx1.py 3cx2.py 3cz.py
 	rm -f   3e.py 3ex.py 3ex1.py 3ex2.py 3f.py 3fl.py 3fl1.py 3g.py 3i.py 3i1.py
 	rm -f   3j.py 3js1.py 3js2.py 3js3.py 3js4.py 3js5.py 3js6.py 3js7.py 3jst.py
@@ -687,9 +689,9 @@ clean:
 	rm -f     3pr.py 3pt.py 3py.py 3py2.py 3py3.py 3py4.py 3py5.py 3py6.py 3pyt.py 3pyt6.py
 	rm -f   3r.txt 3s.py 3s1.py 3s4.py 3s5.py 3s6.py 3s7.py 3sxy.py 3sy.py
 	rm -f   3t.py 3tag.py 3tag1.py 3tag3.py 3tal.py 3tal1.py 3tal3.py 3tal4.py 3tal5.py 3tal6.py
-	rm -f       3tat1.py 3tat3.py 3tat4.py 3tat5.py
+	rm -f       3tas1.py 3tas7.py 3tas8.py 3tat1.py 3tat3.py 3tat4.py 3tat5.py
 	rm -f     3tc.py 3tc1.py 3tce1.py 3tce4.py 3tcs1.py 3tcs7.py 3td1.py 3td3.py 3td7.py
-	rm -f     3te.py 3te1.py 3test.py 3tex.py 3tex1.py 3tex7.py 3tex8.py
+	rm -f     3te.py 3te1.py 3te4.py 3test.py 3tex.py 3tex1.py 3tex7.py 3tex8.py
 	rm -f     3tfi1.py 3tfi4.py 3tfi7.py 3tg1.py 3tg5.py 3tg5.py 3tg6.py 3tg7.py
 	rm -f     3tin.py 3tin1.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tl4.py 3tm.py 3tm1.py 3tm4.py 3tm5.py
 	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tn5.py 3tno.py 3tnu.py 3to.py 3to1.py 3to3.py
@@ -925,11 +927,11 @@ links:
 	ln -s $(Grow_3T)/Convert_Statement_V2.py                                    3cs2.py
 	ln -s $(Grow_3T)/Convert_Specific_Expression_V1.py                          3cse1.py
 	ln -s $(Grow_3T)/Convert_Specific_Expression_V2.py                          3cse2.py
+	ln -s $(Grow_3T)/Convert_Subscript_V1.py                                    3csi1.py
+	ln -s $(Grow_3T)/Convert_Subscript_V2.py                                    3csi2.py
+	ln -s $(Grow_3T)/Convert_Subscript_V4.py                                    3csi4.py
 	ln -s $(Grow_3T)/Convert_Simple_Statement_V1.py                             3css1.py
 	ln -s $(Grow_3T)/Convert_Simple_Statement_V2.py                             3css2.py
-	ln -s $(Grow_3T)/Convert_Subscript_V1.py                                    3csu1.py
-	ln -s $(Grow_3T)/Convert_Subscript_V2.py                                    3csu2.py
-	ln -s $(Grow_3T)/Convert_Subscript_V4.py                                    3csu4.py
 	ln -s $(Grow_3T)/Convert_Target_V1.py                                       3ct1.py
 	ln -s $(Grow_3T)/Convert_Target_V2.py                                       3ct2.py
 	ln -s $(Grow_3T)/Convert_Target_V5.py                                       3ct5.py
@@ -1009,6 +1011,9 @@ links:
 	ln -s $(Grow_3T)/Alias_V4.py                                                3tal4.py
 	ln -s $(Grow_3T)/Alias_V5.py                                                3tal5.py
 	ln -s $(Grow_3T)/Alias_V6.py                                                3tal6.py
+	ln -s $(Grow_3T)/Assert_Statement_V1.py                                     3tas1.py
+	ln -s $(Grow_3T)/Assert_Statement_V7.py                                     3tas7.py
+	ln -s $(Grow_3T)/Assert_Statement_V8.py                                     3tas8.py
 	ln -s $(Grow_3T)/Attribute_V1.py                                            3tat1.py
 	ln -s $(Grow_3T)/Attribute_V3.py                                            3tat3.py
 	ln -s $(Grow_3T)/Attribute_V4.py                                            3tat4.py
@@ -1024,6 +1029,7 @@ links:
 	ln -s $(Grow_3T)/Definition_V7.py                                           3td7.py
 	ln -s $(Grow_3T)/Expression.py                                              3te.py
 	ln -s $(Grow_3T)/Expression_V1.py                                           3te1.py
+	ln -s $(Grow_3T)/Expression_V4.py                                           3te4.py
 	ln -s $(Grow_3)/ParseTest.py                                                3test.py
 	ln -s $(Grow_3T)/Except.py                                                  3tex.py
 	ln -s $(Grow_3T)/Except_V1.py                                               3tex1.py

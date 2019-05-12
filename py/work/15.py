@@ -44,8 +44,8 @@ class Tree_Delete_Attribute(
 
 class Tree_Evaluate_Attribute(
         Tree_Attribute,
-        TRAIT_Tree_Expression,
-        TRAIT_Tree_Expression_0,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = (())
 
@@ -187,7 +187,8 @@ class Tree_Function_Definition(
 
 
 class Tree_Value_Comprehension(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -199,7 +200,8 @@ class Tree_Value_Comprehension(
 
 
 class Tree_Backquote_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -210,7 +212,8 @@ class Tree_Backquote_Expression(
 
 
 class Tree_Binary_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -223,7 +226,8 @@ class Tree_Binary_Expression(
 
 
 class Tree_Call_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -238,7 +242,8 @@ class Tree_Call_Expression(
 
 
 class Tree_Compare_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -257,7 +262,8 @@ class Tree_Generator_Comprehension(Tree_Value_Comprehension):
 
 
 class Tree_If_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -270,7 +276,8 @@ class Tree_If_Expression(
 
 
 class Tree_Logical_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -282,7 +289,8 @@ class Tree_Logical_Expression(
 
 
 class Tree_Map_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -294,7 +302,8 @@ class Tree_Map_Expression(
 
 
 class Tree_Lambda_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -310,7 +319,8 @@ class Tree_List_Comprehension(Tree_Value_Comprehension):
 
 
 class Tree_Map_Comprehension(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -327,7 +337,8 @@ class Tree_Set_Comprehension(Tree_Value_Comprehension):
 
 
 class Tree_Set_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -338,7 +349,8 @@ class Tree_Set_Expression(
 
 
 class Tree_Number_Literal(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -349,7 +361,8 @@ class Tree_Number_Literal(
 
 
 class Tree_String_Literal(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -360,7 +373,8 @@ class Tree_String_Literal(
 
 
 class Tree_Unary_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -372,7 +386,8 @@ class Tree_Unary_Expression(
 
 
 class Tree_Yield_Expression(
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
@@ -438,7 +453,8 @@ class Tree_Many_Expression(object):
 
 class Tree_Evaluate_List(
         Tree_Many_Expression
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
     #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
@@ -448,7 +464,8 @@ class Tree_Evaluate_List(
 
 class Tree_Evaluate_Tuple(
         Tree_Many_Expression,
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = ((
     #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
@@ -499,8 +516,8 @@ class Tree_Delete_Name(
 
 class Tree_Evaluate_Name(
         Tree_Name_Branch,
-        TRAIT_Tree_Expression,
-        TRAIT_Tree_Expression_0,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = (())
 
@@ -573,10 +590,8 @@ class Tree_Parameter_Tuple_Leaf(
 ):
     __slots__ = (())
 
-class Tree_Subscript_Expression(
-        TRAIT_Tree_Delete_Target,
-        TRAIT_Tree_Expression,
-):
+
+class Tree_Subscript_Expression(object):
     __slots__ = ((
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
@@ -595,7 +610,8 @@ class Tree_Delete_Subscript(
 
 class Tree_Evaluate_Subscript(
         Tree_Subscript_Expression,
-        TRAIT_Tree_Expression,
+        TRAIT_Tree_Value_Expression,
+        TRAIT_Tree_Value_Expression_0,
 ):
     __slots__ = (())
 
@@ -632,7 +648,7 @@ class Tree_Assert_Statement(
         'column',                       #   Avid_Native_Integer
 
         'test',                         #   Tree_Value_Expression
-        'message',                      #   None | Tree_Value_Expression
+        'message',                      #   Tree_Value_Expression_0
     ))
 
 
