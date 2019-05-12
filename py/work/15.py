@@ -799,7 +799,7 @@ class Tree_Return_Statement(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'value',                        #   Tree_Value_Expression
+        'value',                        #   Tree_Value_Expression_0
     ))
 
 
@@ -812,9 +812,9 @@ class Tree_Raise_Statement(
         'line_number',                  #   Native_Positive_Integer
         'column',                       #   Avid_Native_Integer
 
-        'type',                         #   None | Tree_Value_Expression
-        'instance',                     #   None | Tree_Value_Expression
-        'traceback',                    #   None | Tree_Value_Expression
+        'type',                         #   Tree_Value_Expression_0
+        'instance',                     #   Tree_Value_Expression_0
+        'traceback',                    #   Tree_Value_Expression_0
     ))
 
 

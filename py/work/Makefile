@@ -322,6 +322,8 @@ Grow_3_Files = \
                 $(Grow_3T)/Parameter_Tuple_V6.py \
             $(Grow_3T)/Print_Statement_V1.py $(Grow_3T)/Print_Statement_V7.py $(Grow_3T)/Print_Statement_V8.py \
             $(Grow_3T)/Produce_Convert_List_V1.py $(Grow_3T)/Produce_Convert_List_V2.py \
+        $(Grow_3T)/Raise_Statement_V1.py $(Grow_3T)/Raise_Statement_V7.py $(Grow_3T)/Raise_Statement_V8.py \
+        $(Grow_3T)/Return_Statement_V1.py $(Grow_3T)/Return_Statement_V7.py $(Grow_3T)/Return_Statement_V8.py \
         $(Grow_3T)/Simple_Statement_V1.py $(Grow_3T)/Simple_Statement_V7.py \
             $(Grow_3T)/Statement.py \
             $(Grow_3T)/Subscript_V1.py $(Grow_3T)/Subscript_V4.py $(Grow_3T)/Subscript_V5.py \
@@ -698,6 +700,7 @@ clean:
 	rm -f     3tin.py 3tin1.py 3tim1.py 3tim7.py 3tl1.py 3tl3.py 3tl4.py 3tm.py 3tm1.py 3tm4.py 3tm5.py
 	rm -f     3tn.py 3tn1.py 3tn3.py 3tn4.py 3tn5.py 3tno.py 3tnu.py 3to.py 3to1.py 3to3.py
 	rm -f     3tp.py 3tp4.py 3tp5.py 3tp6.py 3tpt.py 3tpr1.py 3tpr7.py 3tpr8.py 3tpt1.py 3tpt5.py 3tpt6.py
+	rm -f     3tra1.py 3tra7.py 3tra8.py 3tre1.py 3tre7.py 3tre8.py
 	rm -f     3ts.py 3ts6.py 3ts7.py 3tsi1.py 3tsi4.py 3tsi5.py 3tss1.py 3tss7.py 3tsu.py 3tsu7.py
 	rm -f     3tt.py 3ttcmx1.py 3ttfl1.py 3tti1.py 3ttl1.py 3tw1.py 3tw7.py 3tw8.py
 	rm -f     3tx.py 3tx1.py 3tx3.py 3tye1.py 3tye4.py
@@ -1079,6 +1082,12 @@ links:
 	ln -s $(Grow_3T)/Parameter_Tuple_V1.py                                      3tpt1.py
 	ln -s $(Grow_3T)/Parameter_Tuple_V5.py                                      3tpt5.py
 	ln -s $(Grow_3T)/Parameter_Tuple_V6.py                                      3tpt6.py
+	ln -s $(Grow_3T)/Raise_Statement_V1.py                                      3tra1.py
+	ln -s $(Grow_3T)/Raise_Statement_V7.py                                      3tra7.py
+	ln -s $(Grow_3T)/Raise_Statement_V8.py                                      3tra8.py
+	ln -s $(Grow_3T)/Return_Statement_V1.py                                     3tre1.py
+	ln -s $(Grow_3T)/Return_Statement_V7.py                                     3tre7.py
+	ln -s $(Grow_3T)/Return_Statement_V8.py                                     3tre8.py
 	ln -s $(Grow_3T)/Statement.py                                               3ts.py
 	ln -s $(Grow_3C)/Temporary_String_V6.py                                     3ts6.py
 	ln -s $(Grow_3C)/Temporary_String_V7.py                                     3ts7.py
