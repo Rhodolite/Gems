@@ -52,6 +52,7 @@ class Tree_Evaluate_Attribute(
 class Tree_Store_Attribute(
         Tree_Attribute,
         TRAIT_Tree_Store_Target,
+        TRAIT_Tree_Store_Target_0,
 ):
     __slots__ = (())
 
@@ -147,7 +148,7 @@ class Tree_With_Statement(
         'column',                       #   Avid_Native_Integer
 
         'value',                        #   Tree_Value_Expression
-        'target',                       #   None | Tree_Target
+        'target',                       #   Tree_Store_Target_0
         'body',                         #   Tree_Statement
     ))
 
@@ -320,17 +321,6 @@ class Tree_Map_Comprehension(
     ))
 
 
-class Tree_Number(
-        TRAIT_Tree_Expression,
-):
-    __slots__ = ((
-        'line_number',                  #   Positive_Native_Integer
-        'column',                       #   Avid_Native_Integer
-
-        'n',                            #   Native_Float | Native_Integer | Native_Long
-    ))
-
-
 class Tree_Set_Comprehension(Tree_Value_Comprehension):
     __slots__ = (())
 
@@ -346,7 +336,18 @@ class Tree_Set_Expression(
     ))
 
 
-class Tree_String(
+class Tree_Number_Literal(
+        TRAIT_Tree_Expression,
+):
+    __slots__ = ((
+        'line_number',                  #   Positive_Native_Integer
+        'column',                       #   Avid_Native_Integer
+
+        'n',                            #   Number
+    ))
+
+
+class Tree_String_Literal(
         TRAIT_Tree_Expression,
 ):
     __slots__ = ((
@@ -388,7 +389,7 @@ class Tree_Except_Handler(
         'column',                       #   Avid_Native_Integer
 
         'type_expression',              #   None | Tree_Value_Expression
-        'name_expression',              #   None | Tree_Value_Expression
+        'target_expression',            #   Tree_Store_Target_0
         'body',                         #   Full_Native_List of Tree_Statement
     ))
 
@@ -456,6 +457,7 @@ class Tree_Evaluate_Tuple(
 class Tree_Store_List(
         Tree_Many_Expression,
         TRAIT_Tree_Store_Target,
+        TRAIT_Tree_Store_Target_0,
 ):
     __slots__ = ((
     #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
@@ -464,10 +466,10 @@ class Tree_Store_List(
 
 
 
-
 class Tree_Store_Tuple(
         Tree_Many_Expression,
         TRAIT_Tree_Store_Target,
+        TRAIT_Tree_Store_Target_0,
 ):
     __slots__ = ((
     #   'elements',                     #   Inherited from `Tree_Many_Expression`; but type changes to:
@@ -503,6 +505,7 @@ class Tree_Evaluate_Name(
 class Tree_Store_Name(
         Tree_Name_Branch,
         TRAIT_Tree_Store_Target,
+        TRAIT_Tree_Store_Target_0,
 ):
     __slots__ = (())
 
@@ -597,6 +600,7 @@ class Tree_Evaluate_Subscript(
 class Tree_Store_Subscript(
         Tree_Subscript_Expression,
         TRAIT_Tree_Store_Target,
+        TRAIT_Tree_Store_Target_0,
 ):
     __slots__ = (())
 
