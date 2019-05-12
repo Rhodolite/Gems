@@ -231,8 +231,8 @@ class Tree_Call_Expression(
         'function',                     #   Tree_Value_Expression
         'arguments',                    #   Native_List of Tree_Value_Expression
         'keywords',                     #   Native_List of Tree_Value_Expression
-        'star_arguments',               #   None | Tree_Value_Expression
-        'keyword_arguments',            #   None | Tree_Value_Expression
+        'star_arguments',               #   Tree_Value_Expression_0
+        'keyword_arguments',            #   Tree_Value_Expression_0
     ))
 
 
@@ -390,8 +390,9 @@ class Tree_Except_Handler(
 
         'type_expression',              #   None | Tree_Value_Expression
         'target_expression',            #   Tree_Store_Target_0
-        'body',                         #   Full_Native_List of Tree_Statement
+        'body',                         #   Tree_Suite
     ))
+
 
 class Tree_Ellipses_Index(
         TRAIT_Tree_Index_Clause,
@@ -498,6 +499,7 @@ class Tree_Delete_Name(
 class Tree_Evaluate_Name(
         Tree_Name_Branch,
         TRAIT_Tree_Expression,
+        TRAIT_Tree_Expression_0,
 ):
     __slots__ = (())
 
