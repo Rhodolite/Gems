@@ -697,8 +697,8 @@ class Tree_Execute_Statement(
         'column',                       #   Avid_Native_Integer
 
         'body',                         #   Tree_Value_Expression
-        'globals',                      #   None | Tree_Value_Expression
-        'locals',                       #   None | Tree_Value_Expression
+        'globals',                      #   Tree_Value_Expression_0
+        'locals',                       #   Tree_Value_Expression_0
     ))
 
 
@@ -784,7 +784,7 @@ class Tree_Print_Statement(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'destination',                  #   None | Tree_Value_Expression
+        'destination',                  #   Tree_Value_Expression_0
         'values',                       #   Native_List of Tree_Value_Expression
         'newline',                      #   Native_Boolean
     ))
