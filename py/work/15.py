@@ -45,6 +45,7 @@ class Tree_Delete_Attribute(
 class Tree_Evaluate_Attribute(
         Tree_Attribute,
         TRAIT_Tree_Expression,
+        TRAIT_Tree_Expression_0,
 ):
     __slots__ = (())
 
@@ -377,7 +378,7 @@ class Tree_Yield_Expression(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'value',                        #   None | Tree_Value_Expression
+        'value',                        #   Tree_Value_Expression_0
     ))
 
 
@@ -388,7 +389,7 @@ class Tree_Except_Handler(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'type_expression',              #   None | Tree_Value_Expression
+        'type_expression',              #   Tree_Value_Expression_0
         'target_expression',            #   Tree_Store_Target_0
         'body',                         #   Tree_Suite
     ))
