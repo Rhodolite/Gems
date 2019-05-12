@@ -404,8 +404,8 @@ class Tree_Except_Handler(
         'line_number',                  #   Positive_Native_Integer
         'column',                       #   Avid_Native_Integer
 
-        'type_expression',              #   None | Tree_Value_Expression
-        'target_expression',            #   None | Tree_Store_Target
+        'type_expression',              #   Tree_Value_Expression_0
+        'target_expression',            #   Tree_Store_Target_0
         'body',                         #   Tree_Suite
     ))
 
